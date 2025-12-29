@@ -11,8 +11,9 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <span className="font-display text-2xl md:text-3xl font-extrabold tracking-tighter">
-                KX <span className="text-primary italic">Location</span>
+              <img src={logoPng} alt="KX Location" className="h-10 w-auto object-contain" />
+              <span className="font-display text-xl font-bold tracking-tight">
+                KX <span className="text-primary">Location</span>
               </span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-xs">
