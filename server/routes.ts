@@ -41,9 +41,9 @@ export async function registerRoutes(
         {
           model: "Mercedes Classe S",
           pricePerDay: 250,
-          imageUrl: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800",
+          imageUrl: "/images/classe-s.webp",
           galleryUrls: [
-            "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800",
+            "/images/classe-s.webp",
             "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=800"
           ],
           power: "286 ch",
@@ -54,9 +54,9 @@ export async function registerRoutes(
         {
           model: "Renault Clio 5",
           pricePerDay: 45,
-          imageUrl: "https://images.unsplash.com/photo-1621007947382-bb3c3968e3bb?auto=format&fit=crop&q=80&w=800",
+          imageUrl: "/images/clio-5.jpg",
           galleryUrls: [
-            "https://images.unsplash.com/photo-1621007947382-bb3c3968e3bb?auto=format&fit=crop&q=80&w=800",
+            "/images/clio-5.jpg",
             "https://images.unsplash.com/photo-1635783888365-d601b0f5b9d2?auto=format&fit=crop&q=80&w=800"
           ],
           power: "100 ch",
