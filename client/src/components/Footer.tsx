@@ -1,6 +1,6 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoPng from "@assets/generated_images/childish_pink_car_logo_kx.png";
+import logoPng from "@assets/image_1767024778246.png";
 
 export function Footer() {
   return (
