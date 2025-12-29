@@ -70,7 +70,7 @@ export default function Catalogue() {
                 </div>
               </CardContent>
               <CardFooter className="p-4 border-t">
-                <Button variant="secondary" className="w-full bg-muted hover:bg-muted/80 text-muted-foreground">Voir les détails</Button>
+                <Button variant="secondary" className="w-full bg-slate-700 hover:bg-slate-600 text-white border-none shadow-md">Voir les détails</Button>
               </CardFooter>
             </Card>
           );
