@@ -14,17 +14,17 @@ export function Header() {
       <div className="flex flex-col gap-4">
         <Button 
           className="w-full h-14 text-lg font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
-          onClick={() => window.open('https://wa.me/33753641249', '_blank')}
+          onClick={() => window.open('https://wa.me/33677727957', '_blank')}
         >
           <SiWhatsapp className="mr-3 h-6 w-6" />
-          WhatsApp: 07 53 64 12 49
+          WhatsApp: 06 77 72 79 57
         </Button>
         <Button 
           className="w-full h-14 text-lg font-semibold bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
-          onClick={() => window.open('https://snapchat.com/add/kx-location', '_blank')}
+          onClick={() => window.open('https://snapchat.com/add/RIIMKA672', '_blank')}
         >
           <SiSnapchat className="mr-3 h-6 w-6" />
-          Snapchat: kx-location
+          Snapchat: RIIMKA672
         </Button>
       </div>
       <div className="text-center text-muted-foreground">

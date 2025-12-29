@@ -134,14 +134,14 @@ export default function Catalogue() {
                     <div className="space-y-3">
                       <Button 
                         className="w-full h-12 gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white"
-                        onClick={() => window.open(`https://wa.me/33753641249?text=Bonjour, je souhaite réserver la ${selectedCar.model}`, '_blank')}
+                        onClick={() => window.open(`https://wa.me/33677727957?text=Bonjour, je souhaite réserver la ${selectedCar.model}`, '_blank')}
                       >
                         <SiWhatsapp className="w-5 h-5" />
                         Réserver via WhatsApp
                       </Button>
                       <Button 
                         className="w-full h-12 gap-2 bg-[#FFFC00] hover:bg-[#e6e300] text-black"
-                        onClick={() => window.open('https://snapchat.com/add/kx-location', '_blank')}
+                        onClick={() => window.open('https://snapchat.com/add/RIIMKA672', '_blank')}
                       >
                         <SiSnapchat className="w-5 h-5" />
                         Réserver via Snapchat

@@ -26,28 +26,40 @@ export async function registerRoutes(
     if (existingCars.length === 0) {
       const seedCars = [
         {
-          model: "Mercedes Classe E",
-          pricePerDay: 120,
-          imageUrl: "/images/classe-e.jpg",
-          galleryUrls: ["/images/classe-e.jpg"],
-          power: "194 ch",
+          model: "Mercedes C43 AMG",
+          pricePerDay: 250,
+          imageUrl: "/images/c43-amg.jpg",
+          galleryUrls: ["/images/c43-amg.jpg"],
+          power: "390 ch",
           transmission: "Automatique",
-          options: ["GPS", "Toit ouvrant", "Sièges chauffants", "Bluetooth"],
-          category: "Luxe",
+          options: ["Pack Performance", "Échappement AMG", "Sièges Performance", "Burmester"],
+          category: "Sport",
           caution: 5000,
-          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile", "Pièce d'identité"]
+          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
         },
         {
-          model: "Mercedes Classe S",
-          pricePerDay: 250,
-          imageUrl: "/images/classe-s.webp",
-          galleryUrls: ["/images/classe-s.webp"],
-          power: "286 ch",
+          model: "Mercedes A35 AMG",
+          pricePerDay: 200,
+          imageUrl: "/images/a35-amg.jpg",
+          galleryUrls: ["/images/a35-amg.jpg"],
+          power: "306 ch",
           transmission: "Automatique",
-          options: ["Massage", "Son Burmester", "Night Vision", "Pack Chauffeur"],
+          options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
+          category: "Sport",
+          caution: 5000,
+          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
+        },
+        {
+          model: "Mercedes Classe S Maybach",
+          pricePerDay: 900,
+          imageUrl: "/images/classe-s-maybach.jpg",
+          galleryUrls: ["/images/classe-s-maybach.jpg"],
+          power: "469 ch",
+          transmission: "Automatique",
+          options: ["Chauffeur Uniquement", "Accompagnement Complet", "Cortège Mairie", "Salon VIP"],
           category: "Luxe",
           caution: 5000,
-          conditions: ["Âge minimum 25 ans", "Permis de conduire > 3 ans", "Justificatif de domicile", "Pièce d'identité"]
+          conditions: ["Avec chauffeur uniquement", "Prestation sur devis", "Strasbourg & alentours"]
         },
         {
           model: "Renault Clio 5",
@@ -59,19 +71,7 @@ export async function registerRoutes(
           options: ["Climatisation", "CarPlay", "Régulateur", "Caméra de recul"],
           category: "Citadine",
           caution: 5000,
-          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile", "Pièce d'identité"]
-        },
-        {
-          model: "Audi A6 S-Line",
-          pricePerDay: 110,
-          imageUrl: "/images/audi-a6.jpg",
-          galleryUrls: ["/images/audi-a6.jpg"],
-          power: "204 ch",
-          transmission: "Automatique",
-          options: ["Virtual Cockpit", "Matrix LED", "Lane Assist", "Cuir"],
-          category: "Luxe",
-          caution: 5000,
-          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile", "Pièce d'identité"]
+          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
         }
       ];
 
