@@ -29,7 +29,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 space-y-8 text-center lg:text-left">
               <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1]">
-                Louez <span className="italic font-serif font-light">l'excellence</span> à{" "}
+                Louez l'excellence à{" "}
                 <span className="text-primary block sm:inline">Strasbourg</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
