@@ -1,5 +1,6 @@
-import { Car, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoPng from "@assets/generated_images/minimalist_kx_app_icon_logo_grey.png";
 
 export function Footer() {
   return (
@@ -8,10 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-primary p-1.5 rounded-lg">
-                <Car className="h-5 w-5 text-white" />
-              </div>
+            <div className="flex items-center space-x-3">
+              <img src={logoPng} alt="KX Location" className="h-10 w-auto object-contain brightness-0 invert" />
               <span className="font-display text-xl font-bold tracking-tight">
                 KX <span className="text-primary">Location</span>
               </span>
@@ -27,7 +26,7 @@ export function Footer() {
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <span>07 12 34 56 78</span>
+                <span>06 77 72 79 57</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
@@ -44,16 +43,15 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-display text-lg font-bold">Disponibilités</h3>
             <p className="text-muted-foreground">
-              Découvrez notre flotte complète et réservez dès maintenant pour votre prochain séjour.
+              Découvrez notre véhicules et réservez dès maintenant votre prochaine virée.
             </p>
-            <Button size="lg" className="w-full md:w-auto font-semibold bg-primary hover:bg-primary/90 text-white">
+            <Button size="lg" className="w-full md:w-auto font-semibold bg-primary hover:bg-primary/90 text-white" onClick={() => window.open('/catalogue', '_self')}>
               Voir toutes les dispos
             </Button>
             <div className="pt-4 flex gap-4">
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
+              <a href="https://instagram.com/kx.location" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              {/* Add more social icons as needed */}
             </div>
           </div>
         </div>
