@@ -107,8 +107,8 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Notre Flotte</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Sélectionnez le véhicule qui correspond à votre style et à vos envies.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Découvrez nos véhicules et plongez dans le luxe ultime en réservant dès maintenant votre voiture de prestige et transformez chaque trajet en expérience inoubliable de puissance et d'élégance.
             </p>
           </div>
 
