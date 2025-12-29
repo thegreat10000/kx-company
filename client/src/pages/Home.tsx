@@ -184,13 +184,14 @@ export default function Home() {
                   className="h-[340px] bg-muted animate-pulse rounded-2xl"
                 />
               ))
-            ) : isError ? (
+            ) : isError || !cars || cars.length === 0 ? (
               <div className="col-span-full text-center py-10">
-                <p className="text-destructive">Erreur de chargement</p>
+                <p className="text-destructive mb-4">Aucun véhicule disponible pour le moment.</p>
+                <Button onClick={() => window.location.reload()} variant="outline">Réessayer</Button>
               </div>
             ) : (
               cars
-                ?.slice(0, 3)
+                .slice(0, 3)
                 .map((car) => (
                   <CarCard
                     key={car.id}
