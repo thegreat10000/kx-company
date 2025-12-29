@@ -42,7 +42,16 @@ export async function registerRoutes(
         options: ["Pack Performance", "Échappement AMG", "Sièges Performance", "Burmester"],
         category: "Sport",
         caution: 5000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
+        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        pricingInfo: JSON.stringify({
+          type: "standard",
+          prices: [
+            { duration: "24h", price: "250€", note: "en semaine" },
+            { duration: "48h", price: "750€", note: "week-end inclus" },
+            { duration: "72h", price: "900€", note: "week-end inclus" },
+            { duration: "7 jours", price: "1500€", note: "" }
+          ]
+        })
       },
       {
         model: "Mercedes Classe S Maybach",
@@ -61,7 +70,13 @@ export async function registerRoutes(
         options: ["Chauffeur Uniquement", "Accompagnement Complet", "Cortège Mairie", "Salon VIP"],
         category: "Luxe",
         caution: 5000,
-        conditions: ["Avec chauffeur uniquement", "Prestation sur devis", "Strasbourg & alentours"]
+        conditions: ["Avec chauffeur uniquement", "Prestation sur devis", "Strasbourg & alentours"],
+        pricingInfo: JSON.stringify({
+          type: "chauffeur",
+          basePrice: "900€",
+          note: "Chauffeur inclus uniquement",
+          extra: "Pack cortège, mairie et plus disponibles. Contactez-nous pour plus d'informations."
+        })
       },
       {
         model: "Mercedes A35 AMG",
@@ -71,9 +86,18 @@ export async function registerRoutes(
         power: "306 ch",
         transmission: "Automatique",
         options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
-        category: "Sport",
+        category: "Berline sportive",
         caution: 5000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
+        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        pricingInfo: JSON.stringify({
+          type: "standard",
+          prices: [
+            { duration: "24h", price: "200€", note: "" },
+            { duration: "48h", price: "650€", note: "week-end inclus" },
+            { duration: "72h", price: "800€", note: "week-end inclus" },
+            { duration: "7 jours", price: "1200€", note: "" }
+          ]
+        })
       },
       {
         model: "Peugeot 208 GT",
@@ -85,7 +109,8 @@ export async function registerRoutes(
         options: ["Finition GT", "i-Cockpit 3D", "Caméra de recul", "Toit Black Diamond"],
         category: "",
         caution: 2000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
+        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        pricingInfo: null
       }
     ];
 
