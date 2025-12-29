@@ -76,8 +76,8 @@ export async function registerRoutes(
     }
   }
 
-  // Désactivé pour permettre la saisie manuelle des véhicules
-  // seedDatabase();
+  // Seed initial cars data
+  seedDatabase();
 
   return httpServer;
 }

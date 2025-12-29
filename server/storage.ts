@@ -1,6 +1,4 @@
-import { db } from "./db";
-import { cars, type Car, type InsertCar } from "@shared/schema";
-import { eq } from "drizzle-orm";
+import { type Car, type InsertCar } from "@shared/schema";
 
 export interface IStorage {
   getCars(): Promise<Car[]>;
@@ -9,24 +7,40 @@ export interface IStorage {
   deleteAllCars(): Promise<void>;
 }
 
-export class DatabaseStorage implements IStorage {
+// Données des véhicules en mémoire (sera remplacé par les vraies données)
+const carsData: Car[] = [];
+
+export class MemoryStorage implements IStorage {
   async getCars(): Promise<Car[]> {
-    return await db.select().from(cars).orderBy(cars.id);
+    return carsData;
   }
 
   async getCar(id: number): Promise<Car | undefined> {
-    const [car] = await db.select().from(cars).where(eq(cars.id, id));
-    return car;
+    return carsData.find(car => car.id === id);
   }
 
   async createCar(insertCar: InsertCar): Promise<Car> {
-    const [car] = await db.insert(cars).values(insertCar).returning();
+    const newId = carsData.length > 0 ? Math.max(...carsData.map(c => c.id)) + 1 : 1;
+    const car: Car = {
+      id: newId,
+      model: insertCar.model,
+      pricePerDay: insertCar.pricePerDay,
+      imageUrl: insertCar.imageUrl,
+      galleryUrls: insertCar.galleryUrls || [],
+      power: insertCar.power,
+      transmission: insertCar.transmission,
+      options: insertCar.options || [],
+      category: insertCar.category,
+      caution: insertCar.caution,
+      conditions: insertCar.conditions || []
+    };
+    carsData.push(car);
     return car;
   }
 
   async deleteAllCars(): Promise<void> {
-    await db.delete(cars);
+    carsData.length = 0;
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new MemoryStorage();
