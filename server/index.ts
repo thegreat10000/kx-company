@@ -3,11 +3,16 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 
-// Serve static files from public/ folder (works in both dev and prod for images)
-app.use(express.static(path.resolve(import.meta.dirname, "..", "public")));
+// Serve static files from public/ folder in development only
+// In production, serveStatic handles this from dist/public
+if (process.env.NODE_ENV !== "production") {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  app.use(express.static(path.resolve(__dirname, "..", "public")));
+}
 const httpServer = createServer(app);
 
 declare module "http" {
