@@ -16,7 +16,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-xs">
-              Location de véhicules de prestige à Strasbourg. Une expérience de conduite inoubliable avec un service premium.
+              Location de véhicules de prestige à Strasbourg. Une expérience de
+              conduite inoubliable avec un service premium.
             </p>
           </div>
 
@@ -43,35 +44,41 @@ export function Footer() {
           <div className="space-y-4 md:text-right">
             <h3 className="font-display text-lg font-bold">Disponibilités</h3>
             <p className="text-muted-foreground ml-auto max-w-xs">
-              Découvrez notre véhicules et réservez dès maintenant votre prochaine virée.
+              Découvrez nos véhicules et le pricing en cliquant ci-dessous.
             </p>
             <div className="flex flex-col gap-4 md:items-end">
-              <Button 
-                size="lg" 
-                className="w-full md:w-auto font-semibold bg-primary hover:bg-primary/90 text-white" 
-                onClick={() => window.open('/catalogue', '_self')}
+              <Button
+                size="lg"
+                className="w-full md:w-auto font-semibold bg-primary hover:bg-primary/90 text-white"
+                onClick={() => window.open("/catalogue", "_self")}
               >
                 Voir toutes les dispos
               </Button>
               <div className="flex gap-4 justify-start md:justify-end">
-                <Button 
-                  size="icon" 
+                <Button
+                  size="icon"
                   className="rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
-                  onClick={() => window.open('https://wa.me/33677727957', '_blank')}
+                  onClick={() =>
+                    window.open("https://wa.me/33677727957", "_blank")
+                  }
                 >
                   <SiWhatsapp className="h-5 w-5" />
                 </Button>
-                <Button 
-                  size="icon" 
+                <Button
+                  size="icon"
                   className="rounded-full bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
-                  onClick={() => window.open('https://snapchat.com/add/RIIMKA672', '_blank')}
+                  onClick={() =>
+                    window.open("https://snapchat.com/add/RIIMKA672", "_blank")
+                  }
                 >
                   <SiSnapchat className="h-5 w-5" />
                 </Button>
-                <Button 
-                  size="icon" 
+                <Button
+                  size="icon"
                   className="rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
-                  onClick={() => window.open('https://instagram.com/kx.location', '_blank')}
+                  onClick={() =>
+                    window.open("https://instagram.com/kx.location", "_blank")
+                  }
                 >
                   <SiInstagram className="h-5 w-5" />
                 </Button>
@@ -79,9 +86,11 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} KX Location. Tous droits réservés.</p>
+          <p>
+            &copy; {new Date().getFullYear()} KX Location. Tous droits réservés.
+          </p>
         </div>
       </div>
     </footer>
