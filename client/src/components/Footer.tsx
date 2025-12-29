@@ -1,5 +1,6 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 import logoPng from "@assets/image_1767024778246.png";
 
 export function Footer() {
@@ -39,19 +40,43 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="space-y-4">
+          {/* CTA & Socials */}
+          <div className="space-y-4 md:text-right">
             <h3 className="font-display text-lg font-bold">Disponibilités</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground ml-auto max-w-xs">
               Découvrez notre véhicules et réservez dès maintenant votre prochaine virée.
             </p>
-            <Button size="lg" className="w-full md:w-auto font-semibold bg-primary hover:bg-primary/90 text-white" onClick={() => window.open('/catalogue', '_self')}>
-              Voir toutes les dispos
-            </Button>
-            <div className="pt-4 flex gap-4">
-              <a href="https://instagram.com/kx.location" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
+            <div className="flex flex-col gap-4 md:items-end">
+              <Button 
+                size="lg" 
+                className="w-full md:w-auto font-semibold bg-primary hover:bg-primary/90 text-white" 
+                onClick={() => window.open('/catalogue', '_self')}
+              >
+                Voir toutes les dispos
+              </Button>
+              <div className="flex gap-4 justify-start md:justify-end">
+                <Button 
+                  size="icon" 
+                  className="rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
+                  onClick={() => window.open('https://wa.me/33677727957', '_blank')}
+                >
+                  <SiWhatsapp className="h-5 w-5" />
+                </Button>
+                <Button 
+                  size="icon" 
+                  className="rounded-full bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
+                  onClick={() => window.open('https://snapchat.com/add/RIIMKA672', '_blank')}
+                >
+                  <SiSnapchat className="h-5 w-5" />
+                </Button>
+                <Button 
+                  size="icon" 
+                  className="rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
+                  onClick={() => window.open('https://instagram.com/kx.location', '_blank')}
+                >
+                  <SiInstagram className="h-5 w-5" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
