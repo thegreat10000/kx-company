@@ -39,38 +39,35 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
           {/* Left: Gallery */}
           <div className="relative bg-muted/30 min-h-[300px] md:h-full flex items-center justify-center group/gallery">
             <div className="relative aspect-[4/3] md:aspect-auto md:h-full w-full h-full overflow-hidden">
-              <img 
-                src={images[currentImageIndex]} 
-                alt={car.model} 
-                className="object-cover w-full h-full"
-              />
-              
-              {images.length > 1 && (
-                <>
-                  <button 
-                    onClick={prevImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/20 text-white opacity-0 group-hover/gallery:opacity-100 transition-opacity"
-                  >
-                    <ChevronLeft className="h-6 w-6" />
-                  </button>
-                  <button 
-                    onClick={nextImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/20 text-white opacity-0 group-hover/gallery:opacity-100 transition-opacity"
-                  >
-                    <ChevronRight className="h-6 w-6" />
-                  </button>
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
-                    {images.map((_, idx) => (
-                      <div 
-                        key={idx}
-                        className={`h-1.5 rounded-full transition-all ${
-                          idx === currentImageIndex ? "w-4 bg-white" : "w-1.5 bg-white/50"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
+              <Carousel className="w-full h-full">
+                <CarouselContent className="h-full">
+                  {images.map((src, index) => (
+                    <CarouselItem key={index} className="h-full">
+                      <div className="relative h-full w-full">
+                        <img 
+                          src={src} 
+                          alt={`${car.model} - Photo ${index + 1}`} 
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                {images.length > 1 && (
+                  <>
+                    <CarouselPrevious className="left-4 opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-black/20 text-white hover:bg-black/40 border-none" />
+                    <CarouselNext className="right-4 opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-black/20 text-white hover:bg-black/40 border-none" />
+                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-10">
+                      {images.map((_, idx) => (
+                        <div 
+                          key={idx}
+                          className="h-1.5 rounded-full transition-all w-1.5 bg-white/50"
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
+              </Carousel>
             </div>
           </div>
 
