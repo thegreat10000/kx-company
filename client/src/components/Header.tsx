@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { Menu, Phone, Instagram } from "lucide-react";
+import { Menu, Phone, Instagram, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -9,7 +10,7 @@ import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 import logoPng from "@assets/image_1767024778246.png";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const ContactInfo = () => (
     <div className="space-y-6 py-4">
@@ -44,6 +45,17 @@ export function Header() {
 
   const NavLinks = () => (
     <>
+      <Button
+        variant="ghost"
+        size="icon"
+        className="rounded-full mr-2"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        title="Changer le mode"
+      >
+        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <span className="sr-only">Changer le thème</span>
+      </Button>
       <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
         Accueil
       </Link>

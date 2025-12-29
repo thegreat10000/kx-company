@@ -7,6 +7,8 @@ import { useCars } from "@/hooks/use-cars";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ShieldCheck, Clock, Award } from "lucide-react";
 import { Car } from "@shared/schema";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 
 import { Link, useLocation } from "wouter";
 
@@ -47,13 +49,47 @@ export default function Home() {
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="rounded-full text-base px-8 h-12 border-2 hover:bg-muted/50"
-                >
-                  Nous contacter
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="rounded-full text-base px-8 h-12 border-2 hover:bg-muted/50"
+                    >
+                      Nous contacter
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl font-bold text-center">Contactez KX Location</DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-6 py-4">
+                      <div className="flex flex-col gap-4">
+                        <Button 
+                          className="w-full h-14 text-lg font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
+                          onClick={() => window.open('https://wa.me/33677727957', '_blank')}
+                        >
+                          <SiWhatsapp className="mr-3 h-6 w-6" />
+                          WhatsApp: 06 77 72 79 57
+                        </Button>
+                        <Button 
+                          className="w-full h-14 text-lg font-semibold bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
+                          onClick={() => window.open('https://snapchat.com/add/RIIMKA672', '_blank')}
+                        >
+                          <SiSnapchat className="mr-3 h-6 w-6" />
+                          Snapchat: RIIMKA672
+                        </Button>
+                        <Button 
+                          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
+                          onClick={() => window.open('https://instagram.com/kx.location', '_blank')}
+                        >
+                          <SiInstagram className="mr-3 h-6 w-6" />
+                          Instagram: kx.location
+                        </Button>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
 
