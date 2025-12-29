@@ -73,11 +73,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center space-x-3 group">
-          <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-primary/20 bg-white flex items-center justify-center p-1 transition-transform duration-300 group-hover:scale-105">
-            <img src={logoPng} alt="KX Location" className="h-full w-full object-contain" />
-          </div>
-          <span className="font-display text-xl font-bold tracking-tight text-foreground">
-            KX <span className="text-primary">Location</span>
+          <span className="font-display text-2xl md:text-3xl font-extrabold tracking-tighter text-foreground">
+            KX <span className="text-primary italic">Location</span>
           </span>
         </Link>
 
