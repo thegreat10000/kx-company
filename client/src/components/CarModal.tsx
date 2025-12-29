@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { FaWhatsapp, FaSnapchatGhost } from "react-icons/fa";
-import { X, Check, Gauge, Cog, Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, Check, Gauge, Cog, Zap } from "lucide-react";
 
 interface CarModalProps {
   car: Car | null;
@@ -23,7 +23,6 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl p-0 gap-0 overflow-hidden bg-background border-none shadow-2xl rounded-2xl md:rounded-3xl h-[100dvh] md:h-auto md:max-h-[90vh] flex flex-col md:block">
         
-        {/* Close Button - Custom positioned */}
         <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-black/20 p-2 text-white hover:bg-black/40 backdrop-blur-sm transition-colors">
           <X className="h-5 w-5" />
           <span className="sr-only">Fermer</span>
@@ -33,7 +32,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
           {/* Left: Gallery */}
           <div className="relative bg-muted/30 min-h-[300px] md:h-full flex items-center justify-center group/gallery">
             <div className="relative aspect-[4/3] md:aspect-auto md:h-full w-full h-full overflow-hidden">
-              <Carousel className="w-full h-full">
+              <Carousel className="w-full h-full" opts={{ loop: true }}>
                 <CarouselContent className="h-full">
                   {images.map((src, index) => (
                     <CarouselItem key={index} className="h-full">
@@ -49,13 +48,13 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                 </CarouselContent>
                 {images.length > 1 && (
                   <>
-                    <CarouselPrevious className="left-4 opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-black/20 text-white hover:bg-black/40 border-none" />
-                    <CarouselNext className="right-4 opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-black/20 text-white hover:bg-black/40 border-none" />
+                    <CarouselPrevious className="left-4 opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-black/20 text-white hover:bg-black/40 border-none disabled:hidden" />
+                    <CarouselNext className="right-4 opacity-0 group-hover/gallery:opacity-100 transition-opacity bg-black/20 text-white hover:bg-black/40 border-none disabled:hidden" />
                     <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-10">
                       {images.map((_, idx) => (
                         <div 
                           key={idx}
-                          className="h-1.5 rounded-full transition-all w-1.5 bg-white/50"
+                          className="h-1.5 rounded-full w-1.5 bg-white/50"
                         />
                       ))}
                     </div>
