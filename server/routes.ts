@@ -28,9 +28,9 @@ export async function registerRoutes(
         {
           model: "Mercedes Classe E",
           pricePerDay: 120,
-          imageUrl: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
+          imageUrl: "/images/classe-e.jpg",
           galleryUrls: [
-            "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
+            "/images/classe-e.jpg",
             "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=800"
           ],
           power: "194 ch",
