@@ -20,6 +20,12 @@ export async function registerRoutes(
     res.json(car);
   });
 
+  // Route to delete all cars (for admin reset)
+  app.delete("/api/cars", async (req, res) => {
+    await storage.deleteAllCars();
+    res.json({ message: "All cars deleted" });
+  });
+
   // Seed data function
   async function seedDatabase() {
     const existingCars = await storage.getCars();
@@ -70,7 +76,8 @@ export async function registerRoutes(
     }
   }
 
-  seedDatabase();
+  // Désactivé pour permettre la saisie manuelle des véhicules
+  // seedDatabase();
 
   return httpServer;
 }

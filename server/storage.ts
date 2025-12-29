@@ -6,6 +6,7 @@ export interface IStorage {
   getCars(): Promise<Car[]>;
   getCar(id: number): Promise<Car | undefined>;
   createCar(car: InsertCar): Promise<Car>;
+  deleteAllCars(): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -21,6 +22,10 @@ export class DatabaseStorage implements IStorage {
   async createCar(insertCar: InsertCar): Promise<Car> {
     const [car] = await db.insert(cars).values(insertCar).returning();
     return car;
+  }
+
+  async deleteAllCars(): Promise<void> {
+    await db.delete(cars);
   }
 }
 
