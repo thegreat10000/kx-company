@@ -54,9 +54,7 @@ export default function Catalogue() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {cars?.map((car) => {
-            const imageUrl = car.imageUrl.startsWith('attached_assets/') 
-              ? `/@fs/home/runner/workspace/${car.imageUrl}` 
-              : car.imageUrl;
+            const imageUrl = car.imageUrl;
             return (
             <Card 
               key={car.id} 
@@ -111,9 +109,7 @@ export default function Catalogue() {
       <Dialog open={!!selectedCar} onOpenChange={() => setSelectedCar(null)}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           {selectedCar && (() => {
-            const selectedImageUrl = selectedCar.imageUrl.startsWith('attached_assets/') 
-              ? `/@fs/home/runner/workspace/${selectedCar.imageUrl}` 
-              : selectedCar.imageUrl;
+            const selectedImageUrl = selectedCar.imageUrl;
             return (
             <>
               <DialogHeader>

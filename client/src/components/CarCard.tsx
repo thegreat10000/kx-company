@@ -9,9 +9,7 @@ interface CarCardProps {
 }
 
 export function CarCard({ car, onClick }: CarCardProps) {
-  const imageUrl = car.imageUrl.startsWith('attached_assets/') 
-    ? `/@fs/home/runner/workspace/${car.imageUrl}` 
-    : car.imageUrl;
+  const imageUrl = car.imageUrl;
 
   return (
     <motion.div 

@@ -56,14 +56,14 @@ export async function registerRoutes(
       {
         model: "Mercedes Classe S Maybach",
         pricePerDay: 900,
-        imageUrl: "attached_assets/s_devant_1767034994217.jpg",
+        imageUrl: "/images/s_devant_1767034994217.jpg",
         galleryUrls: [
-          "attached_assets/s_devant_1767034994217.jpg",
-          "attached_assets/s2_1767034999895.jpg",
-          "attached_assets/s3_1767035002650.jpg",
-          "attached_assets/s4_1767035004807.jpg",
-          "attached_assets/s_arriere_1767035011532.jpg",
-          "attached_assets/cdda4d84-6306-43da-a681-fd4f8e1b5fb5_1767035032788.jpg"
+          "/images/s_devant_1767034994217.jpg",
+          "/images/s2_1767034999895.jpg",
+          "/images/s3_1767035002650.jpg",
+          "/images/s4_1767035004807.jpg",
+          "/images/s_arriere_1767035011532.jpg",
+          "/images/cdda4d84-6306-43da-a681-fd4f8e1b5fb5_1767035032788.jpg"
         ],
         power: "469 ch",
         transmission: "Automatique",
@@ -102,8 +102,8 @@ export async function registerRoutes(
       {
         model: "Peugeot 208 GT",
         pricePerDay: 80,
-        imageUrl: "attached_assets/riimka672-2025-11-22T19-11-59_1767035330155.jpg",
-        galleryUrls: ["attached_assets/riimka672-2025-11-22T19-11-59_1767035330155.jpg"],
+        imageUrl: "/images/riimka672-2025-11-22T19-11-59_1767035330155.jpg",
+        galleryUrls: ["/images/riimka672-2025-11-22T19-11-59_1767035330155.jpg"],
         power: "130 ch",
         transmission: "Automatique",
         options: ["Finition GT", "i-Cockpit 3D", "Caméra de recul", "Toit Black Diamond"],
