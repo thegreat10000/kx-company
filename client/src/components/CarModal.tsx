@@ -4,7 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { FaWhatsapp, FaSnapchatGhost } from "react-icons/fa";
-import { X, Check, Gauge, Cog, Zap } from "lucide-react";
+import { X, Check, Cog, Euro, Info } from "lucide-react";
+
+interface PricingStandard {
+  type: "standard";
+  prices: { duration: string; price: string; note: string }[];
+}
+
+interface PricingChauffeur {
+  type: "chauffeur";
+  basePrice: string;
+  note: string;
+  extra: string;
+}
+
+type PricingInfo = PricingStandard | PricingChauffeur;
 
 interface CarModalProps {
   car: Car | null;
@@ -77,22 +91,76 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-muted/30 p-4 rounded-xl">
-                <div className="flex items-center gap-2 text-muted-foreground mb-1">
-                  <Zap className="h-4 w-4" />
-                  <span className="text-xs font-medium uppercase tracking-wider">Puissance</span>
+            {car.pricingInfo ? (
+              <div className="space-y-4 mb-6">
+                <div className="bg-muted/30 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 text-muted-foreground mb-3">
+                    <Euro className="h-4 w-4" />
+                    <span className="text-xs font-medium uppercase tracking-wider">Tarification</span>
+                  </div>
+                  {(() => {
+                    try {
+                      const pricing: PricingInfo = JSON.parse(car.pricingInfo);
+                      if (pricing.type === "standard") {
+                        return (
+                          <div className="space-y-2">
+                            {pricing.prices.map((p, idx) => (
+                              <div key={idx} className="flex items-center justify-between">
+                                <span className="text-sm text-muted-foreground">{p.duration}</span>
+                                <div className="flex items-center gap-2">
+                                  <span className="font-bold text-foreground">{p.price}</span>
+                                  {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div className="space-y-3">
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-muted-foreground">Tarif</span>
+                              <span className="font-bold text-foreground text-lg">{pricing.basePrice}</span>
+                            </div>
+                            <p className="text-sm font-medium text-primary">{pricing.note}</p>
+                            <div className="flex items-start gap-2 bg-primary/10 p-3 rounded-lg">
+                              <Info className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                              <p className="text-xs text-muted-foreground">{pricing.extra}</p>
+                            </div>
+                          </div>
+                        );
+                      }
+                    } catch {
+                      return <span className="text-sm text-foreground">{car.pricePerDay}€/jour</span>;
+                    }
+                  })()}
                 </div>
-                <span className="font-semibold text-foreground">{car.power}</span>
-              </div>
-              <div className="bg-muted/30 p-4 rounded-xl">
-                <div className="flex items-center gap-2 text-muted-foreground mb-1">
-                  <Cog className="h-4 w-4" />
-                  <span className="text-xs font-medium uppercase tracking-wider">Boîte</span>
+                <div className="bg-muted/30 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                    <Cog className="h-4 w-4" />
+                    <span className="text-xs font-medium uppercase tracking-wider">Boîte</span>
+                  </div>
+                  <span className="font-semibold text-foreground">{car.transmission}</span>
                 </div>
-                <span className="font-semibold text-foreground">{car.transmission}</span>
               </div>
-            </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-muted/30 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                    <Euro className="h-4 w-4" />
+                    <span className="text-xs font-medium uppercase tracking-wider">Prix</span>
+                  </div>
+                  <span className="font-semibold text-foreground">{car.pricePerDay}€/jour</span>
+                </div>
+                <div className="bg-muted/30 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                    <Cog className="h-4 w-4" />
+                    <span className="text-xs font-medium uppercase tracking-wider">Boîte</span>
+                  </div>
+                  <span className="font-semibold text-foreground">{car.transmission}</span>
+                </div>
+              </div>
+            )}
 
             <div className="mb-8 flex-1">
               <h3 className="font-display text-lg font-bold mb-4">Options incluses</h3>
