@@ -44,18 +44,6 @@ export async function registerRoutes(
           conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
         },
         {
-          model: "Mercedes A35 AMG",
-          pricePerDay: 200,
-          imageUrl: "/images/a35-amg.jpg",
-          galleryUrls: ["/images/a35-amg.jpg"],
-          power: "306 ch",
-          transmission: "Automatique",
-          options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
-          category: "Sport",
-          caution: 5000,
-          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
-        },
-        {
           model: "Mercedes Classe S Maybach",
           pricePerDay: 900,
           imageUrl: "/images/classe-s-maybach.jpg",
@@ -66,6 +54,18 @@ export async function registerRoutes(
           category: "Luxe",
           caution: 5000,
           conditions: ["Avec chauffeur uniquement", "Prestation sur devis", "Strasbourg & alentours"]
+        },
+        {
+          model: "Mercedes A35 AMG",
+          pricePerDay: 200,
+          imageUrl: "/images/a35-amg.jpg",
+          galleryUrls: ["/images/a35-amg.jpg"],
+          power: "306 ch",
+          transmission: "Automatique",
+          options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
+          category: "Sport",
+          caution: 5000,
+          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
         }
       ];
 
