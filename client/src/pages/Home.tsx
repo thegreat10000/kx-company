@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ShieldCheck, Clock, Award } from "lucide-react";
 import { Car } from "@shared/schema";
 
+import { Link } from "wouter";
+
 export default function Home() {
   const { data: cars, isLoading, isError } = useCars();
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
@@ -32,10 +34,12 @@ export default function Home() {
                 Découvrez notre flotte de véhicules premium pour vos déplacements professionnels ou vos escapades le temps d'un week-end.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="rounded-full text-base px-8 h-12 shadow-lg shadow-primary/25">
-                  Voir le catalogue
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href="/catalogue">
+                  <Button size="lg" className="rounded-full text-base px-8 h-12 shadow-lg shadow-primary/25 w-full sm:w-auto">
+                    Voir le catalogue
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
                 <Button variant="outline" size="lg" className="rounded-full text-base px-8 h-12 border-2 hover:bg-muted/50">
                   Nous contacter
                 </Button>

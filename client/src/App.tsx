@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import Catalogue from "@/pages/Catalogue";
 
 // Create a wrapper for simple scroll-to-top behavior
 function ScrollToTop() {
@@ -18,7 +19,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/catalogue" component={Home} /> {/* Re-use home for now, as catalogue is on home */}
+      <Route path="/catalogue" component={Catalogue} />
       <Route component={NotFound} />
     </Switch>
   );
