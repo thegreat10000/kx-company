@@ -106,7 +106,7 @@ export default function Home() {
       <section className="py-20 bg-muted/30" id="catalogue">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Découvrez notre flotte de véhicules haut de gamme</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Découvrez notre sélection de véhicules sportifs de luxe.</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Réservez dès à présent votre prochaine escapade sur mesure avec nous.
             </p>
