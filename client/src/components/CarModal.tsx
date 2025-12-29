@@ -1,5 +1,5 @@
 import { Car } from "@shared/schema";
-import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogClose, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -36,6 +36,8 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl p-0 gap-0 overflow-hidden bg-background border-none shadow-2xl rounded-2xl md:rounded-3xl h-[100dvh] md:h-auto md:max-h-[90vh] flex flex-col md:block">
+        <DialogTitle className="sr-only">{car.model}</DialogTitle>
+        <DialogDescription className="sr-only">Détails et tarifs pour {car.model}</DialogDescription>
         
         <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-black/20 p-2 text-white hover:bg-black/40 backdrop-blur-sm transition-colors">
           <X className="h-5 w-5" />

@@ -31,9 +31,9 @@ export class MemoryStorage implements IStorage {
       transmission: insertCar.transmission,
       options: insertCar.options || [],
       category: insertCar.category,
-      caution: insertCar.caution,
+      caution: insertCar.caution ?? 5000,
       conditions: insertCar.conditions || [],
-      pricingInfo: insertCar.pricingInfo || null
+      pricingInfo: insertCar.pricingInfo ?? null
     };
     carsData.push(car);
     return car;
