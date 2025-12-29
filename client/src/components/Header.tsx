@@ -136,6 +136,18 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[80%] sm:w-[385px]">
               <div className="flex flex-col gap-6 mt-10">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-medium">Mode sombre</span>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full"
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  >
+                    <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                    <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  </Button>
+                </div>
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
