@@ -11,7 +11,9 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={logoPng} alt="KX Location" className="h-10 w-auto object-contain" />
+              <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-primary/20 bg-white flex items-center justify-center p-1">
+                <img src={logoPng} alt="KX Location" className="h-full w-full object-contain" />
+              </div>
               <span className="font-display text-xl font-bold tracking-tight">
                 KX <span className="text-primary">Location</span>
               </span>
