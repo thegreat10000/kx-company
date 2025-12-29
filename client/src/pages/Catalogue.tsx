@@ -4,12 +4,26 @@ import { type Car } from "@shared/schema";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Loader2, ArrowLeft, Car as CarIcon } from "lucide-react";
+import { Loader2, ArrowLeft, Car as CarIcon, Euro, Cog, Info } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { SiWhatsapp, SiSnapchat } from "react-icons/si";
+
+interface PricingStandard {
+  type: "standard";
+  prices: { duration: string; price: string; note: string }[];
+}
+
+interface PricingChauffeur {
+  type: "chauffeur";
+  basePrice: string;
+  note: string;
+  extra: string;
+}
+
+type PricingInfo = PricingStandard | PricingChauffeur;
 
 export default function Catalogue() {
   const { data: cars, isLoading } = useQuery<Car[]>({
@@ -65,7 +79,11 @@ export default function Catalogue() {
               <CardContent className="p-4 pt-0">
                 <p className="text-2xl font-bold text-primary">{car.pricePerDay}€<span className="text-sm font-normal text-muted-foreground">/jour</span></p>
                 <div className="mt-2 space-y-1 text-sm text-muted-foreground">
-                  <p>Puissance: {car.power}</p>
+                  {car.pricingInfo ? (
+                    <p className="flex items-center gap-1"><Euro className="h-3 w-3" /> Tarifs détaillés</p>
+                  ) : (
+                    <p>Puissance: {car.power}</p>
+                  )}
                   <p>Transmission: {car.transmission}</p>
                 </div>
               </CardContent>
@@ -114,16 +132,70 @@ export default function Catalogue() {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 rounded-lg bg-muted">
-                      <p className="text-sm text-muted-foreground">Puissance</p>
-                      <p className="font-semibold">{selectedCar.power}</p>
+                  {selectedCar.pricingInfo ? (
+                    <div className="space-y-3">
+                      <div className="p-4 rounded-lg bg-muted">
+                        <div className="flex items-center gap-2 text-primary mb-3">
+                          <Euro className="h-5 w-5" />
+                          <span className="text-sm font-bold uppercase tracking-wider">Tarification</span>
+                        </div>
+                        {(() => {
+                          try {
+                            const pricing: PricingInfo = JSON.parse(selectedCar.pricingInfo);
+                            if (pricing.type === "standard") {
+                              return (
+                                <div className="space-y-2">
+                                  {pricing.prices.map((p, idx) => (
+                                    <div key={idx} className="flex items-center justify-between py-1 border-b border-border/30 last:border-0">
+                                      <span className="text-sm font-medium">{p.duration}</span>
+                                      <div className="flex items-center gap-2">
+                                        <span className="font-bold text-primary text-lg">{p.price}</span>
+                                        {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              );
+                            } else {
+                              return (
+                                <div className="space-y-3">
+                                  <div className="flex items-center justify-between py-1">
+                                    <span className="text-sm font-medium">Tarif</span>
+                                    <span className="font-bold text-primary text-xl">{pricing.basePrice}</span>
+                                  </div>
+                                  <p className="text-sm font-semibold text-primary">{pricing.note}</p>
+                                  <div className="flex items-start gap-2 bg-primary/10 p-3 rounded-lg mt-2">
+                                    <Info className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                                    <p className="text-sm text-muted-foreground">{pricing.extra}</p>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          } catch {
+                            return <span className="text-sm">{selectedCar.pricePerDay}€/jour</span>;
+                          }
+                        })()}
+                      </div>
+                      <div className="p-4 rounded-lg bg-muted">
+                        <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                          <Cog className="h-4 w-4" />
+                          <span className="text-xs font-medium uppercase tracking-wider">Transmission</span>
+                        </div>
+                        <p className="font-semibold">{selectedCar.transmission}</p>
+                      </div>
                     </div>
-                    <div className="p-4 rounded-lg bg-muted">
-                      <p className="text-sm text-muted-foreground">Transmission</p>
-                      <p className="font-semibold">{selectedCar.transmission}</p>
+                  ) : (
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="p-4 rounded-lg bg-muted">
+                        <p className="text-sm text-muted-foreground">Puissance</p>
+                        <p className="font-semibold">{selectedCar.power}</p>
+                      </div>
+                      <div className="p-4 rounded-lg bg-muted">
+                        <p className="text-sm text-muted-foreground">Transmission</p>
+                        <p className="font-semibold">{selectedCar.transmission}</p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 <div className="space-y-6">
