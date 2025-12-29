@@ -81,8 +81,8 @@ export async function registerRoutes(
       {
         model: "Mercedes A35 AMG",
         pricePerDay: 200,
-        imageUrl: "/images/a35-amg.jpg",
-        galleryUrls: ["/images/a35-amg.jpg"],
+        imageUrl: "/images/a35_amg.png",
+        galleryUrls: ["/images/a35_amg.png"],
         power: "306 ch",
         transmission: "Automatique",
         options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
