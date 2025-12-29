@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { SiWhatsapp, SiSnapchat } from "react-icons/si";
 
+import logoPng from "@assets/generated_images/luxury_automotive_logo_kx_location.png";
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -61,20 +63,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center space-x-2 group">
-          <div className="bg-primary p-1.5 rounded-lg group-hover:bg-primary/90 transition-colors">
-            <Car className="h-5 w-5 text-white" />
-          </div>
-          <span className="font-display text-xl font-bold tracking-tight text-foreground">
-            KX <span className="text-primary">Location</span>
-          </span>
+          <img src={logoPng} alt="KX Location" className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           <NavLinks />
-          <Button size="sm" className="rounded-full px-6 font-semibold shadow-lg shadow-primary/20">
+          <Button size="sm" className="rounded-full px-6 font-semibold shadow-lg shadow-primary/20" onClick={() => window.open('tel:0677727957')}>
             <Phone className="mr-2 h-4 w-4" />
-            07 12 34 56 78
+            06 77 72 79 57
           </Button>
         </nav>
 
@@ -99,7 +96,7 @@ export function Header() {
                   Contact
                 </Link>
                 <div className="border-t pt-6">
-                  <Button className="w-full rounded-full" size="lg">
+                  <Button className="w-full rounded-full" size="lg" onClick={() => window.open('tel:0677727957')}>
                     <Phone className="mr-2 h-4 w-4" />
                     Appeler maintenant
                   </Button>
