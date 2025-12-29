@@ -83,19 +83,13 @@ export default function Catalogue() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
                 <div className="space-y-4">
-                  <Carousel className="w-full">
-                    <CarouselContent>
-                      {selectedCar.galleryUrls.map((url, index) => (
-                        <CarouselItem key={index}>
-                          <div className="aspect-video relative rounded-lg overflow-hidden">
-                            <img src={url} alt={`${selectedCar.model} view ${index + 1}`} className="object-cover w-full h-full" />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-2" />
-                    <CarouselNext className="right-2" />
-                  </Carousel>
+                  <div className="aspect-video relative rounded-lg overflow-hidden">
+                    <img 
+                      src={selectedCar.imageUrl} 
+                      alt={selectedCar.model} 
+                      className="object-cover w-full h-full" 
+                    />
+                  </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="p-4 rounded-lg bg-muted">

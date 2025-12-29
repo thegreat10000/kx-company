@@ -28,43 +28,13 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
         <div className="grid md:grid-cols-2 h-full md:h-auto overflow-y-auto md:overflow-visible">
           {/* Left: Gallery */}
           <div className="relative bg-muted/30 min-h-[300px] md:h-full flex items-center justify-center">
-            <Carousel className="w-full h-full">
-              <CarouselContent>
-                {/* Main image first */}
-                <CarouselItem className="h-full">
-                  <div className="relative aspect-[4/3] md:aspect-auto md:h-full w-full h-full overflow-hidden">
-                    <img 
-                      src={car.imageUrl} 
-                      alt={car.model} 
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                </CarouselItem>
-                {/* Gallery images */}
-                {car.galleryUrls.map((url, idx) => (
-                  <CarouselItem key={idx} className="h-full">
-                    <div className="relative aspect-[4/3] md:aspect-auto md:h-full w-full h-full overflow-hidden">
-                      <img 
-                        src={url} 
-                        alt={`${car.model} view ${idx + 1}`} 
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              {/* Controls visible on hover/focus only on desktop, always on mobile if > 1 image */}
-              {(car.galleryUrls.length > 0) && (
-                <>
-                  <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                    <CarouselPrevious className="relative left-0 bg-white/80 hover:bg-white border-none shadow-lg" />
-                  </div>
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                    <CarouselNext className="relative right-0 bg-white/80 hover:bg-white border-none shadow-lg" />
-                  </div>
-                </>
-              )}
-            </Carousel>
+            <div className="relative aspect-[4/3] md:aspect-auto md:h-full w-full h-full overflow-hidden">
+              <img 
+                src={car.imageUrl} 
+                alt={car.model} 
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
 
           {/* Right: Details */}
