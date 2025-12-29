@@ -38,11 +38,6 @@ export default function Catalogue() {
           <h1 className="text-3xl font-bold">Nos Véhicules</h1>
         </div>
 
-        <p className="text-xl text-muted-foreground max-w-2xl mb-12">
-          Avec KX Location, louer un véhicule devient une expérience d'exception. 
-          Embrassez le prestige et l'élégance.
-        </p>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {cars?.map((car) => {
             const imageUrl = car.imageUrl.startsWith('attached_assets/') 
@@ -75,7 +70,7 @@ export default function Catalogue() {
                 </div>
               </CardContent>
               <CardFooter className="p-4 border-t">
-                <Button variant="secondary" className="w-full bg-slate-700 hover:bg-slate-600 text-white border-none shadow-md">Voir les détails</Button>
+                <Button className="w-full">Voir les détails</Button>
               </CardFooter>
             </Card>
           );
