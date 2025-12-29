@@ -108,7 +108,8 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Découvrez notre sélection de véhicules sportifs de luxe.</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Réservez dès à présent votre prochaine escapade sur mesure avec nous.
+              Avec KX Location, louer un véhicule devient une expérience d'exception. 
+              Embrassez le prestige et l'élégance.
             </p>
           </div>
 
