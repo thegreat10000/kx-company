@@ -45,6 +45,18 @@ export async function registerRoutes(
         conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
       },
       {
+        model: "Peugeot 208 GT",
+        pricePerDay: 80,
+        imageUrl: "attached_assets/riimka672-2025-11-22T19-11-59_1767035330155.jpg",
+        galleryUrls: ["attached_assets/riimka672-2025-11-22T19-11-59_1767035330155.jpg"],
+        power: "130 ch",
+        transmission: "Automatique",
+        options: ["Finition GT", "i-Cockpit 3D", "Caméra de recul", "Toit Black Diamond"],
+        category: "",
+        caution: 2000,
+        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
+      },
+      {
         model: "Mercedes Classe S Maybach",
         pricePerDay: 900,
         imageUrl: "attached_assets/s_devant_1767034994217.jpg",

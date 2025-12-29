@@ -67,7 +67,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
           {/* Right: Details */}
           <div className="p-6 md:p-8 flex flex-col h-full">
             <div className="mb-6">
-              <Badge className="mb-3" variant="outline">{car.category}</Badge>
+              {car.category && <Badge className="mb-3" variant="outline">{car.category}</Badge>}
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
                 {car.model}
               </h2>
