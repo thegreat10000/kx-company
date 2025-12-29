@@ -10,6 +10,7 @@ import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 import logoPng from "@assets/image_1767024778246.png";
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   const ContactInfo = () => (
