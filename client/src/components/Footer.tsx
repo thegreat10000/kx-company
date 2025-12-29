@@ -1,6 +1,6 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoPng from "@assets/generated_images/minimalist_kx_app_icon_logo_grey.png";
+import logoPng from "@assets/generated_images/luxury_automotive_logo_kx_location.png";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={logoPng} alt="KX Location" className="h-10 w-auto object-contain brightness-0 invert" />
+              <img src={logoPng} alt="KX Location" className="h-10 w-auto object-contain" />
               <span className="font-display text-xl font-bold tracking-tight">
                 KX <span className="text-primary">Location</span>
               </span>
