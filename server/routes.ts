@@ -46,8 +46,15 @@ export async function registerRoutes(
         {
           model: "Mercedes Classe S Maybach",
           pricePerDay: 900,
-          imageUrl: "/images/classe-s-maybach.jpg",
-          galleryUrls: ["/images/classe-s-maybach.jpg"],
+          imageUrl: "attached_assets/s_devant_1767034994217.jpg",
+          galleryUrls: [
+            "attached_assets/s_devant_1767034994217.jpg",
+            "attached_assets/s2_1767034999895.jpg",
+            "attached_assets/s3_1767035002650.jpg",
+            "attached_assets/s4_1767035004807.jpg",
+            "attached_assets/s_arriere_1767035011532.jpg",
+            "attached_assets/cdda4d84-6306-43da-a681-fd4f8e1b5fb5_1767035032788.jpg"
+          ],
           power: "469 ch",
           transmission: "Automatique",
           options: ["Chauffeur Uniquement", "Accompagnement Complet", "Cortège Mairie", "Salon VIP"],
