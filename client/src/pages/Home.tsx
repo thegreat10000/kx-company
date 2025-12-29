@@ -108,7 +108,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Notre Flotte</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Découvrez nos véhicules et plongez dans le luxe ultime en réservant dès maintenant votre voiture de prestige et transformez chaque trajet en expérience inoubliable de puissance et d'élégance.
+              Découvrez notre véhicules et réservez dès maintenant votre prochaine virée.
             </p>
           </div>
 
