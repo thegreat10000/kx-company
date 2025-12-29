@@ -9,6 +9,10 @@ interface CarCardProps {
 }
 
 export function CarCard({ car, onClick }: CarCardProps) {
+  const imageUrl = car.imageUrl.startsWith('attached_assets/') 
+    ? `/@fs/home/runner/workspace/${car.imageUrl}` 
+    : car.imageUrl;
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -26,7 +30,7 @@ export function CarCard({ car, onClick }: CarCardProps) {
           </Badge>
         </div>
         <img 
-          src={car.imageUrl} 
+          src={imageUrl} 
           alt={car.model}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />

@@ -39,7 +39,11 @@ export default function Catalogue() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {cars?.map((car) => (
+          {cars?.map((car) => {
+            const imageUrl = car.imageUrl.startsWith('attached_assets/') 
+              ? `/@fs/home/runner/workspace/${car.imageUrl}` 
+              : car.imageUrl;
+            return (
             <Card 
               key={car.id} 
               className="overflow-hidden hover-elevate cursor-pointer"
@@ -47,7 +51,7 @@ export default function Catalogue() {
             >
               <div className="aspect-video relative overflow-hidden">
                 <img 
-                  src={car.imageUrl} 
+                  src={imageUrl} 
                   alt={car.model}
                   className="object-cover w-full h-full"
                 />
@@ -69,7 +73,8 @@ export default function Catalogue() {
                 <Button className="w-full">Voir les détails</Button>
               </CardFooter>
             </Card>
-          ))}
+          );
+          })}
           {/* Empty slots for future additions */}
           {Array(3).fill(0).map((_, i) => (
             <Card key={`empty-${i}`} className="overflow-hidden border-2 border-dashed border-muted flex flex-col items-center justify-center min-h-[300px] bg-muted/5 opacity-50">
@@ -89,7 +94,11 @@ export default function Catalogue() {
 
       <Dialog open={!!selectedCar} onOpenChange={() => setSelectedCar(null)}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-          {selectedCar && (
+          {selectedCar && (() => {
+            const selectedImageUrl = selectedCar.imageUrl.startsWith('attached_assets/') 
+              ? `/@fs/home/runner/workspace/${selectedCar.imageUrl}` 
+              : selectedCar.imageUrl;
+            return (
             <>
               <DialogHeader>
                 <DialogTitle className="text-2xl">{selectedCar.model}</DialogTitle>
@@ -99,7 +108,7 @@ export default function Catalogue() {
                 <div className="space-y-4">
                   <div className="aspect-video relative rounded-lg overflow-hidden">
                     <img 
-                      src={selectedCar.imageUrl} 
+                      src={selectedImageUrl} 
                       alt={selectedCar.model} 
                       className="object-cover w-full h-full" 
                     />
@@ -165,7 +174,8 @@ export default function Catalogue() {
                 </div>
               </div>
             </>
-          )}
+          );
+          })()}
         </DialogContent>
       </Dialog>
     </div>
