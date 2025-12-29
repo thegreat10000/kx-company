@@ -81,9 +81,7 @@ export default function Catalogue() {
                 <div className="mt-2 space-y-1 text-sm text-muted-foreground">
                   {car.pricingInfo ? (
                     <p className="flex items-center gap-1"><Euro className="h-3 w-3" /> Tarifs détaillés</p>
-                  ) : (
-                    <p>Puissance: {car.power}</p>
-                  )}
+                  ) : null}
                   <p>Transmission: {car.transmission}</p>
                 </div>
               </CardContent>
@@ -185,11 +183,7 @@ export default function Catalogue() {
                       </div>
                     </div>
                   ) : (
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="p-4 rounded-lg bg-muted">
-                        <p className="text-sm text-muted-foreground">Puissance</p>
-                        <p className="font-semibold">{selectedCar.power}</p>
-                      </div>
+                    <div className="grid grid-cols-1 gap-4">
                       <div className="p-4 rounded-lg bg-muted">
                         <p className="text-sm text-muted-foreground">Transmission</p>
                         <p className="font-semibold">{selectedCar.transmission}</p>
