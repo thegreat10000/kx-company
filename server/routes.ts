@@ -102,8 +102,8 @@ export async function registerRoutes(
       {
         model: "Peugeot 208 GT",
         pricePerDay: 80,
-        imageUrl: "/images/riimka672-2025-11-22T19-11-59_1767035330155.jpg",
-        galleryUrls: ["/images/riimka672-2025-11-22T19-11-59_1767035330155.jpg"],
+        imageUrl: "/images/peugeot_208_gt.png",
+        galleryUrls: ["/images/peugeot_208_gt.png"],
         power: "130 ch",
         transmission: "Automatique",
         options: ["Finition GT", "i-Cockpit 3D", "Caméra de recul", "Toit Black Diamond"],
