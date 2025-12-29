@@ -1,6 +1,6 @@
 import { Car } from "@shared/schema";
 import { Badge } from "@/components/ui/badge";
-import { Gauge, Zap } from "lucide-react";
+import { Cog, Euro } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface CarCardProps {
@@ -24,11 +24,13 @@ export function CarCard({ car, onClick }: CarCardProps) {
     >
       {/* Image Container */}
       <div className="aspect-[4/3] overflow-hidden bg-muted/20 relative">
-        <div className="absolute top-3 left-3 z-10">
-          <Badge variant="secondary" className="bg-white/90 backdrop-blur text-foreground font-semibold shadow-sm">
-            {car.category}
-          </Badge>
-        </div>
+        {car.category && (
+          <div className="absolute top-3 left-3 z-10">
+            <Badge variant="secondary" className="bg-white/90 backdrop-blur text-foreground font-semibold shadow-sm">
+              {car.category}
+            </Badge>
+          </div>
+        )}
         <img 
           src={imageUrl} 
           alt={car.model}
@@ -53,11 +55,11 @@ export function CarCard({ car, onClick }: CarCardProps) {
 
         <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-1.5">
-            <Zap className="h-4 w-4" />
-            <span>{car.power}</span>
+            <Euro className="h-4 w-4 text-primary" />
+            <span>Tarifs détaillés</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <Gauge className="h-4 w-4" />
+            <Cog className="h-4 w-4" />
             <span>{car.transmission}</span>
           </div>
         </div>

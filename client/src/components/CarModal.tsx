@@ -87,6 +87,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
                 {car.model}
               </h2>
+              {/* Force refresh trigger: 1767038280 */}
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-primary">{car.pricePerDay}€</span>
                 <span className="text-muted-foreground font-medium">/ jour</span>
