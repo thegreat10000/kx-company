@@ -1,12 +1,12 @@
 import { Link } from "wouter";
-import { Car, Menu, Phone, MessageSquare } from "lucide-react";
+import { Menu, Phone, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { SiWhatsapp, SiSnapchat } from "react-icons/si";
+import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 
-import logoPng from "@assets/generated_images/luxury_automotive_logo_kx_location.png";
+import logoPng from "@assets/generated_images/minimalist_kx_app_icon_logo_grey.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +27,13 @@ export function Header() {
         >
           <SiSnapchat className="mr-3 h-6 w-6" />
           Snapchat: RIIMKA672
+        </Button>
+        <Button 
+          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
+          onClick={() => window.open('https://instagram.com/kx.location', '_blank')}
+        >
+          <SiInstagram className="mr-3 h-6 w-6" />
+          Instagram: kx.location
         </Button>
       </div>
       <div className="text-center text-muted-foreground">
