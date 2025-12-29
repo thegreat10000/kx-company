@@ -4,7 +4,7 @@ import { type Car } from "@shared/schema";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Loader2, ArrowLeft } from "lucide-react";
+import { Loader2, ArrowLeft, Car as CarIcon } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -75,7 +75,7 @@ export default function Catalogue() {
             <Card key={`empty-${i}`} className="overflow-hidden border-2 border-dashed border-muted flex flex-col items-center justify-center min-h-[300px] bg-muted/5 opacity-50">
               <div className="p-8 text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-muted/20 flex items-center justify-center mx-auto">
-                  <Car className="w-8 h-8 text-muted-foreground" />
+                  <CarIcon className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <div className="space-y-2">
                   <p className="font-semibold text-muted-foreground">Bientôt disponible</p>

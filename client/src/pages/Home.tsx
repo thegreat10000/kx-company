@@ -8,11 +8,12 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ShieldCheck, Clock, Award } from "lucide-react";
 import { Car } from "@shared/schema";
 
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export default function Home() {
   const { data: cars, isLoading, isError } = useCars();
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+  const [, setLocation] = useLocation();
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -125,7 +126,7 @@ export default function Home() {
                 <CarCard 
                   key={car.id} 
                   car={car} 
-                  onClick={setSelectedCar} 
+                  onClick={() => setLocation(`/catalogue?id=${car.id}`)} 
                 />
               ))
             )}
