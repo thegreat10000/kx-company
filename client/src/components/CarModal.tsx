@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { FaWhatsapp, FaSnapchatGhost } from "react-icons/fa";
+import { FaWhatsapp, FaSnapchatGhost, FaInstagram } from "react-icons/fa";
 import { X, Check, Gauge, Cog, Zap } from "lucide-react";
 
 interface CarModalProps {
@@ -121,6 +121,14 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
               >
                 <FaSnapchatGhost className="mr-2 h-5 w-5" />
                 Réserver via Snapchat
+              </Button>
+              <Button 
+                className="w-full h-12 text-base font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
+                variant="outline"
+                onClick={() => window.open('https://instagram.com/kx.location', '_blank')}
+              >
+                <FaInstagram className="mr-2 h-5 w-5" />
+                Réserver via Instagram
               </Button>
             </div>
           </div>
