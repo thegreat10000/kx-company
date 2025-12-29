@@ -206,7 +206,7 @@ export default function Catalogue() {
                     <h3 className="text-lg font-semibold">Conditions & Caution</h3>
                     <div className="bg-muted p-4 rounded-lg space-y-2">
                       <p className="font-bold text-destructive flex items-center gap-2">
-                        Caution: 5.000€
+                        Caution: {selectedCar.caution ? `${selectedCar.caution.toLocaleString()}€` : "5.000€"}
                       </p>
                       <ul className="text-sm text-muted-foreground space-y-1">
                         {selectedCar.conditions?.map((condition, index) => (
