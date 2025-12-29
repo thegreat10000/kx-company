@@ -153,10 +153,7 @@ export function Header() {
                     <SiInstagram className="mr-2 h-5 w-5" />
                     Instagram: kx.location
                   </Button>
-                  <Button className="w-full rounded-full" size="lg" onClick={() => window.open('tel:0677727957')}>
-                    <Phone className="mr-2 h-4 w-4" />
-                    Appeler maintenant
-                  </Button>
+                  <p className="text-center text-sm text-muted-foreground pt-4">© 2025 KX Location. Tous droits réservés.</p>
                 </div>
               </div>
             </SheetContent>

@@ -31,8 +31,15 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isOpen && contentRef.current) {
-      contentRef.current.scrollTop = 0;
+    if (isOpen) {
+      // Use setTimeout to ensure DOM is fully rendered
+      setTimeout(() => {
+        if (contentRef.current) {
+          contentRef.current.scrollTop = 0;
+        }
+        // Also scroll window to top in case the page scrolled
+        window.scrollTo(0, 0);
+      }, 50);
     }
   }, [isOpen, car]);
 
