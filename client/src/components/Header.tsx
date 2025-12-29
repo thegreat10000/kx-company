@@ -120,10 +120,39 @@ export function Header() {
                 <Link href="/catalogue" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                   Nos Véhicules
                 </Link>
-                <Link href="#contact" onClick={() => setIsOpen(false)} className="text-lg font-medium">
-                  Contact
-                </Link>
-                <div className="border-t pt-6">
+                
+                <div className="border-t pt-6 space-y-4">
+                  <p className="text-lg font-medium">Contact</p>
+                  <Button 
+                    className="w-full h-12 font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white"
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.open('https://wa.me/33677727957', '_blank');
+                    }}
+                  >
+                    <SiWhatsapp className="mr-2 h-5 w-5" />
+                    WhatsApp: 06 77 72 79 57
+                  </Button>
+                  <Button 
+                    className="w-full h-12 font-semibold bg-[#FFFC00] hover:bg-[#EBE800] text-black border-none"
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.open('https://snapchat.com/add/RIIMKA672', '_blank');
+                    }}
+                  >
+                    <SiSnapchat className="mr-2 h-5 w-5" />
+                    Snapchat: RIIMKA672
+                  </Button>
+                  <Button 
+                    className="w-full h-12 font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white border-none"
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.open('https://instagram.com/kx.location', '_blank');
+                    }}
+                  >
+                    <SiInstagram className="mr-2 h-5 w-5" />
+                    Instagram: kx.location
+                  </Button>
                   <Button className="w-full rounded-full" size="lg" onClick={() => window.open('tel:0677727957')}>
                     <Phone className="mr-2 h-4 w-4" />
                     Appeler maintenant

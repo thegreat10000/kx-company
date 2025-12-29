@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Car } from "@shared/schema";
 import { Dialog, DialogContent, DialogClose, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,14 @@ interface CarModalProps {
 }
 
 export function CarModal({ car, isOpen, onClose }: CarModalProps) {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isOpen && contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  }, [isOpen, car]);
+
   if (!car) return null;
 
   const images = car.galleryUrls && car.galleryUrls.length > 0 
@@ -44,7 +53,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
           <span className="sr-only">Fermer</span>
         </DialogClose>
 
-        <div className="grid md:grid-cols-2 h-full md:h-auto overflow-y-auto md:overflow-visible">
+        <div ref={contentRef} className="grid md:grid-cols-2 h-full md:h-auto overflow-y-auto md:overflow-visible">
           {/* Left: Gallery */}
           <div className="relative bg-muted/30 min-h-[300px] md:h-full flex items-center justify-center group/gallery">
             <div className="relative aspect-[4/3] md:aspect-auto md:h-full w-full h-full overflow-hidden">
