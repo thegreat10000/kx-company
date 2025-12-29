@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 
-import logoPng from "@assets/generated_images/luxury_automotive_logo_kx_location.png";
+import logoPng from "@assets/generated_images/pink_and_black_luxury_logo_kx.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);

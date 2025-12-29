@@ -1,6 +1,6 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoPng from "@assets/generated_images/luxury_automotive_logo_kx_location.png";
+import logoPng from "@assets/generated_images/pink_and_black_luxury_logo_kx.png";
 
 export function Footer() {
   return (
