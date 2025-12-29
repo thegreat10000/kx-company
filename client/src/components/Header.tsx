@@ -47,6 +47,9 @@ export function Header() {
       <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
         Accueil
       </Link>
+      <Link href="/informations" className="text-sm font-medium hover:text-primary transition-colors">
+        Informations
+      </Link>
       <Link href="/catalogue" className="text-sm font-medium hover:text-primary transition-colors">
         Nos Véhicules
       </Link>
@@ -98,6 +101,9 @@ export function Header() {
               <div className="flex flex-col gap-6 mt-10">
                 <Link href="/" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                   Accueil
+                </Link>
+                <Link href="/informations" onClick={() => setIsOpen(false)} className="text-lg font-medium">
+                  Informations
                 </Link>
                 <Link href="/catalogue" onClick={() => setIsOpen(false)} className="text-lg font-medium">
                   Nos Véhicules

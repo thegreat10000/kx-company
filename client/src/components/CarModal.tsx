@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { FaWhatsapp, FaSnapchatGhost } from "react-icons/fa";
 import { X, Check, Gauge, Cog, Zap, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
 
 interface CarModalProps {
   car: Car | null;
@@ -14,16 +13,11 @@ interface CarModalProps {
 }
 
 export function CarModal({ car, isOpen, onClose }: CarModalProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   if (!car) return null;
 
   const images = car.galleryUrls && car.galleryUrls.length > 0 
     ? car.galleryUrls.map(url => url.startsWith('attached_assets/') ? `/@fs/home/runner/workspace/${url}` : url)
     : [car.imageUrl.startsWith('attached_assets/') ? `/@fs/home/runner/workspace/${car.imageUrl}` : car.imageUrl];
-
-  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
