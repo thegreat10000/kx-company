@@ -18,7 +18,9 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
 
   if (!car) return null;
 
-  const images = car.galleryUrls && car.galleryUrls.length > 0 ? car.galleryUrls : [car.imageUrl];
+  const images = car.galleryUrls && car.galleryUrls.length > 0 
+    ? car.galleryUrls.map(url => url.startsWith('attached_assets/') ? `/@fs/home/runner/workspace/${url}` : url)
+    : [car.imageUrl.startsWith('attached_assets/') ? `/@fs/home/runner/workspace/${car.imageUrl}` : car.imageUrl];
 
   const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
