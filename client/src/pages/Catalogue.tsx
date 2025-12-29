@@ -113,16 +113,36 @@ export default function Catalogue() {
                     </div>
                   </div>
 
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-semibold">Conditions & Caution</h3>
+                    <div className="bg-muted p-4 rounded-lg space-y-2">
+                      <p className="font-bold text-destructive flex items-center gap-2">
+                        Caution: 5.000€
+                      </p>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        {selectedCar.conditions?.map((condition, index) => (
+                          <li key={index}>• {condition}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
                   <div className="p-6 rounded-xl border-2 border-primary/10 bg-primary/5">
                     <p className="text-3xl font-bold text-primary mb-1">{selectedCar.pricePerDay}€ <span className="text-base font-normal text-muted-foreground">/ jour</span></p>
                     <p className="text-sm text-muted-foreground mb-6">Assurance tous risques incluse</p>
                     
                     <div className="space-y-3">
-                      <Button className="w-full h-12 gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white">
+                      <Button 
+                        className="w-full h-12 gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white"
+                        onClick={() => window.open(`https://wa.me/33753641249?text=Bonjour, je souhaite réserver la ${selectedCar.model}`, '_blank')}
+                      >
                         <SiWhatsapp className="w-5 h-5" />
                         Réserver via WhatsApp
                       </Button>
-                      <Button className="w-full h-12 gap-2 bg-[#FFFC00] hover:bg-[#e6e300] text-black">
+                      <Button 
+                        className="w-full h-12 gap-2 bg-[#FFFC00] hover:bg-[#e6e300] text-black"
+                        onClick={() => window.open('https://snapchat.com/add/kx-location', '_blank')}
+                      >
                         <SiSnapchat className="w-5 h-5" />
                         Réserver via Snapchat
                       </Button>

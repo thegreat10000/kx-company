@@ -1,11 +1,37 @@
 import { Link } from "wouter";
-import { Car, Menu, Phone } from "lucide-react";
+import { Car, Menu, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { SiWhatsapp, SiSnapchat } from "react-icons/si";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const ContactInfo = () => (
+    <div className="space-y-6 py-4">
+      <div className="flex flex-col gap-4">
+        <Button 
+          className="w-full h-14 text-lg font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
+          onClick={() => window.open('https://wa.me/33753641249', '_blank')}
+        >
+          <SiWhatsapp className="mr-3 h-6 w-6" />
+          WhatsApp: 07 53 64 12 49
+        </Button>
+        <Button 
+          className="w-full h-14 text-lg font-semibold bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
+          onClick={() => window.open('https://snapchat.com/add/kx-location', '_blank')}
+        >
+          <SiSnapchat className="mr-3 h-6 w-6" />
+          Snapchat: kx-location
+        </Button>
+      </div>
+      <div className="text-center text-muted-foreground">
+        <p>Disponible 24/7 pour vos réservations à Strasbourg</p>
+      </div>
+    </div>
+  );
 
   const NavLinks = () => (
     <>
@@ -15,9 +41,19 @@ export function Header() {
       <Link href="/catalogue" className="text-sm font-medium hover:text-primary transition-colors">
         Nos Véhicules
       </Link>
-      <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-        Contact
-      </Link>
+      <Dialog>
+        <DialogTrigger asChild>
+          <button className="text-sm font-medium hover:text-primary transition-colors">
+            Contact
+          </button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center">Contactez KX Location</DialogTitle>
+          </DialogHeader>
+          <ContactInfo />
+        </DialogContent>
+      </Dialog>
     </>
   );
 

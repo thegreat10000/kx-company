@@ -29,53 +29,49 @@ export async function registerRoutes(
           model: "Mercedes Classe E",
           pricePerDay: 120,
           imageUrl: "/images/classe-e.jpg",
-          galleryUrls: [
-            "/images/classe-e.jpg",
-            "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=800"
-          ],
+          galleryUrls: ["/images/classe-e.jpg"],
           power: "194 ch",
           transmission: "Automatique",
           options: ["GPS", "Toit ouvrant", "Sièges chauffants", "Bluetooth"],
-          category: "Luxe"
+          category: "Luxe",
+          caution: 5000,
+          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile", "Pièce d'identité"]
         },
         {
           model: "Mercedes Classe S",
           pricePerDay: 250,
           imageUrl: "/images/classe-s.webp",
-          galleryUrls: [
-            "/images/classe-s.webp",
-            "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=800"
-          ],
+          galleryUrls: ["/images/classe-s.webp"],
           power: "286 ch",
           transmission: "Automatique",
           options: ["Massage", "Son Burmester", "Night Vision", "Pack Chauffeur"],
-          category: "Luxe"
+          category: "Luxe",
+          caution: 5000,
+          conditions: ["Âge minimum 25 ans", "Permis de conduire > 3 ans", "Justificatif de domicile", "Pièce d'identité"]
         },
         {
           model: "Renault Clio 5",
           pricePerDay: 45,
           imageUrl: "/images/clio-5.jpg",
-          galleryUrls: [
-            "/images/clio-5.jpg",
-            "https://images.unsplash.com/photo-1635783888365-d601b0f5b9d2?auto=format&fit=crop&q=80&w=800"
-          ],
+          galleryUrls: ["/images/clio-5.jpg"],
           power: "100 ch",
           transmission: "Manuelle",
           options: ["Climatisation", "CarPlay", "Régulateur", "Caméra de recul"],
-          category: "Citadine"
+          category: "Citadine",
+          caution: 5000,
+          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile", "Pièce d'identité"]
         },
         {
           model: "Audi A6 S-Line",
           pricePerDay: 110,
-          imageUrl: "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&q=80&w=800",
-          galleryUrls: [
-            "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1541443131876-44b03de101c5?auto=format&fit=crop&q=80&w=800"
-          ],
+          imageUrl: "/images/audi-a6.jpg",
+          galleryUrls: ["/images/audi-a6.jpg"],
           power: "204 ch",
           transmission: "Automatique",
           options: ["Virtual Cockpit", "Matrix LED", "Lane Assist", "Cuir"],
-          category: "Luxe"
+          category: "Luxe",
+          caution: 5000,
+          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile", "Pièce d'identité"]
         }
       ];
 

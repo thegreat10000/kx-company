@@ -12,6 +12,8 @@ export const cars = pgTable("cars", {
   transmission: text("transmission").notNull(),
   options: text("options").array().notNull(),
   category: text("category").notNull(), // e.g., 'Luxury', 'City', 'Sport'
+  caution: integer("caution").default(5000),
+  conditions: text("conditions").array(),
 });
 
 export const insertCarSchema = createInsertSchema(cars).omit({ id: true });
