@@ -70,6 +70,20 @@ export default function Catalogue() {
               </CardFooter>
             </Card>
           ))}
+          {/* Empty slots for future additions */}
+          {Array(3).fill(0).map((_, i) => (
+            <Card key={`empty-${i}`} className="overflow-hidden border-2 border-dashed border-muted flex flex-col items-center justify-center min-h-[300px] bg-muted/5 opacity-50">
+              <div className="p-8 text-center space-y-4">
+                <div className="w-16 h-16 rounded-full bg-muted/20 flex items-center justify-center mx-auto">
+                  <Car className="w-8 h-8 text-muted-foreground" />
+                </div>
+                <div className="space-y-2">
+                  <p className="font-semibold text-muted-foreground">Bientôt disponible</p>
+                  <p className="text-sm text-muted-foreground/60">Nouvel arrivage KX Location</p>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
 

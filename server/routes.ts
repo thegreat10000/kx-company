@@ -60,18 +60,6 @@ export async function registerRoutes(
           category: "Luxe",
           caution: 5000,
           conditions: ["Avec chauffeur uniquement", "Prestation sur devis", "Strasbourg & alentours"]
-        },
-        {
-          model: "Renault Clio 5",
-          pricePerDay: 45,
-          imageUrl: "/images/clio-5.jpg",
-          galleryUrls: ["/images/clio-5.jpg"],
-          power: "100 ch",
-          transmission: "Manuelle",
-          options: ["Climatisation", "CarPlay", "Régulateur", "Caméra de recul"],
-          category: "Citadine",
-          caution: 5000,
-          conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"]
         }
       ];
 

@@ -111,30 +111,25 @@ export default function Home() {
             </p>
           </div>
 
-          {isLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {[1, 2, 3, 4].map((i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {isLoading ? (
+              [1, 2, 3].map((i) => (
                 <div key={i} className="h-[340px] bg-muted animate-pulse rounded-2xl" />
-              ))}
-            </div>
-          ) : isError ? (
-            <div className="text-center py-20 bg-white rounded-3xl border shadow-sm">
-              <p className="text-destructive font-medium">Une erreur est survenue lors du chargement des véhicules.</p>
-              <Button onClick={() => window.location.reload()} variant="link" className="mt-2">
-                Réessayer
-              </Button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              {cars?.map((car) => (
+              ))
+            ) : isError ? (
+              <div className="col-span-full text-center py-10">
+                <p className="text-destructive">Erreur de chargement</p>
+              </div>
+            ) : (
+              cars?.slice(0, 3).map((car) => (
                 <CarCard 
                   key={car.id} 
                   car={car} 
                   onClick={setSelectedCar} 
                 />
-              ))}
-            </div>
-          )}
+              ))
+            )}
+          </div>
         </div>
       </section>
 
