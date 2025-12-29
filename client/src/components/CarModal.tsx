@@ -87,31 +87,31 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
                 {car.model}
               </h2>
-              {/* Force refresh trigger: 1767038280 */}
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-primary">{car.pricePerDay}€</span>
                 <span className="text-muted-foreground font-medium">/ jour</span>
               </div>
             </div>
 
+            {/* Specs Section - Pricing for Mercedes, simple for others */}
             {car.pricingInfo ? (
               <div className="space-y-4 mb-6">
                 <div className="bg-muted/30 p-4 rounded-xl">
-                  <div className="flex items-center gap-2 text-muted-foreground mb-3">
-                    <Euro className="h-4 w-4" />
-                    <span className="text-xs font-medium uppercase tracking-wider">Tarification</span>
+                  <div className="flex items-center gap-2 text-primary mb-3">
+                    <Euro className="h-5 w-5" />
+                    <span className="text-sm font-bold uppercase tracking-wider">Tarification</span>
                   </div>
                   {(() => {
                     try {
                       const pricing: PricingInfo = JSON.parse(car.pricingInfo);
                       if (pricing.type === "standard") {
                         return (
-                          <div className="space-y-2">
+                          <div className="space-y-3">
                             {pricing.prices.map((p, idx) => (
-                              <div key={idx} className="flex items-center justify-between">
-                                <span className="text-sm text-muted-foreground">{p.duration}</span>
+                              <div key={idx} className="flex items-center justify-between py-1 border-b border-border/30 last:border-0">
+                                <span className="text-sm font-medium text-foreground">{p.duration}</span>
                                 <div className="flex items-center gap-2">
-                                  <span className="font-bold text-foreground">{p.price}</span>
+                                  <span className="font-bold text-primary text-lg">{p.price}</span>
                                   {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
                                 </div>
                               </div>
@@ -121,14 +121,14 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                       } else {
                         return (
                           <div className="space-y-3">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm text-muted-foreground">Tarif</span>
-                              <span className="font-bold text-foreground text-lg">{pricing.basePrice}</span>
+                            <div className="flex items-center justify-between py-1">
+                              <span className="text-sm font-medium text-foreground">Tarif</span>
+                              <span className="font-bold text-primary text-xl">{pricing.basePrice}</span>
                             </div>
-                            <p className="text-sm font-medium text-primary">{pricing.note}</p>
-                            <div className="flex items-start gap-2 bg-primary/10 p-3 rounded-lg">
+                            <p className="text-sm font-semibold text-primary">{pricing.note}</p>
+                            <div className="flex items-start gap-2 bg-primary/10 p-3 rounded-lg mt-2">
                               <Info className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                              <p className="text-xs text-muted-foreground">{pricing.extra}</p>
+                              <p className="text-sm text-muted-foreground">{pricing.extra}</p>
                             </div>
                           </div>
                         );
@@ -141,7 +141,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                 <div className="bg-muted/30 p-4 rounded-xl">
                   <div className="flex items-center gap-2 text-muted-foreground mb-1">
                     <Cog className="h-4 w-4" />
-                    <span className="text-xs font-medium uppercase tracking-wider">Boîte</span>
+                    <span className="text-xs font-medium uppercase tracking-wider">Transmission</span>
                   </div>
                   <span className="font-semibold text-foreground">{car.transmission}</span>
                 </div>
@@ -151,14 +151,14 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                 <div className="bg-muted/30 p-4 rounded-xl">
                   <div className="flex items-center gap-2 text-muted-foreground mb-1">
                     <Euro className="h-4 w-4" />
-                    <span className="text-xs font-medium uppercase tracking-wider">Prix</span>
+                    <span className="text-xs font-medium uppercase tracking-wider">Puissance</span>
                   </div>
-                  <span className="font-semibold text-foreground">{car.pricePerDay}€/jour</span>
+                  <span className="font-semibold text-foreground">{car.power}</span>
                 </div>
                 <div className="bg-muted/30 p-4 rounded-xl">
                   <div className="flex items-center gap-2 text-muted-foreground mb-1">
                     <Cog className="h-4 w-4" />
-                    <span className="text-xs font-medium uppercase tracking-wider">Boîte</span>
+                    <span className="text-xs font-medium uppercase tracking-wider">Transmission</span>
                   </div>
                   <span className="font-semibold text-foreground">{car.transmission}</span>
                 </div>
