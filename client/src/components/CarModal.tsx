@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { FaWhatsapp, FaSnapchatGhost } from "react-icons/fa";
-import { X, Check, Gauge, Cog, Zap } from "lucide-react";
+import { X, Check, Gauge, Cog, Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 interface CarModalProps {
   car: Car | null;
@@ -13,7 +14,14 @@ interface CarModalProps {
 }
 
 export function CarModal({ car, isOpen, onClose }: CarModalProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   if (!car) return null;
+
+  const images = car.galleryUrls && car.galleryUrls.length > 0 ? car.galleryUrls : [car.imageUrl];
+
+  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -27,13 +35,40 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
 
         <div className="grid md:grid-cols-2 h-full md:h-auto overflow-y-auto md:overflow-visible">
           {/* Left: Gallery */}
-          <div className="relative bg-muted/30 min-h-[300px] md:h-full flex items-center justify-center">
+          <div className="relative bg-muted/30 min-h-[300px] md:h-full flex items-center justify-center group/gallery">
             <div className="relative aspect-[4/3] md:aspect-auto md:h-full w-full h-full overflow-hidden">
               <img 
-                src={car.imageUrl} 
+                src={images[currentImageIndex]} 
                 alt={car.model} 
                 className="object-cover w-full h-full"
               />
+              
+              {images.length > 1 && (
+                <>
+                  <button 
+                    onClick={prevImage}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/20 text-white opacity-0 group-hover/gallery:opacity-100 transition-opacity"
+                  >
+                    <ChevronLeft className="h-6 w-6" />
+                  </button>
+                  <button 
+                    onClick={nextImage}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/20 text-white opacity-0 group-hover/gallery:opacity-100 transition-opacity"
+                  >
+                    <ChevronRight className="h-6 w-6" />
+                  </button>
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {images.map((_, idx) => (
+                      <div 
+                        key={idx}
+                        className={`h-1.5 rounded-full transition-all ${
+                          idx === currentImageIndex ? "w-4 bg-white" : "w-1.5 bg-white/50"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
