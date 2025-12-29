@@ -2,6 +2,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { ShieldCheck, Fuel, Clock, Wallet, CalendarDays, CheckCircle2 } from "lucide-react";
+import cautionImg from "@assets/generated_images/luxury_car_rental_insurance_concept.png";
+import restitutionImg from "@assets/generated_images/luxury_car_refueling_and_cleaning_service.png";
+import reservationImg from "@assets/generated_images/premium_car_booking_and_reservation_process.png";
 
 export default function Informations() {
   return (
@@ -55,7 +58,7 @@ export default function Informations() {
                   </div>
                 </div>
                 <Card className="overflow-hidden border-none shadow-2xl rotate-2">
-                  <img src="attached_assets/fonctionnement_caution_1767027896057.jpg" alt="Fonctionnement Caution" className="w-full h-auto" />
+                  <img src={cautionImg} alt="Fonctionnement Caution" className="w-full h-auto" />
                 </Card>
               </div>
             </section>
@@ -70,7 +73,7 @@ export default function Informations() {
               </div>
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <Card className="overflow-hidden border-none shadow-2xl -rotate-2 order-2 md:order-1">
-                  <img src="attached_assets/prise_en_charge_et_restitution_1767027896059.jpg" alt="Restitution" className="w-full h-auto" />
+                  <img src={restitutionImg} alt="Restitution" className="w-full h-auto" />
                 </Card>
                 <div className="space-y-6 order-1 md:order-2">
                   <p className="text-lg leading-relaxed text-muted-foreground">
@@ -134,7 +137,7 @@ export default function Informations() {
                   </div>
                 </div>
                 <Card className="overflow-hidden border-none shadow-2xl rotate-2">
-                  <img src="attached_assets/reservation_et_acompte_1767027896060.jpg" alt="Réservation et Acompte" className="w-full h-auto" />
+                  <img src={reservationImg} alt="Réservation et Acompte" className="w-full h-auto" />
                 </Card>
               </div>
             </section>
