@@ -31,7 +31,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>contact@kx-location.fr</span>
+                <span>kx.location@outlook.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />
