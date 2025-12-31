@@ -18,7 +18,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>KX.Company77694@gmail.com</span>
+                <span className="font-display font-bold tracking-tight">KX.Company77694@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />
