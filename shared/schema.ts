@@ -1,4 +1,4 @@
-import { pgTable, text, serial, integer, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -15,6 +15,7 @@ export const cars = pgTable("cars", {
   caution: integer("caution").default(5000),
   conditions: text("conditions").array(),
   pricingInfo: text("pricing_info"),
+  displayOrder: integer("display_order").default(0),
 });
 
 export const insertCarSchema = createInsertSchema(cars).omit({ id: true });

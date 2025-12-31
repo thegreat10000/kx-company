@@ -231,6 +231,8 @@ export default function Home() {
               </div>
             ) : (
               cars
+                .slice()
+                .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0))
                 .slice(0, 4)
                 .map((car) => (
                   <CarCard
