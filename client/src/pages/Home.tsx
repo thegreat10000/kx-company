@@ -7,7 +7,13 @@ import { useCars } from "@/hooks/use-cars";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ShieldCheck, Clock, Award } from "lucide-react";
 import { Car } from "@shared/schema";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 
 import { Link, useLocation } from "wouter";
@@ -34,20 +40,26 @@ export default function Home() {
                 Louez l'excellence à{" "}
                 <span className="text-primary block sm:inline">Strasbourg</span>
               </h1>
-              <p 
+              <p
                 className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed italic text-center font-serif"
-                style={{ fontFamily: "'Libre Baskerville', 'Lora', 'Georgia', serif", fontWeight: 400 }}
+                style={{
+                  fontFamily: "'Libre Baskerville', 'Lora', 'Georgia', serif",
+                  fontWeight: 400,
+                }}
               >
-                Bienvenue chez KX, votre agence de Location et de Detailing automobile
-                basée sur Strasbourg.
+                Bienvenue chez KX, votre agence de Location <br /> et de
+                Detailing automobile basée sur Strasbourg.
                 <br />
-                Nous vous proposons tout types de véhicules (Citadines, Sportives, Luxueuse)
-                ainsi que diverses prestations (Avec chauffeur, Shooting photo, vidéos et clips)
+                Nous vous proposons tout types de véhicules <br /> (Citadines,
+                Sportives, Luxueuse) ainsi que diverses prestations (Avec
+                chauffeur, Shooting photo, vidéos et clips)
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed text-center">
+                À côté de cela, notre société vous propose aussi de redonner vie
+                à votre véhicule en vous le nettoyant.
                 <br />
-                À côté de cela, notre société vous propose aussi de redonner vie à votre véhicule
-                en vous le nettoyant.
-                <br />
-                Sur place, à votre domicile ou encore sur votre lieu de travail !
+                Sur place, à votre domicile ou encore sur votre lieu de travail
+                !
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/catalogue">
@@ -71,27 +83,41 @@ export default function Home() {
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-md">
                     <DialogHeader>
-                      <DialogTitle className="text-2xl font-bold text-center">Contactez KX Location</DialogTitle>
+                      <DialogTitle className="text-2xl font-bold text-center">
+                        Contactez KX Location
+                      </DialogTitle>
                     </DialogHeader>
                     <div className="space-y-6 py-4">
                       <div className="flex flex-col gap-4">
-                        <Button 
+                        <Button
                           className="w-full h-14 text-lg font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
-                          onClick={() => window.open('https://wa.me/33677727957', '_blank')}
+                          onClick={() =>
+                            window.open("https://wa.me/33677727957", "_blank")
+                          }
                         >
                           <SiWhatsapp className="mr-3 h-6 w-6" />
                           WhatsApp: 06 77 72 79 57
                         </Button>
-                        <Button 
+                        <Button
                           className="w-full h-14 text-lg font-semibold bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
-                          onClick={() => window.open('https://snapchat.com/add/RIIMKA672', '_blank')}
+                          onClick={() =>
+                            window.open(
+                              "https://snapchat.com/add/RIIMKA672",
+                              "_blank",
+                            )
+                          }
                         >
                           <SiSnapchat className="mr-3 h-6 w-6" />
                           Snapchat: RIIMKA672
                         </Button>
-                        <Button 
+                        <Button
                           className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
-                          onClick={() => window.open('https://instagram.com/kx.location', '_blank')}
+                          onClick={() =>
+                            window.open(
+                              "https://instagram.com/kx.location",
+                              "_blank",
+                            )
+                          }
                         >
                           <SiInstagram className="mr-3 h-6 w-6" />
                           Instagram: kx.location
@@ -119,7 +145,8 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-semibold uppercase flex items-center gap-1">
-                    Assurance RC <ShieldCheck className="h-3.5 w-3.5 text-green-600 fill-green-600/20" />
+                    Assurance RC{" "}
+                    <ShieldCheck className="h-3.5 w-3.5 text-green-600 fill-green-600/20" />
                   </p>
                 </div>
               </div>
@@ -193,8 +220,15 @@ export default function Home() {
               ))
             ) : isError || !cars || cars.length === 0 ? (
               <div className="col-span-full text-center py-10">
-                <p className="text-destructive mb-4">Aucun véhicule disponible pour le moment.</p>
-                <Button onClick={() => window.location.reload()} variant="outline">Réessayer</Button>
+                <p className="text-destructive mb-4">
+                  Aucun véhicule disponible pour le moment.
+                </p>
+                <Button
+                  onClick={() => window.location.reload()}
+                  variant="outline"
+                >
+                  Réessayer
+                </Button>
               </div>
             ) : (
               cars
