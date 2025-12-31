@@ -53,7 +53,7 @@ export default function Catalogue() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {cars?.slice().sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0)).map((car) => {
+          {[...cars].sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0)).map((car) => {
             const imageUrl = car.imageUrl;
             return (
             <Card 

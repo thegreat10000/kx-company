@@ -230,8 +230,7 @@ export default function Home() {
                 </Button>
               </div>
             ) : (
-              cars
-                .slice()
+              [...cars]
                 .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0))
                 .slice(0, 4)
                 .map((car) => (

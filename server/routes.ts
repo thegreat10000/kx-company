@@ -33,6 +33,28 @@ export async function registerRoutes(
     
     const seedCars = [
       {
+        model: "Mercedes A35 AMG",
+        pricePerDay: 200,
+        imageUrl: "/images/a35_amg.png",
+        galleryUrls: ["/images/a35_amg.png"],
+        power: "306 ch",
+        transmission: "Automatique",
+        options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
+        category: "Berline sportive",
+        caution: 5000,
+        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        displayOrder: 1,
+        pricingInfo: JSON.stringify({
+          type: "standard",
+          prices: [
+            { duration: "24h", price: "200€", note: "" },
+            { duration: "48h", price: "650€", note: "week-end inclus" },
+            { duration: "72h", price: "800€", note: "week-end inclus" },
+            { duration: "7 jours", price: "1200€", note: "" }
+          ]
+        })
+      },
+      {
         model: "Mercedes C43 AMG",
         pricePerDay: 250,
         imageUrl: "/images/c43_amg.png",
@@ -43,6 +65,7 @@ export async function registerRoutes(
         category: "Sport",
         caution: 5000,
         conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        displayOrder: 2,
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
@@ -71,32 +94,12 @@ export async function registerRoutes(
         category: "Luxe",
         caution: 5000,
         conditions: ["Avec chauffeur uniquement", "Prestation sur devis", "Strasbourg & alentours"],
+        displayOrder: 3,
         pricingInfo: JSON.stringify({
           type: "chauffeur",
           basePrice: "900€",
           note: "Chauffeur inclus uniquement",
           extra: "Pack cortège, mairie et plus disponibles. Contactez-nous pour plus d'informations."
-        })
-      },
-      {
-        model: "Mercedes A35 AMG",
-        pricePerDay: 200,
-        imageUrl: "/images/a35_amg.png",
-        galleryUrls: ["/images/a35_amg.png"],
-        power: "306 ch",
-        transmission: "Automatique",
-        options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
-        category: "Berline sportive",
-        caution: 5000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
-        pricingInfo: JSON.stringify({
-          type: "standard",
-          prices: [
-            { duration: "24h", price: "200€", note: "" },
-            { duration: "48h", price: "650€", note: "week-end inclus" },
-            { duration: "72h", price: "800€", note: "week-end inclus" },
-            { duration: "7 jours", price: "1200€", note: "" }
-          ]
         })
       },
       {
@@ -107,9 +110,10 @@ export async function registerRoutes(
         power: "130 ch",
         transmission: "Automatique",
         options: ["Finition GT", "i-Cockpit 3D", "Caméra de recul", "Toit Black Diamond"],
-        category: "",
+        category: "Citadine",
         caution: 2000,
         conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        displayOrder: 4,
         pricingInfo: null
       }
     ];
