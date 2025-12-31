@@ -49,7 +49,7 @@ export function Header() {
         </Button>
       </div>
       <div className="text-center text-muted-foreground">
-        <p>Disponible 24/7 pour vos réservations à Strasbourg</p>
+        <p>Joignable 24/7 pour toutes informations, réservations ou prestations.</p>
       </div>
     </div>
   );
@@ -100,7 +100,7 @@ export function Header() {
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-center">
-              Contactez KX Location
+              Contactez KX Company
             </DialogTitle>
           </DialogHeader>
           <ContactInfo />
@@ -209,7 +209,7 @@ export function Header() {
                     Instagram: kx.location
                   </Button>
                   <p className="text-center text-sm text-muted-foreground pt-4">
-                    © KX Location. Tous droits réservés.
+                    © KX Company. Tous droits réservés.
                   </p>
                 </div>
               </div>
