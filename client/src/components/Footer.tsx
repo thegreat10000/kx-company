@@ -18,7 +18,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>kx.location@outlook.com</span>
+                <span>KX.Company77694@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-primary" />
@@ -61,7 +61,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} KX Location. Tous droits réservés.
+            &copy; {new Date().getFullYear()} KX Company. Tous droits réservés.
           </p>
         </div>
       </div>
