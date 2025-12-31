@@ -17,14 +17,14 @@ export function CarCard({ car, onClick }: CarCardProps) {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl bg-white border border-border/50 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300"
       onClick={() => onClick(car)}
     >
       {/* Image Container */}
       <div className="aspect-[4/3] overflow-hidden bg-muted/20 relative">
         {car.category && (
           <div className="absolute top-3 left-3 z-10">
-            <Badge variant="secondary" className="bg-white/90 backdrop-blur text-foreground font-semibold shadow-sm">
+            <Badge variant="secondary" className="bg-white/90 dark:bg-black/90 backdrop-blur text-black dark:text-white font-semibold shadow-sm border-none">
               {car.category}
             </Badge>
           </div>
@@ -40,7 +40,7 @@ export function CarCard({ car, onClick }: CarCardProps) {
       {/* Content */}
       <div className="p-5">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="font-display text-lg font-bold text-foreground leading-tight">
+          <h3 className="font-display text-lg font-bold text-foreground leading-tight dark:text-white">
             {car.model}
           </h3>
           <div className="text-right flex flex-col items-end">

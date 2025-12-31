@@ -70,8 +70,8 @@ export default function Catalogue() {
               </div>
               <CardHeader className="p-4">
                 <div className="flex justify-between items-start gap-2">
-                  <CardTitle className="text-xl">{car.model}</CardTitle>
-                  <Badge variant="secondary">{car.category}</Badge>
+                  <CardTitle className="text-xl text-foreground">{car.model}</CardTitle>
+                  <Badge variant="secondary" className="bg-secondary text-secondary-foreground">{car.category}</Badge>
                 </div>
               </CardHeader>
               <CardContent className="p-4 pt-0 text-right flex flex-col items-end">
