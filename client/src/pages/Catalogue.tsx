@@ -176,19 +176,43 @@ export default function Catalogue() {
                           }
                         })()}
                       </div>
-                      <div className="p-4 rounded-lg bg-muted">
-                        <div className="flex items-center gap-2 text-muted-foreground mb-1">
-                          <Cog className="h-4 w-4" />
-                          <span className="text-xs font-medium uppercase tracking-wider">Transmission</span>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div className="p-4 rounded-lg bg-muted">
+                          <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                            <Cog className="h-4 w-4" />
+                            <span className="text-xs font-medium uppercase tracking-wider">Transmission</span>
+                          </div>
+                          <p className="font-semibold">{selectedCar.transmission}</p>
                         </div>
-                        <p className="font-semibold">{selectedCar.transmission}</p>
+                        <div className="p-4 rounded-lg bg-muted">
+                          <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                            <CarIcon className="h-4 w-4" />
+                            <span className="text-xs font-medium uppercase tracking-wider">Motorisation</span>
+                          </div>
+                          <p className="font-semibold">Essence</p>
+                        </div>
+                        <div className="p-4 rounded-lg bg-muted">
+                          <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                            <Award className="h-4 w-4" />
+                            <span className="text-xs font-medium uppercase tracking-wider">Puissance</span>
+                          </div>
+                          <p className="font-semibold">{selectedCar.power.replace("ch", "🐎")}</p>
+                        </div>
                       </div>
                     </div>
                   ) : (
-                    <div className="grid grid-cols-1 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                       <div className="p-4 rounded-lg bg-muted">
-                        <p className="text-sm text-muted-foreground">Transmission</p>
+                        <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Transmission</p>
                         <p className="font-semibold">{selectedCar.transmission}</p>
+                      </div>
+                      <div className="p-4 rounded-lg bg-muted">
+                        <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Motorisation</p>
+                        <p className="font-semibold">Essence</p>
+                      </div>
+                      <div className="p-4 rounded-lg bg-muted">
+                        <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Puissance</p>
+                        <p className="font-semibold">{selectedCar.power.replace("ch", "🐎")}</p>
                       </div>
                     </div>
                   )}
