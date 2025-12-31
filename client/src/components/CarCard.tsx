@@ -44,11 +44,14 @@ export function CarCard({ car, onClick }: CarCardProps) {
             {car.model}
           </h3>
           <div className="text-right flex flex-col items-end">
-            <div className="flex items-baseline gap-1">
-              <span className="font-display text-lg font-bold text-primary">
-                {car.pricePerDay}€
-              </span>
-              <span className="text-xs text-muted-foreground font-medium">/jour</span>
+            <div className="flex flex-col items-end">
+              <span className="text-[10px] text-muted-foreground font-medium leading-none mb-0.5">À partir de</span>
+              <div className="flex items-baseline gap-1">
+                <span className="font-display text-lg font-bold text-primary">
+                  {car.pricePerDay}€
+                </span>
+                <span className="text-xs text-muted-foreground font-medium">/jour</span>
+              </div>
             </div>
             <Badge variant="outline" className="mt-1 text-[9px] px-1 py-0 h-3.5 border-black/20 text-white bg-black font-bold uppercase tracking-wider">
               250KM/J Inclus
