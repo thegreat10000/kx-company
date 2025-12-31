@@ -34,7 +34,10 @@ export default function Home() {
                 Louez l'excellence à{" "}
                 <span className="text-primary block sm:inline">Strasbourg</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed italic">
+              <p 
+                className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed italic"
+                style={{ fontFamily: "'Brush Script MT', 'Lucida Handwriting', cursive" }}
+              >
                 Bienvenue chez KX, votre agence de Location et de Detailing automobile
                 basée sur Strasbourg.
                 <br />
