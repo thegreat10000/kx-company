@@ -96,7 +96,7 @@ export async function registerRoutes(
         options: ["Apple CarPlay", "Ambiance LED", "Son Burmester", "Double Toit Panoramique"],
         category: "Luxe",
         caution: 5000,
-        conditions: ["Avec ou sans chauffeur", "Prestation sur devis", "Strasbourg & alentours"],
+        conditions: ["Avec ou sans chauffeur", "Prestation sur devis"],
         displayOrder: 3,
         pricingInfo: JSON.stringify({
           type: "chauffeur",
