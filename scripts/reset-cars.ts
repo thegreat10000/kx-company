@@ -43,9 +43,9 @@ const carsData = [
   },
   {
     model: "Peugeot 208 GT",
-    pricePerDay: 80,
-    imageUrl: "/images/peugeot_208_gt.png",
-    galleryUrls: ["/images/peugeot_208_gt.png"],
+    pricePerDay: 100,
+    imageUrl: "/images/208_gt_new.jpg",
+    galleryUrls: ["/images/208_gt_new.jpg"],
     power: "130 ch",
     transmission: "Automatique",
     options: ["GT Line", "i-Cockpit", "Caméra de recul"],
