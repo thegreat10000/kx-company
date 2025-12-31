@@ -48,12 +48,12 @@ export default function Services() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-slate-900 text-white py-20">
+        <section className="bg-slate-100 text-slate-900 py-20">
           <div className="container px-4 md:px-6 mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-6">
               Nos Services Premium
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto font-serif italic">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-serif italic">
               Découvrez l'excellence automobile à Strasbourg à travers nos prestations de location, service chauffeur et entretien.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function Services() {
                     <div className="space-y-4">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
                           <span className="text-sm text-slate-700 font-medium">{feature}</span>
                         </div>
                       ))}
