@@ -79,7 +79,7 @@ export async function registerRoutes(
         })
       },
       {
-        model: "Mercedes Classe S Maybach",
+        model: "Mercedes Classe S350 Maybach",
         pricePerDay: 900,
         imageUrl: "/images/s_devant_1767034994217.jpg",
         galleryUrls: [
@@ -93,7 +93,7 @@ export async function registerRoutes(
         power: "258 ch",
         motorisation: "Diesel",
         transmission: "Automatique",
-        options: ["Chauffeur Uniquement", "Accompagnement Complet", "Cortège Mairie", "Salon VIP"],
+        options: ["Apple CarPlay", "Ambiance LED", "Son Burmester", "Double toit panoramique"],
         category: "Luxe",
         caution: 5000,
         conditions: ["Avec chauffeur uniquement", "Prestation sur devis", "Strasbourg & alentours"],
