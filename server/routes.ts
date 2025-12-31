@@ -96,7 +96,7 @@ export async function registerRoutes(
         options: ["Apple CarPlay", "Ambiance LED", "Son Burmester", "Double Toit Panoramique"],
         category: "Luxe",
         caution: 5000,
-        conditions: ["Avec ou sans chauffeur", "Prestation sur devis"],
+        conditions: ["Âge minimum : 21 ans", "Permis de conduire > 3 ans", "Prestation avec ou sans chauffeur sur devis", "Caution requise uniquement pour les prestations sans chauffeur"],
         displayOrder: 3,
         pricingInfo: JSON.stringify({
           type: "chauffeur",
