@@ -63,7 +63,7 @@ export async function registerRoutes(
         power: "390 ch",
         motorisation: "Essence",
         transmission: "Automatique",
-        options: ["Apple CarPlay", "Caméra 360", "Multibeam LED", "Toit Panoramique"],
+        options: ["Apple CarPlay", "Caméra 360", "Ambiance LED", "Toit Panoramique"],
         category: "Sport",
         caution: 5000,
         conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
