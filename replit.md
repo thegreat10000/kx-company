@@ -7,6 +7,7 @@ KX Location is a premium car rental web application for Strasbourg, France. The 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Do NOT proactively suggest publishing/deploying. The user will do it when they are ready.
 
 ## System Architecture
 

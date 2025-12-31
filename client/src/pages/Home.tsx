@@ -168,8 +168,8 @@ export default function Home() {
                 Qualité Premium
               </h3>
               <p className="text-muted-foreground">
-                Nos véhicules sont récents, entretenus méticuleusement et
-                suréquipés.
+                Votre confort est notre priorité. Nos véhicules sont récents,
+                entretenus avec soin et équipés des meilleures options.
               </p>
             </div>
             <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-background border border-border/50">
