@@ -116,7 +116,7 @@ export async function registerRoutes(
         options: ["Apple CarPlay", "Ambiance LED", "i-Cockpit 3D", "Toit Black Diamond"],
         category: "Citadine",
         caution: 2000,
-        conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)"],
+        conditions: ["Âge minimum 20 ans", "Pièce d'identité", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 4,
         pricingInfo: null
       }
