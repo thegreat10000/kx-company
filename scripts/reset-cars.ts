@@ -43,7 +43,7 @@ const carsData = [
   },
   {
     model: "Peugeot 208 GT",
-    pricePerDay: 100,
+    pricePerDay: 80,
     imageUrl: "/images/208_gt_new.jpg",
     galleryUrls: ["/images/208_gt_new.jpg"],
     power: "130 ch",
