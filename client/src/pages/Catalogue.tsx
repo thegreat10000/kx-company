@@ -218,7 +218,7 @@ export default function Catalogue() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-xl border-2 border-primary/10 bg-primary/5 text-right flex flex-col items-end">
+                  <div className="p-6 rounded-xl border-2 border-primary/10 bg-primary/5 text-center flex flex-col items-center">
                     <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider leading-none mb-1">
                       À partir de
                     </span>
@@ -226,7 +226,7 @@ export default function Catalogue() {
                       <p className="text-3xl font-bold text-primary">{selectedCar.pricePerDay}€</p>
                       <span className="text-base font-normal text-muted-foreground">/ jour</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-6">Assurance RC INCLUSE</p>
+                    <p className="text-sm text-muted-foreground mb-6 font-medium">Assurance RC INCLUSE</p>
                     
                     <div className="space-y-3">
                       <Button 

@@ -43,7 +43,7 @@ export function CarCard({ car, onClick }: CarCardProps) {
           <h3 className="font-display text-lg font-bold text-foreground leading-tight dark:text-white">
             {car.model}
           </h3>
-          <div className="text-right flex flex-col items-end">
+          <div className="text-center flex flex-col items-center">
             <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider leading-none mb-1">
               À partir de
             </span>
