@@ -93,7 +93,7 @@ export async function registerRoutes(
         power: "258 ch",
         motorisation: "Diesel",
         transmission: "Automatique",
-        options: ["Apple CarPlay", "Ambiance LED", "Son Burmester", "Double toit panoramique"],
+        options: ["Apple CarPlay", "Ambiance LED", "Son Burmester", "Double Toit Panoramique"],
         category: "Luxe",
         caution: 5000,
         conditions: ["Avec ou sans chauffeur", "Prestation sur devis", "Strasbourg & alentours"],
