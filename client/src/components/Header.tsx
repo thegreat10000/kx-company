@@ -121,7 +121,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 ml-auto pr-4 lg:pr-8">
+        <nav className="hidden md:flex items-center gap-8 ml-auto pr-0">
           <NavLinks />
         </nav>
 
