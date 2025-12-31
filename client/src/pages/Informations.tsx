@@ -25,7 +25,7 @@ export default function Informations() {
       <Header />
       <main className="flex-1 pb-16 md:pb-24 bg-slate-50/30">
         {/* Hero Section with pleasant background */}
-        <section className="bg-[#E5E0E3] py-16 md:py-24 mb-12">
+        <section className="bg-[#FFB7D5] py-16 md:py-24 mb-12">
           <div className="container px-4 md:px-6 mx-auto max-w-5xl text-center">
             <h1 className="font-display text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900">
               Conditions & Fonctionnement
