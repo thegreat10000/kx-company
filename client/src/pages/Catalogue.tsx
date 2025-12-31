@@ -4,7 +4,7 @@ import { type Car } from "@shared/schema";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Loader2, ArrowLeft, Car as CarIcon, Euro, Cog, Info } from "lucide-react";
+import { Loader2, ArrowLeft, Car as CarIcon, Euro, Cog, Info, Award } from "lucide-react";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
