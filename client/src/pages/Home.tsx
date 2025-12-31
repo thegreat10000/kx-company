@@ -104,21 +104,12 @@ export default function Home() {
             </div>
 
             <div className="flex-1 relative w-full max-w-[600px] lg:max-w-none">
-              <div className="grid grid-cols-1 gap-4">
-                <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 ease-out border border-white/50 bg-white">
-                  <img
-                    src="/images/hero_red_car.png"
-                    alt="Luxury Car Red"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-500 ease-out border border-white/50 bg-white ml-8 -mt-12">
-                  <img
-                    src="/images/hero_benz_sunset.jpg"
-                    alt="Mercedes AMG Sunset"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 ease-out border border-white/50 bg-white">
+                <img
+                  src="/images/hero_benz_sunset.jpg"
+                  alt="Mercedes AMG Sunset"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating badges */}
