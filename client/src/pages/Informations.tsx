@@ -23,16 +23,20 @@ export default function Informations() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      <main className="flex-1 py-16 md:py-24 bg-slate-50/30">
-        <div className="container px-4 md:px-6 mx-auto max-w-5xl">
-          <div className="text-center mb-16">
+      <main className="flex-1 pb-16 md:pb-24 bg-slate-50/30">
+        {/* Hero Section with pleasant background */}
+        <section className="bg-slate-100 py-16 md:py-24 mb-12">
+          <div className="container px-4 md:px-6 mx-auto max-w-5xl text-center">
             <h1 className="font-display text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900">
               Conditions & Fonctionnement
             </h1>
-            <p className="text-xl text-muted-foreground font-serif italic max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 font-serif italic max-w-2xl mx-auto">
               Tout ce que vous devez savoir pour louer l'excellence en toute sérénité.
             </p>
           </div>
+        </section>
+
+        <div className="container px-4 md:px-6 mx-auto max-w-5xl">
 
           <motion.div 
             variants={containerVariants}
