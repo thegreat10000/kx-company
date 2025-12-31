@@ -108,24 +108,24 @@ export default function Informations() {
                   Fonctionnement de la caution
                 </h2>
               </div>
-              <Card className="border-none shadow-xl bg-slate-900 text-white overflow-hidden">
+              <Card className="border-none shadow-xl bg-white overflow-hidden">
                 <CardContent className="p-8 md:p-10">
                   <div className="space-y-8">
-                    <div className="flex gap-6 items-center border-b border-slate-800 pb-6">
+                    <div className="flex gap-6 items-center border-b border-slate-100 pb-6">
                       <span className="text-primary font-bold text-xl">01</span>
-                      <p className="text-lg font-medium">
+                      <p className="text-lg font-medium text-slate-900">
                         La caution est à déposer <span className="text-primary font-bold">OBLIGATOIREMENT</span> avant tout départ.
                       </p>
                     </div>
-                    <div className="flex gap-6 items-center border-b border-slate-800 pb-6">
+                    <div className="flex gap-6 items-center border-b border-slate-100 pb-6">
                       <span className="text-primary font-bold text-xl">02</span>
-                      <p className="text-lg font-medium">
+                      <p className="text-lg font-medium text-slate-900">
                         Tout frais, résultant d'un <span className="text-primary font-bold">USURE ANORMALE</span>, sont à la charge du client.
                       </p>
                     </div>
                     <div className="flex gap-6 items-center">
                       <span className="text-primary font-bold text-xl">03</span>
-                      <p className="text-lg font-medium">
+                      <p className="text-lg font-medium text-slate-900">
                         Dans le cas où les <span className="text-primary font-bold">FRAIS DE RÉPARATION</span> s'avèrent supérieur à la caution, la différence reste à la charge du client.
                       </p>
                     </div>
