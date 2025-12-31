@@ -36,7 +36,7 @@ export default function Home() {
               </h1>
               <p 
                 className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed italic"
-                style={{ fontFamily: "'Lora', 'Georgia', 'Times New Roman', serif", fontWeight: 400 }}
+                style={{ fontFamily: "'Libre Baskerville', 'Lora', 'Georgia', serif", fontWeight: 400 }}
               >
                 Bienvenue chez KX, votre agence de Location et de Detailing automobile
                 basée sur Strasbourg.
