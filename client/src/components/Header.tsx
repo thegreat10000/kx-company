@@ -108,9 +108,9 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center group">
           <img 
-            src={logoPng} 
+            src="/images/logo_kx.png" 
             alt="KX Location" 
-            className="h-10 md:h-12 w-auto"
+            className="h-10 md:h-12 w-auto mix-blend-normal"
           />
         </Link>
 

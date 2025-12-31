@@ -14,7 +14,7 @@ export function Footer() {
               <img
                 src="/images/logo_kx.png"
                 alt="KX Logo"
-                className="h-12 md:h-16 w-auto"
+                className="h-12 md:h-16 w-auto mix-blend-normal"
               />
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-xs">
