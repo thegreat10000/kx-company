@@ -13,7 +13,16 @@ const carsData = [
     category: "Sport",
     caution: 5000,
     conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
-    displayOrder: 1
+    displayOrder: 1,
+    pricingInfo: JSON.stringify({
+      type: "standard",
+      prices: [
+        { duration: "24h", price: "200€", note: "" },
+        { duration: "48h", price: "650€", note: "Vendredi à Dimanche" },
+        { duration: "72h", price: "800€", note: "Vendredi à Lundi" },
+        { duration: "7 jours", price: "1200€", note: "" }
+      ]
+    })
   },
   {
     model: "Mercedes C43 AMG",
@@ -26,7 +35,16 @@ const carsData = [
     category: "Sport",
     caution: 5000,
     conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
-    displayOrder: 2
+    displayOrder: 2,
+    pricingInfo: JSON.stringify({
+      type: "standard",
+      prices: [
+        { duration: "24h", price: "250€", note: "en semaine" },
+        { duration: "48h", price: "750€", note: "Vendredi à Dimanche" },
+        { duration: "72h", price: "900€", note: "Vendredi à Lundi" },
+        { duration: "7 jours", price: "1500€", note: "" }
+      ]
+    })
   },
   {
     model: "Mercedes Classe S Maybach",
