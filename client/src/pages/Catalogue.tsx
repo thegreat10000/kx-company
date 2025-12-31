@@ -75,7 +75,13 @@ export default function Catalogue() {
                 </div>
               </CardHeader>
               <CardContent className="p-4 pt-0">
-                <p className="text-2xl font-bold text-primary">{car.pricePerDay}€<span className="text-sm font-normal text-muted-foreground">/jour</span></p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">
+                    À partir de
+                  </span>
+                  <p className="text-2xl font-bold text-primary">{car.pricePerDay}€</p>
+                  <span className="text-sm font-normal text-muted-foreground">/jour</span>
+                </div>
                 <div className="mt-2 space-y-1 text-sm text-muted-foreground">
                   {car.pricingInfo ? (
                     <p className="flex items-center gap-1"><Euro className="h-3 w-3" /> Tarifs détaillés</p>
@@ -213,7 +219,13 @@ export default function Catalogue() {
                   </div>
 
                   <div className="p-6 rounded-xl border-2 border-primary/10 bg-primary/5">
-                    <p className="text-3xl font-bold text-primary mb-1">{selectedCar.pricePerDay}€ <span className="text-base font-normal text-muted-foreground">/ jour</span></p>
+                    <div className="flex items-baseline gap-1 mb-1">
+                      <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                        À partir de
+                      </span>
+                      <p className="text-3xl font-bold text-primary">{selectedCar.pricePerDay}€</p>
+                      <span className="text-base font-normal text-muted-foreground">/ jour</span>
+                    </div>
                     <p className="text-sm text-muted-foreground mb-6">Assurance tous risques incluse</p>
                     
                     <div className="space-y-3">
