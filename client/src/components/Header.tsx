@@ -36,7 +36,7 @@ export function Header() {
           }
         >
           <SiSnapchat className="mr-3 h-6 w-6" />
-          Snapchat: RIIMKA672
+          Snapchat: KX.COMPANY
         </Button>
         <Button
           className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
@@ -45,7 +45,7 @@ export function Header() {
           }
         >
           <SiInstagram className="mr-3 h-6 w-6" />
-          Instagram: kx.location
+          Instagram: 2KX.LOCATION
         </Button>
       </div>
       <div className="text-center text-muted-foreground">
@@ -193,7 +193,7 @@ export function Header() {
                     }}
                   >
                     <SiSnapchat className="mr-2 h-5 w-5" />
-                    Snapchat: RIIMKA672
+                    Snapchat: KX.COMPANY
                   </Button>
                   <Button
                     className="w-full h-12 font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white border-none"
@@ -206,7 +206,7 @@ export function Header() {
                     }}
                   >
                     <SiInstagram className="mr-2 h-5 w-5" />
-                    Instagram: kx.location
+                    Instagram: 2KX.LOCATION
                   </Button>
                   <p className="text-center text-sm text-muted-foreground pt-4">
                     © KX Company. Tous droits réservés.
