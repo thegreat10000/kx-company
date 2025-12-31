@@ -40,7 +40,7 @@ export async function registerRoutes(
         power: "306 ch",
         motorisation: "Essence",
         transmission: "Automatique",
-        options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
+        options: ["Apple CarPlay", "Ambiance LED", "Volant AMG Performance", "Toit Panoramique"],
         category: "Berline sportive",
         caution: 5000,
         conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
