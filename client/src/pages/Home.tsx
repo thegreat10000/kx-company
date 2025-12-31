@@ -118,10 +118,7 @@ export default function Home() {
                   <ShieldCheck className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground font-semibold uppercase">
-                    Assurance
-                  </p>
-                  <p className="font-bold text-sm flex items-center gap-1">
+                  <p className="text-xs text-muted-foreground font-semibold uppercase flex items-center gap-1">
                     Assurance RC <ShieldCheck className="h-3.5 w-3.5 text-green-600 fill-green-600/20" />
                   </p>
                 </div>
