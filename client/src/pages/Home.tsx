@@ -168,8 +168,7 @@ export default function Home() {
                 Qualité Premium
               </h3>
               <p className="text-muted-foreground">
-                Votre confort est notre priorité. Nos véhicules sont récents,
-                entretenus avec soin et équipés des meilleures options.
+                Véhicules récents et entretenus exclusivement en concession.
               </p>
             </div>
             <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-background border border-border/50">
@@ -177,7 +176,7 @@ export default function Home() {
                 <Clock className="h-8 w-8" />
               </div>
               <h3 className="font-display text-xl font-bold mb-2">
-                Service disponible 24/7
+                Joignable 24/7
               </h3>
               <p className="text-muted-foreground">
                 Une équipe disponible à tout moment pour répondre à vos besoins.
@@ -191,7 +190,7 @@ export default function Home() {
                 Sérénité Totale
               </h3>
               <p className="text-muted-foreground">
-                Assurance incluse pour rouler l'esprit tranquille.
+                Assurance RC Incluse avec différentes formules de rachat de Franchise en supplément.
               </p>
             </div>
           </div>
@@ -203,7 +202,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Découvrez nos véhicules haut de gamme
+              Découvrez tout nos véhicules
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Réservez dès à présent votre prochaine escapade sur mesure
