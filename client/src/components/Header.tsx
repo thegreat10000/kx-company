@@ -56,44 +56,44 @@ export function Header() {
 
   const NavLinks = () => (
     <>
-      <Button
-        variant="ghost"
-        size="icon"
-        className="rounded-full mr-2"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        title="Changer le mode"
-      >
-        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-        <span className="sr-only">Changer le thème</span>
-      </Button>
+        <Button
+          variant="ghost"
+          size="lg"
+          className="rounded-full mr-2 h-10 w-10 p-0"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          title="Changer le mode"
+        >
+          <Sun className="h-[1.4rem] w-[1.4rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-[1.4rem] w-[1.4rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Changer le thème</span>
+        </Button>
       <Link
         href="/"
-        className="text-sm font-medium hover:text-primary transition-colors"
+        className="text-base font-semibold hover:text-primary transition-colors"
       >
         Accueil
       </Link>
       <Link
         href="/catalogue"
-        className="text-sm font-medium hover:text-primary transition-colors"
+        className="text-base font-semibold hover:text-primary transition-colors"
       >
         Nos véhicules
       </Link>
       <Link
         href="/services"
-        className="text-sm font-medium hover:text-primary transition-colors"
+        className="text-base font-semibold hover:text-primary transition-colors"
       >
         Nos services
       </Link>
       <Link
         href="/informations"
-        className="text-sm font-medium hover:text-primary transition-colors"
+        className="text-base font-semibold hover:text-primary transition-colors"
       >
         Informations
       </Link>
       <Dialog>
         <DialogTrigger asChild>
-          <button className="text-sm font-medium hover:text-primary transition-colors">
+          <button className="text-base font-semibold hover:text-primary transition-colors">
             Contact
           </button>
         </DialogTrigger>
