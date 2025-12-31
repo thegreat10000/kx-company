@@ -50,7 +50,7 @@ export function CarCard({ car, onClick }: CarCardProps) {
               </span>
               <span className="text-xs text-muted-foreground font-medium">/jour</span>
             </div>
-            <Badge variant="outline" className="mt-1 text-[10px] px-1.5 py-0 h-4 border-primary/30 text-primary bg-primary/5 font-bold">
+            <Badge variant="outline" className="mt-1 text-[9px] px-1 py-0 h-3.5 border-black/20 text-white bg-black font-bold uppercase tracking-wider">
               250KM/J Inclus
             </Badge>
           </div>
