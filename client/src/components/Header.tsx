@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 
-import logoPng from "@assets/image_1767024778246.png";
+import logoPng from "@assets/logo_kx.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
