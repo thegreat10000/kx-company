@@ -113,7 +113,7 @@ export async function registerRoutes(
         power: "110 ch",
         motorisation: "Hybride",
         transmission: "Automatique",
-        options: ["Finition GT", "i-Cockpit 3D", "Caméra de recul", "Toit Black Diamond"],
+        options: ["Apple CarPlay", "Ambiance LED", "i-Cockpit 3D", "Toit Black Diamond"],
         category: "Citadine",
         caution: 2000,
         conditions: ["Âge minimum 21 ans", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
