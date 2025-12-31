@@ -18,8 +18,8 @@ const carsData = [
   {
     model: "Mercedes C43 AMG",
     pricePerDay: 250,
-    imageUrl: "/images/c43-amg.jpg",
-    galleryUrls: ["/images/c43-amg.jpg"],
+    imageUrl: "/images/c43_amg_new.jpg",
+    galleryUrls: ["/images/c43_amg_new.jpg"],
     power: "390 ch",
     transmission: "Automatique",
     options: ["V6 Biturbo", "AMG Performance", "Échappement sport"],

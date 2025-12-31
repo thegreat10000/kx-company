@@ -57,8 +57,8 @@ export async function registerRoutes(
       {
         model: "Mercedes C43 AMG",
         pricePerDay: 250,
-        imageUrl: "/images/c43_amg.png",
-        galleryUrls: ["/images/c43_amg.png"],
+        imageUrl: "/images/c43_amg_new.jpg",
+        galleryUrls: ["/images/c43_amg_new.jpg"],
         power: "390 ch",
         transmission: "Automatique",
         options: ["Pack Performance", "Échappement AMG", "Sièges Performance", "Burmester"],
