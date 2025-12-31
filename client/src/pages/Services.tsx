@@ -44,27 +44,27 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background dark:bg-slate-950 flex flex-col transition-colors duration-300">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-slate-100 text-slate-900 py-20">
+        <section className="bg-slate-100 dark:bg-slate-900 py-20 transition-colors duration-500">
           <div className="container px-4 md:px-6 mx-auto text-center">
-            <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 dark:text-slate-100">
               Nos Services Premium
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-serif italic">
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto font-serif italic">
               Découvrez l'excellence automobile à Strasbourg à travers nos prestations de location, service chauffeur et entretien.
             </p>
           </div>
         </section>
 
         {/* Services Detail */}
-        <section className="py-20 bg-slate-50/30">
+        <section className="py-20 bg-slate-50/30 dark:bg-slate-900/10">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {services.map((service, index) => (
-                <Card key={index} className="overflow-hidden border-none shadow-lg bg-white">
+                <Card key={index} className="overflow-hidden border-none shadow-lg bg-white dark:bg-slate-900/50 dark:border dark:border-slate-800 transition-all duration-300">
                   <div className="aspect-[16/9] overflow-hidden">
                     <img 
                       src={service.image} 
@@ -73,15 +73,15 @@ export default function Services() {
                     />
                   </div>
                   <CardContent className="p-8">
-                    <h2 className="text-2xl font-bold mb-4 text-slate-900">{service.title}</h2>
-                    <p className="text-slate-600 mb-8 leading-relaxed">
+                    <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100">{service.title}</h2>
+                    <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
                       {service.description}
                     </p>
                     <div className="space-y-4">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
-                          <span className="text-sm text-slate-700 font-medium">{feature}</span>
+                          <CheckCircle2 className="w-5 h-5 text-slate-400 dark:text-primary shrink-0 mt-0.5" />
+                          <span className="text-sm text-slate-700 dark:text-slate-300 font-medium">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -93,10 +93,10 @@ export default function Services() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white dark:bg-slate-950 transition-colors duration-500">
           <div className="container px-4 md:px-6 mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Besoin d'un service sur mesure ?</h2>
-            <p className="text-slate-600 mb-10 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 dark:text-slate-100">Besoin d'un service sur mesure ?</h2>
+            <p className="text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
               Contactez-nous directement pour discuter de vos besoins spécifiques. Notre équipe est à votre disposition pour vous proposer la solution idéale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
