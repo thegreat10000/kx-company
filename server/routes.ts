@@ -43,7 +43,7 @@ export async function registerRoutes(
         options: ["Apple CarPlay", "Ambiance LED", "Volant AMG Performance", "Toit Panoramique"],
         category: "Berline sportive",
         caution: 5000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 1,
         pricingInfo: JSON.stringify({
           type: "standard",
@@ -66,7 +66,7 @@ export async function registerRoutes(
         options: ["Apple CarPlay", "Caméra 360", "Ambiance LED", "Toit Panoramique"],
         category: "Sport",
         caution: 5000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 2,
         pricingInfo: JSON.stringify({
           type: "standard",
@@ -116,7 +116,7 @@ export async function registerRoutes(
         options: ["Apple CarPlay", "Ambiance LED", "i-Cockpit 3D", "Toit Black Diamond"],
         category: "Citadine",
         caution: 2000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 4,
         pricingInfo: null
       }
