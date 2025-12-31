@@ -125,7 +125,15 @@ export async function registerRoutes(
         caution: 2000,
         conditions: ["Âge minimum 20 ans", "Pièce d'identité", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 4,
-        pricingInfo: null
+        pricingInfo: JSON.stringify({
+          type: "standard",
+          prices: [
+            { label: "24h", value: "80€", detail: "(en semaine)" },
+            { label: "48h", value: "200€", detail: "(Vendredi à Dimanche)" },
+            { label: "72h", value: "250€", detail: "(Vendredi à Lundi)" },
+            { label: "7 jours", value: "500€", detail: "(Semaine entière)" }
+          ]
+        })
       }
     ];
 
