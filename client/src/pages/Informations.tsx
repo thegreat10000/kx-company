@@ -108,25 +108,25 @@ export default function Informations() {
                   Fonctionnement de la caution
                 </h2>
               </div>
-              <Card className="border-none shadow-xl bg-white overflow-hidden">
+              <Card className="border-none shadow-xl bg-[#2D2A32] text-white overflow-hidden">
                 <CardContent className="p-8 md:p-10">
                   <div className="space-y-8">
-                    <div className="flex gap-6 items-center border-b border-slate-100 pb-6">
-                      <span className="text-primary font-bold text-xl">01</span>
-                      <p className="text-lg font-medium text-slate-900">
-                        La caution est à déposer <span className="text-primary font-bold">OBLIGATOIREMENT</span> avant tout départ.
+                    <div className="flex gap-6 items-center border-b border-white/10 pb-6">
+                      <span className="text-[#E91E63] font-bold text-xl">01</span>
+                      <p className="text-lg font-medium">
+                        La caution est à déposer <span className="text-[#E91E63] font-bold">OBLIGATOIREMENT</span> avant tout départ.
                       </p>
                     </div>
-                    <div className="flex gap-6 items-center border-b border-slate-100 pb-6">
-                      <span className="text-primary font-bold text-xl">02</span>
-                      <p className="text-lg font-medium text-slate-900">
-                        Tout frais, résultant d'un <span className="text-primary font-bold">USURE ANORMALE</span>, sont à la charge du client.
+                    <div className="flex gap-6 items-center border-b border-white/10 pb-6">
+                      <span className="text-[#E91E63] font-bold text-xl">02</span>
+                      <p className="text-lg font-medium">
+                        Tout frais, résultant d'un <span className="text-[#E91E63] font-bold">USURE ANORMALE</span>, sont à la charge du client.
                       </p>
                     </div>
                     <div className="flex gap-6 items-center">
-                      <span className="text-primary font-bold text-xl">03</span>
-                      <p className="text-lg font-medium text-slate-900">
-                        Dans le cas où les <span className="text-primary font-bold">FRAIS DE RÉPARATION</span> s'avèrent supérieur à la caution, la différence reste à la charge du client.
+                      <span className="text-[#E91E63] font-bold text-xl">03</span>
+                      <p className="text-lg font-medium">
+                        Dans le cas où les <span className="text-[#E91E63] font-bold">FRAIS DE RÉPARATION</span> s'avèrent supérieur à la caution, la différence reste à la charge du client.
                       </p>
                     </div>
                   </div>
@@ -211,11 +211,11 @@ export default function Informations() {
                   </CardContent>
                 </Card>
               </div>
-              <div className="bg-slate-900 text-slate-400 p-8 rounded-3xl text-center">
+              <div className="bg-[#2D2A32] text-white/70 p-8 rounded-3xl text-center">
                 <p className="text-sm">
                   LES DOCUMENTS ET ÉQUIPEMENTS MIS À DISPOSITION DOIVENT ÊTRE RESTITUÉS LORS DU RETOUR.
                 </p>
-                <p className="text-primary font-bold mt-4 text-xs tracking-widest uppercase">
+                <p className="text-[#E91E63] font-bold mt-4 text-xs tracking-widest uppercase">
                   À défaut du respect de ces règles, le client se verra facturé.
                 </p>
               </div>
