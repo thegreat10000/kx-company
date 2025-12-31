@@ -121,7 +121,7 @@ export default function Home() {
                   <p className="text-xs text-muted-foreground font-semibold uppercase">
                     Assurance
                   </p>
-                  <p className="font-bold text-sm">Tous risques inclus</p>
+                  <p className="font-bold text-sm">Assurance RC</p>
                 </div>
               </div>
             </div>
