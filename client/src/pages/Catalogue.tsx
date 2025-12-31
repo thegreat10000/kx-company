@@ -104,7 +104,7 @@ export default function Catalogue() {
                 </div>
                 <div className="space-y-2">
                   <p className="font-semibold text-muted-foreground">Bientôt disponible</p>
-                  <p className="text-sm text-muted-foreground/60">Nouvel arrivage KX Location</p>
+                  <p className="text-sm text-muted-foreground/60">Nouvel arrivage KX</p>
                 </div>
               </div>
             </Card>
