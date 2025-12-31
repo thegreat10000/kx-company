@@ -205,8 +205,7 @@ export default function Home() {
               Découvrez tout nos véhicules
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Réservez dès à présent votre prochaine escapade sur mesure
-              facilement & rapidement.
+              Réservez dès à présent facilement & rapidement.
             </p>
           </div>
 
