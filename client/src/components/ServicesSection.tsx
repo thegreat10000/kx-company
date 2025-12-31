@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Cloud } from "lucide-react";
+import { useLocation } from "wouter";
 import rentalImg from "@assets/generated_images/luxury_car_rental_showroom_display..png";
 import chauffeurImg from "@assets/generated_images/professional_chauffeur_opening_car_door..png";
 import detailingImg from "@assets/generated_images/luxury_car_detailing_process..png";
@@ -20,6 +21,13 @@ const services = [
 ];
 
 export function ServicesSection() {
+  const [, setLocation] = useLocation();
+
+  const handleClick = () => {
+    setLocation("/services");
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <section className="py-20 bg-slate-50/50">
       <div className="container mx-auto px-4">
@@ -42,8 +50,34 @@ export function ServicesSection() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -10, scale: 1.02 }}
-                  className="group cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100"
+                  onClick={handleClick}
+                  className="group relative cursor-pointer bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100"
                 >
+                  {/* Effet de fumée au survol */}
+                  <div className="absolute inset-0 pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    {[...Array(6)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ scale: 0, x: 0, y: 0, opacity: 0 }}
+                        animate={{ 
+                          scale: [1, 2, 3],
+                          x: [0, (i % 2 === 0 ? 20 : -20) * (i + 1)],
+                          y: [0, -20 * (i + 1)],
+                          opacity: [0, 0.4, 0]
+                        }}
+                        transition={{ 
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: i * 0.2,
+                          ease: "easeOut"
+                        }}
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2"
+                      >
+                        <Cloud className="w-12 h-12 text-slate-200 fill-slate-200 blur-sm" />
+                      </motion.div>
+                    ))}
+                  </div>
+
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
                       src={service.image}
@@ -51,7 +85,7 @@ export function ServicesSection() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
-                  <div className="p-6 flex flex-col items-center">
+                  <div className="p-6 flex flex-col items-center relative z-10">
                     <h3 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors duration-300">
                       {service.title}
                     </h3>
