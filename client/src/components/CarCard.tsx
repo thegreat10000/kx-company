@@ -44,10 +44,10 @@ export function CarCard({ car, onClick }: CarCardProps) {
             {car.model}
           </h3>
           <div className="text-right flex flex-col items-end">
+            <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider leading-none mb-1">
+              À partir de
+            </span>
             <div className="flex items-baseline gap-1">
-              <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">
-                À partir de
-              </span>
               <span className="font-display text-lg font-bold text-primary">
                 {car.pricePerDay}€
               </span>

@@ -74,11 +74,11 @@ export default function Catalogue() {
                   <Badge variant="secondary">{car.category}</Badge>
                 </div>
               </CardHeader>
-              <CardContent className="p-4 pt-0">
+              <CardContent className="p-4 pt-0 text-right flex flex-col items-end">
+                <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider leading-none mb-1">
+                  À partir de
+                </span>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">
-                    À partir de
-                  </span>
                   <p className="text-2xl font-bold text-primary">{car.pricePerDay}€</p>
                   <span className="text-sm font-normal text-muted-foreground">/jour</span>
                 </div>
@@ -218,11 +218,11 @@ export default function Catalogue() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-xl border-2 border-primary/10 bg-primary/5">
+                  <div className="p-6 rounded-xl border-2 border-primary/10 bg-primary/5 text-right flex flex-col items-end">
+                    <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider leading-none mb-1">
+                      À partir de
+                    </span>
                     <div className="flex items-baseline gap-1 mb-1">
-                      <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
-                        À partir de
-                      </span>
                       <p className="text-3xl font-bold text-primary">{selectedCar.pricePerDay}€</p>
                       <span className="text-base font-normal text-muted-foreground">/ jour</span>
                     </div>
