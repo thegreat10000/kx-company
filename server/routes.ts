@@ -128,10 +128,10 @@ export async function registerRoutes(
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
-            { label: "24h", value: "80€", detail: "(en semaine)" },
-            { label: "48h", value: "200€", detail: "(Vendredi à Dimanche)" },
-            { label: "72h", value: "250€", detail: "(Vendredi à Lundi)" },
-            { label: "7 jours", value: "500€", detail: "(Semaine entière)" }
+            { duration: "24h", price: "80€", note: "en semaine" },
+            { duration: "48h", price: "200€", note: "Vendredi à Dimanche" },
+            { duration: "72h", price: "250€", note: "Vendredi à Lundi" },
+            { duration: "7 jours", price: "500€", note: "Semaine entière" }
           ]
         })
       }
