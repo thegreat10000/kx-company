@@ -16,6 +16,7 @@ export const cars = pgTable("cars", {
   conditions: text("conditions").array(),
   pricingInfo: text("pricing_info"),
   displayOrder: integer("display_order").default(0),
+  motorisation: text("motorisation"),
 });
 
 export const insertCarSchema = createInsertSchema(cars).omit({ id: true });

@@ -189,7 +189,7 @@ export default function Catalogue() {
                             <CarIcon className="h-4 w-4" />
                             <span className="text-xs font-medium uppercase tracking-wider">Motorisation</span>
                           </div>
-                          <p className="font-semibold">Essence</p>
+                          <p className="font-semibold">{selectedCar.motorisation || "Essence"}</p>
                         </div>
                         <div className="p-4 rounded-lg bg-muted">
                           <div className="flex items-center gap-2 text-muted-foreground mb-1">
@@ -208,7 +208,7 @@ export default function Catalogue() {
                       </div>
                       <div className="p-4 rounded-lg bg-muted">
                         <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Motorisation</p>
-                        <p className="font-semibold">Essence</p>
+                        <p className="font-semibold">{selectedCar.motorisation || "Essence"}</p>
                       </div>
                       <div className="p-4 rounded-lg bg-muted">
                         <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Puissance</p>
