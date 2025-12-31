@@ -77,13 +77,13 @@ export function Header() {
         href="/catalogue"
         className="text-sm font-medium hover:text-primary transition-colors"
       >
-        Nos Véhicules
+        Nos véhicules
       </Link>
       <Link
         href="/services"
         className="text-sm font-medium hover:text-primary transition-colors"
       >
-        Nos Services
+        Nos services
       </Link>
       <Link
         href="/informations"
@@ -121,7 +121,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 ml-auto">
+        <nav className="hidden md:flex items-center gap-8 ml-auto pr-4 lg:pr-8">
           <NavLinks />
         </nav>
 
