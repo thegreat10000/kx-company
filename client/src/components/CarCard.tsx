@@ -39,24 +39,23 @@ export function CarCard({ car, onClick }: CarCardProps) {
 
       {/* Content */}
       <div className="p-5">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="font-display text-lg font-bold text-foreground leading-tight">
+        <div className="flex justify-between items-baseline mb-3">
+          <h3 className="font-display text-xl font-bold text-foreground leading-tight">
             {car.model}
           </h3>
-          <div className="text-right flex flex-col items-end">
-            <div className="flex flex-col items-end">
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-tight">À partir de</span>
-                <span className="font-display text-lg font-bold text-primary">
-                  {car.pricePerDay}€
-                </span>
-                <span className="text-xs text-muted-foreground font-medium">/jour</span>
-              </div>
-            </div>
-            <Badge variant="outline" className="mt-1 text-[9px] px-1 py-0 h-3.5 border-black/20 text-white bg-black font-bold uppercase tracking-wider">
-              250KM/J Inclus
-            </Badge>
+          <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+            <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">À partir de</span>
+            <span className="font-display text-2xl font-black text-primary italic">
+              {car.pricePerDay}€
+            </span>
+            <span className="text-xs text-muted-foreground font-medium italic">/jour</span>
           </div>
+        </div>
+        
+        <div className="flex justify-end mb-4">
+          <Badge variant="outline" className="text-[9px] px-2 py-0.5 h-auto border-black/20 text-white bg-black font-bold uppercase tracking-[0.1em] rounded-sm">
+            250KM/J Inclus
+          </Badge>
         </div>
 
         <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
