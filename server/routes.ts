@@ -43,7 +43,7 @@ export async function registerRoutes(
         options: ["4MATIC", "AMG Line", "MBUX", "Toit ouvrant"],
         category: "Berline sportive",
         caution: 5000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
         displayOrder: 1,
         pricingInfo: JSON.stringify({
           type: "standard",
