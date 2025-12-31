@@ -49,12 +49,13 @@ export default function Home() {
               >
                 Bienvenue chez KX, votre agence de Location et de <br />
                 Detailing automobile basée sur Strasbourg.<br className="mt-4 block" /> 
-
+                <br className="my-8 block" />
                 
                 Nous vous proposons tout types de véhicules <br /> (Citadines,
                 Sportives, Luxueuse) ainsi que diverses prestations  (Avec
-                chauffeur, Shooting photo, vidéos et clips)
+                chauffeur, Shooting photo, vidéos et clips).
                 <br />
+                <br className="my-8 block" />
                 À côté de cela, notre société vous propose aussi de redonner vie
                 à votre véhicule en vous le nettoyant.
                 <br />
