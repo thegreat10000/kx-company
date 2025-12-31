@@ -74,16 +74,22 @@ export function Header() {
         Accueil
       </Link>
       <Link
-        href="/informations"
-        className="text-sm font-medium hover:text-primary transition-colors"
-      >
-        Informations
-      </Link>
-      <Link
         href="/catalogue"
         className="text-sm font-medium hover:text-primary transition-colors"
       >
         Nos Véhicules
+      </Link>
+      <Link
+        href="/services"
+        className="text-sm font-medium hover:text-primary transition-colors"
+      >
+        Nos Services
+      </Link>
+      <Link
+        href="/informations"
+        className="text-sm font-medium hover:text-primary transition-colors"
+      >
+        Informations
       </Link>
       <Dialog>
         <DialogTrigger asChild>
@@ -115,16 +121,8 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8 ml-auto">
           <NavLinks />
-          <Button
-            size="sm"
-            className="rounded-full px-6 font-semibold shadow-lg shadow-primary/20"
-            onClick={() => window.open("tel:0677727957")}
-          >
-            <Phone className="mr-2 h-4 w-4" />
-            06 77 72 79 57
-          </Button>
         </nav>
 
         {/* Mobile Nav */}
