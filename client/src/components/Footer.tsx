@@ -7,26 +7,11 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background py-16 px-4 md:px-6">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <img
-                src="/images/logo_kx.png"
-                alt="KX Logo"
-                className="h-12 md:h-16 w-auto mix-blend-normal"
-              />
-            </div>
-            <p className="text-muted-foreground leading-relaxed max-w-xs">
-              Location de véhicules de prestige à Strasbourg. Une expérience de
-              conduite inoubliable avec un service premium.
-            </p>
-          </div>
-
+        <div className="flex flex-col items-center text-center space-y-8">
           {/* Contact */}
           <div className="space-y-4">
             <h3 className="font-display text-lg font-bold">Contactez-nous</h3>
-            <ul className="space-y-3 text-muted-foreground">
+            <ul className="space-y-3 text-muted-foreground flex flex-col items-center">
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary" />
                 <span>06 77 72 79 57</span>
@@ -40,51 +25,36 @@ export function Footer() {
                 <span>Strasbourg, France</span>
               </li>
             </ul>
-          </div>
-
-          {/* CTA & Socials */}
-          <div className="space-y-4 md:text-right">
-            <h3 className="font-display text-lg font-bold">Disponibilités</h3>
-            <p className="text-muted-foreground ml-auto max-w-xs">
-              Découvrez nos véhicules et le pricing en cliquant ci-dessous.
-            </p>
-            <div className="flex flex-col gap-4 md:items-end">
+            
+            {/* Socials moved under address */}
+            <div className="flex gap-4 justify-center pt-2">
               <Button
-                size="lg"
-                className="w-full md:w-auto font-semibold bg-primary hover:bg-primary/90 text-white"
-                onClick={() => window.open("/catalogue", "_self")}
+                size="icon"
+                className="rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
+                onClick={() =>
+                  window.open("https://wa.me/33677727957", "_blank")
+                }
               >
-                Voir toutes les dispos
+                <SiWhatsapp className="h-5 w-5" />
               </Button>
-              <div className="flex gap-4 justify-start md:justify-end">
-                <Button
-                  size="icon"
-                  className="rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
-                  onClick={() =>
-                    window.open("https://wa.me/33677727957", "_blank")
-                  }
-                >
-                  <SiWhatsapp className="h-5 w-5" />
-                </Button>
-                <Button
-                  size="icon"
-                  className="rounded-full bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
-                  onClick={() =>
-                    window.open("https://snapchat.com/add/RIIMKA672", "_blank")
-                  }
-                >
-                  <SiSnapchat className="h-5 w-5" />
-                </Button>
-                <Button
-                  size="icon"
-                  className="rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
-                  onClick={() =>
-                    window.open("https://instagram.com/kx.location", "_blank")
-                  }
-                >
-                  <SiInstagram className="h-5 w-5" />
-                </Button>
-              </div>
+              <Button
+                size="icon"
+                className="rounded-full bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
+                onClick={() =>
+                  window.open("https://snapchat.com/add/RIIMKA672", "_blank")
+                }
+              >
+                <SiSnapchat className="h-5 w-5" />
+              </Button>
+              <Button
+                size="icon"
+                className="rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
+                onClick={() =>
+                  window.open("https://instagram.com/kx.location", "_blank")
+                }
+              >
+                <SiInstagram className="h-5 w-5" />
+              </Button>
             </div>
           </div>
         </div>
