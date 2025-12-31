@@ -18,6 +18,8 @@ import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
 
 import { Link, useLocation } from "wouter";
 
+import { ServicesSection } from "@/components/ServicesSection";
+
 export default function Home() {
   const { data: cars, isLoading, isError } = useCars();
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
@@ -155,6 +157,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ServicesSection />
 
       {/* Benefits Section */}
       <section className="py-16 bg-white">
