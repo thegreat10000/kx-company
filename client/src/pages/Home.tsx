@@ -35,7 +35,7 @@ export default function Home() {
                 <span className="text-primary block sm:inline">Strasbourg</span>
               </h1>
               <p 
-                className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed italic text-center"
+                className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed italic text-center font-serif"
                 style={{ fontFamily: "'Libre Baskerville', 'Lora', 'Georgia', serif", fontWeight: 400 }}
               >
                 Bienvenue chez KX, votre agence de Location et de Detailing automobile
