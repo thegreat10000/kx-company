@@ -226,7 +226,7 @@ export default function Catalogue() {
                       <p className="text-3xl font-bold text-primary">{selectedCar.pricePerDay}€</p>
                       <span className="text-base font-normal text-muted-foreground">/ jour</span>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-6">Assurance tous risques incluse</p>
+                    <p className="text-sm text-muted-foreground mb-6">Assurance RC INCLUSE</p>
                     
                     <div className="space-y-3">
                       <Button 
