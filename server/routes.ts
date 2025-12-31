@@ -70,8 +70,8 @@ export async function registerRoutes(
           type: "standard",
           prices: [
             { duration: "24h", price: "250€", note: "en semaine" },
-            { duration: "48h", price: "750€", note: "week-end inclus" },
-            { duration: "72h", price: "900€", note: "week-end inclus" },
+            { duration: "48h", price: "750€", note: "Vendredi à Dimanche" },
+            { duration: "72h", price: "900€", note: "Vendredi à Lundi" },
             { duration: "7 jours", price: "1500€", note: "" }
           ]
         })
