@@ -61,10 +61,10 @@ export async function registerRoutes(
         galleryUrls: ["/images/c43_amg_new.jpg"],
         power: "390 ch",
         transmission: "Automatique",
-        options: ["Pack Performance", "Échappement AMG", "Sièges Performance", "Burmester"],
+        options: ["Apple CarPlay", "Caméra 360", "Multibeam LED", "Toit Panoramique"],
         category: "Sport",
         caution: 5000,
-        conditions: ["Âge minimum 21 ans", "Permis de conduire > 2 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+        conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
         displayOrder: 2,
         pricingInfo: JSON.stringify({
           type: "standard",

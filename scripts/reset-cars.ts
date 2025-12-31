@@ -22,10 +22,10 @@ const carsData = [
     galleryUrls: ["/images/c43_amg_new.jpg"],
     power: "390 ch",
     transmission: "Automatique",
-    options: ["V6 Biturbo", "AMG Performance", "Échappement sport"],
+    options: ["Apple CarPlay", "Caméra 360", "Multibeam LED", "Toit Panoramique"],
     category: "Sport",
     caution: 5000,
-    conditions: ["Âge minimum 23 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
+    conditions: ["Âge minimum 21 ans", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)", "Pièce d'identité"],
     displayOrder: 2
   },
   {
