@@ -48,19 +48,19 @@ export default function Services() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-slate-100 dark:bg-slate-900 py-20 transition-colors duration-500">
+        <section className="bg-slate-100 dark:bg-[#4A1D2F] py-20 transition-colors duration-500">
           <div className="container px-4 md:px-6 mx-auto text-center">
-            <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 dark:text-slate-100">
+            <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 dark:text-pink-100">
               Nos Services Premium
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto font-serif italic">
+            <p className="text-xl text-slate-600 dark:text-pink-200/70 max-w-3xl mx-auto font-serif italic">
               Découvrez l'excellence automobile à Strasbourg à travers nos prestations de location, service chauffeur et entretien.
             </p>
           </div>
         </section>
 
         {/* Services Detail */}
-        <section className="py-20 bg-slate-50/30 dark:bg-slate-900/10">
+        <section className="py-20 bg-slate-50/30 dark:bg-slate-900/20">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {services.map((service, index) => (
