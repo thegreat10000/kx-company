@@ -132,9 +132,9 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                                     {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
                                   </div>
                                   {p.note?.toLowerCase().includes("vendredi à dimanche") && (
-                                    <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-4 border-primary/30 text-primary bg-primary/5 font-bold">
+                                    <span className="text-[10px] text-primary font-bold">
                                       Chauffeur disponible en option
-                                    </Badge>
+                                    </span>
                                   )}
                                 </div>
                               </div>
