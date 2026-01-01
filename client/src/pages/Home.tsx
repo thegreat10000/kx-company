@@ -43,7 +43,7 @@ export default function Home() {
                 <span className="text-primary block sm:inline">Strasbourg</span>
               </h1>
               <p
-                className="text-lg md:text-xl text-slate-400 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-center font-serif tracking-tight"
+                className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-center font-serif tracking-tight"
                 style={{
                   fontFamily: "'Playfair Display', serif",
                   fontWeight: 400,
