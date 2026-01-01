@@ -43,9 +43,9 @@ export default function Home() {
                 <span className="text-primary block sm:inline">Strasbourg</span>
               </h1>
               <p
-                className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed italic text-center font-serif"
+                className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed text-center font-sans tracking-tight"
                 style={{
-                  fontFamily: "'Libre Baskerville', 'Lora', 'Georgia', serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 400,
                 }}
               >
@@ -54,7 +54,7 @@ export default function Home() {
                 <br className="my-8 block" />
                 
                 Nous vous proposons tout types de véhicules <br /> (Citadines,
-                Sportives, Luxueuse) ainsi que diverses prestations  (Avec
+                Sportives, Luxueuse) ainsi que diverses prestations (Avec
                 chauffeur, Shooting photo, vidéos et clips).
                 <br />
                 <br className="my-8 block" />
