@@ -38,9 +38,9 @@ export default function Home() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 space-y-8 text-center lg:text-left">
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1]">
-                La référence des <span className="text-slate-400">locations</span> de <span className="text-slate-400">voiture</span> à{" "}
-                <span className="text-primary block sm:inline">Strasbourg</span>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-black dark:text-white leading-[1.1]">
+                La <span className="text-slate-400">référence</span> pour vos <span className="text-slate-400">locations de voitures</span> sur{" "}
+                <span className="text-slate-400 block sm:inline">Strasbourg</span>
               </h1>
               <p
                 className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-center font-serif tracking-tight"
