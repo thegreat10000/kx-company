@@ -30,10 +30,10 @@ const services = [
     description: "Redonnez à votre véhicule son aspect d'origine grâce à notre service de Detailing. Nous intervenons sur place, à votre domicile ou sur votre lieu de travail pour un nettoyage complet et minutieux.",
     image: "/images/service_detailing.jpg",
     features: [
-      "Nettoyage intérieur et extérieur approfondi",
+      "Différentes formules",
       "Utilisation de produits haut de gamme",
       "Intervention mobile (domicile, travail)",
-      "Redonne vie et valeur à votre véhicule"
+      "Redonne vie à votre véhicule"
     ]
   }
 ];
