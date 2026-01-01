@@ -31,7 +31,7 @@ export default function Informations() {
               Conditions & Fonctionnement
             </h1>
             <p className="text-xl text-slate-600 dark:text-pink-200/70 font-serif italic max-w-2xl mx-auto">
-              Tout ce que vous devez savoir pour louer l'excellence en toute sérénité.
+              Toutes les informations & conditions à connaître au préalable de toute prestation de Location
             </p>
           </div>
         </section>
