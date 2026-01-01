@@ -132,10 +132,10 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                                 </div>
                               </div>
                             ))}
-                            {"extra" in pricing && pricing.extra && (
+                            {(pricing as any).extra && (
                               <div className="flex items-start gap-2 bg-primary/10 p-3 rounded-lg mt-2">
                                 <Info className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                                <p className="text-sm text-muted-foreground">{pricing.extra}</p>
+                                <p className="text-sm text-muted-foreground">{(pricing as any).extra}</p>
                               </div>
                             )}
                           </div>
