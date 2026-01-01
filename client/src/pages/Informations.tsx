@@ -147,8 +147,9 @@ export default function Informations() {
               <Card className="border-none shadow-xl bg-white dark:bg-slate-900/50 overflow-hidden">
                 <CardContent className="p-8 md:p-10 space-y-8">
                   <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700/50">
-                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                      Un acompte est un premier versement dans le cadre d'un achat ou d'une prestation de services. Dès lors qu'il est versé, chaque parties se voient obligés de tenir ses engagements.
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed whitespace-pre-line">
+                      Un acompte est un premier versement dans le cadre d'un achat ou d'une prestation de services.
+                      Dès lors qu'il est versé, chaque parties se voient obligés de tenir ses engagements.
                     </p>
                   </div>
                   <div className="flex flex-col md:flex-row gap-8 items-center bg-primary/5 dark:bg-primary/10 p-8 rounded-2xl border border-primary/10 dark:border-primary/20">
