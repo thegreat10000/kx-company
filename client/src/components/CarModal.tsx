@@ -131,15 +131,16 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                                     <span className="font-bold text-primary text-lg">{p.price}</span>
                                     {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
                                   </div>
-                                  {p.note?.toLowerCase().includes("dimanche") && (
-                                    <span className="text-[10px] text-primary font-bold">
-                                      Chauffeur disponible en option
-                                    </span>
-                                  )}
                                 </div>
                               </div>
                             ))}
-                            {/* Chauffeur option for Maybach is now handled per-line above */}
+                            {pricing.extra && (
+                              <div className="flex items-center justify-center py-2 mt-2 bg-primary/5 rounded-md border border-primary/10">
+                                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                                  {pricing.extra}
+                                </span>
+                              </div>
+                            )}
                           </div>
                         );
                       } else {
