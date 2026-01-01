@@ -90,7 +90,7 @@ export default function Informations() {
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-1 dark:text-slate-200">Caution</h3>
-                        <p className="text-slate-500 dark:text-slate-400">CB, Espèces ou véhicule équivalent + 1.000€.</p>
+                        <p className="text-slate-500 dark:text-slate-400">Empreinte Bancaire, Espèces ou Véhicule équivalent +1.000€.</p>
                       </div>
                     </li>
                   </ul>
