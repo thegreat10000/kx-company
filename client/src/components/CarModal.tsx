@@ -137,9 +137,8 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                             {pricing.extra && car.id === 3 && (
                               <div className="flex items-center justify-between py-2 border-t border-border/30 mt-2 pt-2">
                                 <span className="text-sm font-bold text-primary italic">
-                                  {pricing.extra}
+                                  {pricing.extra} ⚙️
                                 </span>
-                                <SlidersHorizontal className="w-4 h-4 text-primary" />
                               </div>
                             )}
                           </div>
