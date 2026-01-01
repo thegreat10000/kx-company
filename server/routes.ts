@@ -106,10 +106,11 @@ export async function registerRoutes(
         ],
         displayOrder: 3,
         pricingInfo: JSON.stringify({
-          type: "chauffeur",
-          basePrice: "900€",
-          note: "Chauffeur disponible en option",
-          extra: "Pack cortège, mairie et plus disponibles. Contactez-nous pour plus d'informations."
+          type: "standard",
+          prices: [
+            { duration: "24h", price: "450€", note: "en semaine" },
+            { duration: "24h", price: "900€", note: "Vendredi à Dimanche" }
+          ]
         })
       },
       {
