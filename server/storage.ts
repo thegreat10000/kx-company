@@ -28,6 +28,7 @@ export class MemoryStorage implements IStorage {
       imageUrl: insertCar.imageUrl,
       galleryUrls: insertCar.galleryUrls || [],
       power: insertCar.power,
+      motorisation: insertCar.motorisation || null,
       transmission: insertCar.transmission,
       options: insertCar.options || [],
       category: insertCar.category,
