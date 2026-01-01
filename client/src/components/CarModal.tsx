@@ -128,7 +128,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                                 <span className="text-sm font-medium text-foreground">{p.duration}</span>
                                 <div className="flex flex-col items-end gap-1">
                                   <div className="flex items-center gap-2">
-                                    <span className="font-bold text-primary text-lg">{p.price}</span>
+                                    {p.price && <span className="font-bold text-primary text-lg">{p.price}</span>}
                                     {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
                                   </div>
                                 </div>
