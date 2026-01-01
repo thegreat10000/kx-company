@@ -84,7 +84,7 @@ export default function Catalogue() {
                 </div>
                 <div className="mt-2 space-y-1 text-sm text-muted-foreground">
                   {car.pricingInfo ? (
-                    <p className="flex items-center gap-1"><Euro className="h-3 w-3" /> Tarifs détaillés</p>
+                    <p className="flex items-center gap-1"><Euro className="h-3 w-3" /> Tarif détaillé</p>
                   ) : null}
                   <p>Transmission: {car.transmission}</p>
                 </div>

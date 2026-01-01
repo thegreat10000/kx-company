@@ -62,7 +62,7 @@ export function CarCard({ car, onClick }: CarCardProps) {
         <div className="flex items-center gap-4 mt-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-1.5">
             <Euro className="h-4 w-4 text-primary" />
-            <span>Tarifs détaillés</span>
+            <span>Tarif détaillé</span>
           </div>
           <div className="flex items-center gap-1.5">
             <Cog className="h-4 w-4" />
