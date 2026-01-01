@@ -59,20 +59,20 @@ export default function Informations() {
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <li className="flex items-start gap-4">
                       <div className="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl text-slate-600 dark:text-slate-400">
-                        <FileText className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg mb-1 dark:text-slate-200">Permis de conduire</h3>
-                        <p className="text-slate-500 dark:text-slate-400">Document original en cours de validité.</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-4">
-                      <div className="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl text-slate-600 dark:text-slate-400">
                         <ShieldAlert className="w-6 h-6" />
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-1 dark:text-slate-200">Pièce d'identité</h3>
                         <p className="text-slate-500 dark:text-slate-400">CNI ou Passeport original requis.</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <div className="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl text-slate-600 dark:text-slate-400">
+                        <FileText className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-lg mb-1 dark:text-slate-200">Permis de conduire</h3>
+                        <p className="text-slate-500 dark:text-slate-400">Document original en cours de validité.</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
