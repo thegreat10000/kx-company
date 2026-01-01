@@ -126,18 +126,20 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                             {pricing.prices.map((p, idx) => (
                               <div key={idx} className="flex items-center justify-between py-1 border-b border-border/30 last:border-0">
                                 <span className="text-sm font-medium text-foreground">{p.duration}</span>
-                                <div className="flex items-center gap-2">
-                                  <span className="font-bold text-primary text-lg">{p.price}</span>
-                                  {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
+                                <div className="flex flex-col items-end gap-1">
+                                  <div className="flex items-center gap-2">
+                                    <span className="font-bold text-primary text-lg">{p.price}</span>
+                                    {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
+                                  </div>
+                                  {p.note?.includes("Vendredi à Dimanche") && (
+                                    <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-4 border-primary/30 text-primary bg-primary/5 font-bold">
+                                      Chauffeur disponible en option
+                                    </Badge>
+                                  )}
                                 </div>
                               </div>
                             ))}
-                            {(pricing as any).extra && (
-                              <div className="flex items-start gap-2 bg-primary/10 p-3 rounded-lg mt-2">
-                                <Info className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                                <p className="text-sm text-muted-foreground">{(pricing as any).extra}</p>
-                              </div>
-                            )}
+                            {/* Chauffeur option for Maybach is now handled per-line above */}
                           </div>
                         );
                       } else {
