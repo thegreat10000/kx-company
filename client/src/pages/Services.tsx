@@ -5,13 +5,13 @@ import { CheckCircle2 } from "lucide-react";
 const services = [
   {
     title: "Locations de véhicules",
-    description: "KX Company vous propose une large gamme de véhicules de prestige pour tous vos besoins. Que ce soit pour un week-end, un événement spécial ou un besoin professionnel, nous avons le véhicule qu'il vous faut.",
+    description: "La société KX vous propose une large gamme de véhicules en allant de la simple citadine tout en passant par la sportive ou encore la berline ultra-luxueuse Allemande. Le tout pour répondre à vos différents besoins !\n\nUn week-end, un mariage, un évènement particulier ou encore des vacances entre ami(e)s ? Nous avons le véhicule qu'il vous faut avec des formules sur mesure répondant spécifiquement à vos désirs !",
     image: "/images/service_location.jpg",
     features: [
-      "Flotte de véhicules récents (Mercedes AMG, Peugeot 208 GT)",
-      "Entretien rigoureux et propreté exemplaire",
-      "Options de location flexibles (24h, 48h, 7j, 30j)",
-      "Assurance RC incluse"
+      "Flotte de véhicules récents (AMG, Maybach, GT, R)",
+      "Véhicules entretenus et suivis exclusivement en concession",
+      "Options de location flexibles (Durée, Kilométrage)",
+      "Assurance RC incluse avec diverses formules de rachat de franchise"
     ]
   },
   {
