@@ -39,7 +39,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 space-y-8 text-center lg:text-left">
               <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-black dark:text-white leading-[1.1]">
-                La <span className="text-slate-400">référence</span> pour vos <span className="text-slate-400">locations de voitures</span> sur{" "}
+                La <span className="text-slate-400">référence</span> pour vos <span className="text-primary">locations de voitures</span> sur{" "}
                 <span className="text-slate-400 block sm:inline">Strasbourg</span>
               </h1>
               <p
