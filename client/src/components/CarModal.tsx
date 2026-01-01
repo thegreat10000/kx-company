@@ -4,8 +4,8 @@ import { Dialog, DialogContent, DialogClose, DialogTitle, DialogDescription } fr
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { FaWhatsapp, FaSnapchatGhost, FaInstagram } from "react-icons/fa";
-import { X, Check, Cog, Euro, Info, SlidersHorizontal } from "lucide-react";
+import { FaWhatsapp, FaSnapchatGhost } from "react-icons/fa";
+import { X, Check, Cog, Euro, Info } from "lucide-react";
 
 interface PricingStandard {
   type: "standard";
@@ -134,10 +134,10 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                                 </div>
                               </div>
                             ))}
-                            {car.id === 3 && (
-                              <div className="flex justify-center pt-2">
-                                <span className="text-sm text-muted-foreground italic">
-                                  Chauffeur disponible en option
+                            {pricing.extra && (
+                              <div className="flex items-center justify-between py-1 border-t border-border/30 mt-2 pt-2">
+                                <span className="text-sm font-bold text-primary italic">
+                                  {pricing.extra}
                                 </span>
                               </div>
                             )}

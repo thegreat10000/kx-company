@@ -5,7 +5,7 @@ import { api } from "@shared/routes";
 
 export async function registerRoutes(
   httpServer: Server,
-  app: Express,
+  app: Express
 ): Promise<Server> {
   app.get(api.cars.list.path, async (req, res) => {
     const cars = await storage.getCars();
@@ -30,7 +30,7 @@ export async function registerRoutes(
   async function seedDatabase() {
     // Delete existing cars to force refresh seed data
     await storage.deleteAllCars();
-
+    
     const seedCars = [
       {
         model: "Mercedes A35 AMG",
@@ -40,20 +40,10 @@ export async function registerRoutes(
         power: "306 ch",
         motorisation: "Essence",
         transmission: "Automatique",
-        options: [
-          "Apple CarPlay",
-          "Ambiance LED",
-          "Volant AMG Performance",
-          "Toit Panoramique",
-        ],
+        options: ["Apple CarPlay", "Ambiance LED", "Volant AMG Performance", "Toit Panoramique"],
         category: "Berline Sportive",
         caution: 5000,
-        conditions: [
-          "Âge minimum 21 ans",
-          "Pièce d'identité",
-          "Permis de conduire > 3 ans",
-          "Justificatif de domicile (- 3 mois)",
-        ],
+        conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 1,
         pricingInfo: JSON.stringify({
           type: "standard",
@@ -61,9 +51,9 @@ export async function registerRoutes(
             { duration: "24h", price: "200€", note: "en semaine" },
             { duration: "48h", price: "650€", note: "Vendredi à Dimanche" },
             { duration: "72h", price: "800€", note: "Vendredi à Lundi" },
-            { duration: "7 jours", price: "1200€", note: "Semaine entière" },
-          ],
-        }),
+            { duration: "7 jours", price: "1200€", note: "Semaine entière" }
+          ]
+        })
       },
       {
         model: "Mercedes C43 AMG",
@@ -73,20 +63,10 @@ export async function registerRoutes(
         power: "390 ch",
         motorisation: "Essence",
         transmission: "Automatique",
-        options: [
-          "Apple CarPlay",
-          "Ambiance LED",
-          "Caméra 360",
-          "Toit Panoramique",
-        ],
+        options: ["Apple CarPlay", "Ambiance LED", "Caméra 360", "Toit Panoramique"],
         category: "Berline Sportive",
         caution: 5000,
-        conditions: [
-          "Âge minimum 21 ans",
-          "Pièce d'identité",
-          "Permis de conduire > 3 ans",
-          "Justificatif de domicile (- 3 mois)",
-        ],
+        conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 2,
         pricingInfo: JSON.stringify({
           type: "standard",
@@ -94,9 +74,9 @@ export async function registerRoutes(
             { duration: "24h", price: "250€", note: "en semaine" },
             { duration: "48h", price: "750€", note: "Vendredi à Dimanche" },
             { duration: "72h", price: "900€", note: "Vendredi à Lundi" },
-            { duration: "7 jours", price: "1500€", note: "Semaine entière" },
-          ],
-        }),
+            { duration: "7 jours", price: "1500€", note: "Semaine entière" }
+          ]
+        })
       },
       {
         model: "Mercedes Classe S Maybach",
@@ -108,17 +88,12 @@ export async function registerRoutes(
           "/images/s3_1767035002650.jpg",
           "/images/s4_1767035004807.jpg",
           "/images/s_arriere_1767035011532.jpg",
-          "/images/cdda4d84-6306-43da-a681-fd4f8e1b5fb5_1767035032788.jpg",
+          "/images/cdda4d84-6306-43da-a681-fd4f8e1b5fb5_1767035032788.jpg"
         ],
         power: "258 ch",
         motorisation: "Diesel",
         transmission: "Automatique",
-        options: [
-          "Apple CarPlay",
-          "Ambiance LED",
-          "Son Burmester",
-          "Double Toit Panoramique",
-        ],
+        options: ["Apple CarPlay", "Ambiance LED", "Son Burmester", "Double Toit Panoramique"],
         category: "Berline Ultra-Luxueuse",
         caution: 5000,
         conditions: [
@@ -127,7 +102,7 @@ export async function registerRoutes(
           "Permis de conduire > 3 ans",
           "Justificatif de domicile (- 3 mois)",
           "Prestation avec ou sans chauffeur sur devis",
-          "Caution requise uniquement pour les prestations sans chauffeur",
+          "Caution requise uniquement pour les prestations sans chauffeur"
         ],
         displayOrder: 3,
         pricingInfo: JSON.stringify({
@@ -135,8 +110,10 @@ export async function registerRoutes(
           prices: [
             { duration: "24h", price: "450€", note: "en semaine" },
             { duration: "48h", price: "900€", note: "Vendredi à Dimanche" },
+            { duration: "Chauffeur disponible en option", price: "", note: "" }
           ],
-        }),
+          extra: "Chauffeur disponible en option"
+        })
       },
       {
         model: "Peugeot 208 GT",
@@ -146,20 +123,10 @@ export async function registerRoutes(
         power: "110 ch",
         motorisation: "Hybride",
         transmission: "Automatique",
-        options: [
-          "Apple CarPlay",
-          "Ambiance LED",
-          "i-Cockpit 3D",
-          "Toit Black Diamond",
-        ],
+        options: ["Apple CarPlay", "Ambiance LED", "i-Cockpit 3D", "Toit Black Diamond"],
         category: "Compacte Citadine",
         caution: 2000,
-        conditions: [
-          "Âge minimum 20 ans",
-          "Pièce d'identité",
-          "Permis de conduire > 1 an",
-          "Justificatif de domicile (- 3 mois)",
-        ],
+        conditions: ["Âge minimum 20 ans", "Pièce d'identité", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)"],
         displayOrder: 4,
         pricingInfo: JSON.stringify({
           type: "standard",
@@ -168,10 +135,10 @@ export async function registerRoutes(
             { duration: "48h", price: "220€", note: "Vendredi à Dimanche" },
             { duration: "72h", price: "300€", note: "Vendredi à Lundi" },
             { duration: "7 jours", price: "450€", note: "Semaine entière" },
-            { duration: "30 jours", price: "1300€", note: "Mois complet" },
-          ],
-        }),
-      },
+            { duration: "30 jours", price: "1300€", note: "Mois complet" }
+          ]
+        })
+      }
     ];
 
     for (const car of seedCars) {
