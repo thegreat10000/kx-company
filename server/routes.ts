@@ -79,7 +79,7 @@ export async function registerRoutes(
         })
       },
       {
-        model: "Mercedes Classe S350 Maybach",
+        model: "Mercedes Classe S Maybach",
         pricePerDay: 900,
         imageUrl: "/images/s_devant_1767034994217.jpg",
         galleryUrls: [
