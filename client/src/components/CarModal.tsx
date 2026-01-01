@@ -10,6 +10,7 @@ import { X, Check, Cog, Euro, Info } from "lucide-react";
 interface PricingStandard {
   type: "standard";
   prices: { duration: string; price: string; note: string }[];
+  extra?: string;
 }
 
 interface PricingChauffeur {
