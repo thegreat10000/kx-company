@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 const services = [
   {
     title: "Locations de véhicules",
-    description: "La société KX vous propose une large gamme de véhicules en allant de la simple citadine tout en passant par la sportive ou encore la berline ultra-luxueuse Allemande. Le tout pour répondre à vos différents besoins !\n\nUn week-end, un mariage, un évènement particulier ou encore des vacances entre ami(e)s ? Nous avons le véhicule qu'il vous faut avec des formules sur mesure répondant spécifiquement à vos désirs !",
+    description: "La société KX vous propose une large gamme de véhicules en allant de la simple citadine tout en passant par la sportive ou encore la berline ultra-luxueuse Allemande.\n\nLe tout pour répondre à vos différents besoins !\n\nUn week-end, un mariage, un évènement particulier ou encore des vacances entre ami(e)s ?\n\nNous avons le véhicule qu'il vous faut avec des formules sur mesure répondant spécifiquement à vos désirs !",
     image: "/images/service_location.jpg",
     features: [
       "Flotte de véhicules récents (AMG, Maybach, GT, R)",
@@ -78,9 +78,9 @@ export default function Services() {
                   </div>
                   <CardContent className="p-8">
                     <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-slate-100">{service.title}</h2>
-                    <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    <div className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed whitespace-pre-line">
                       {service.description}
-                    </p>
+                    </div>
                     <div className="space-y-4">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-3">
