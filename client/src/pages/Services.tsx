@@ -19,10 +19,10 @@ const services = [
     description: "Profitez d'un service de transport haut de gamme avec nos chauffeurs professionnels. Pour vos mariages, transferts aéroport ou événements d'entreprise, voyagez en toute sérénité et élégance.",
     image: "/images/service_chauffeur.jpg",
     features: [
-      "Chauffeurs professionnels et discrets",
+      "Chauffeurs professionnels",
       "Ponctualité garantie",
-      "Trajets personnalisés sur Strasbourg et alentours",
-      "Prestation sur devis pour une flexibilité maximale"
+      "Expérience client unique",
+      "Trajets toutes distances sur devis"
     ]
   },
   {
