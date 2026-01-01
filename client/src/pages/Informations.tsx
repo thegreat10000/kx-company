@@ -120,7 +120,7 @@ export default function Informations() {
                     <div className="flex gap-6 items-center border-b border-slate-200 dark:border-slate-700/50 pb-6">
                       <span className="text-primary font-bold text-xl">02</span>
                       <p className="text-lg font-medium text-slate-900 dark:text-slate-200">
-                        Tout frais, résultant d'un <span className="text-primary font-bold">USURE ANORMALE</span>, sont à la charge du client.
+                        Tout frais, résultant d'une <span className="text-primary font-bold">USURE ANORMALE</span>, sont à la charge du client.
                       </p>
                     </div>
                     <div className="flex gap-6 items-center">
