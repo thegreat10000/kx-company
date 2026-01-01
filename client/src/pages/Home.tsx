@@ -49,8 +49,8 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                Bienvenue chez KX, votre agence de Location et de <br />
-                Detailing automobile basée sur Strasbourg.<br className="mt-4 block" /> 
+                Bienvenue chez KX, votre agence de Location et de Detailing <br className="hidden sm:block" />
+                automobile basée sur Strasbourg.<br className="mt-4 block" /> 
                 <br className="my-8 block" />
                 
                 Nous vous proposons tout types de véhicules <br /> (Citadines,
