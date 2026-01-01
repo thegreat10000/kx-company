@@ -26,16 +26,16 @@ export function Footer() {
               </li>
             </ul>
             
-            {/* Socials moved under address */}
+            {/* Socials reordered: Instagram, Snapchat, Whatsapp */}
             <div className="flex gap-4 justify-center pt-2">
               <Button
                 size="icon"
-                className="rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
+                className="rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
                 onClick={() =>
-                  window.open("https://wa.me/33677727957", "_blank")
+                  window.open("https://instagram.com/kx.location", "_blank")
                 }
               >
-                <SiWhatsapp className="h-5 w-5" />
+                <SiInstagram className="h-5 w-5" />
               </Button>
               <Button
                 size="icon"
@@ -48,12 +48,12 @@ export function Footer() {
               </Button>
               <Button
                 size="icon"
-                className="rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
+                className="rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
                 onClick={() =>
-                  window.open("https://instagram.com/kx.location", "_blank")
+                  window.open("https://wa.me/33677727957", "_blank")
                 }
               >
-                <SiInstagram className="h-5 w-5" />
+                <SiWhatsapp className="h-5 w-5" />
               </Button>
             </div>
           </div>
