@@ -51,6 +51,14 @@ export default function Services() {
             </h1>
             <p className="text-xl text-slate-600 dark:text-pink-200/70 max-w-3xl mx-auto font-serif italic">
               Découvrez l'excellence automobile à Strasbourg à travers nos prestations de location, service chauffeur et entretien.
+              <span className="block mt-4 text-lg not-italic font-sans">
+                La référence Strasbourgeoise pour vos diverses prestations de services :
+              </span>
+              <span className="block mt-2 text-lg not-italic font-sans space-y-1">
+                <span className="block">• Location de véhicules Citadines, Sportives et Luxueuses</span>
+                <span className="block">• Service avec chauffeur</span>
+                <span className="block">• Entretien Detailing de votre véhicule</span>
+              </span>
             </p>
           </div>
         </section>
