@@ -135,7 +135,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                               </div>
                             ))}
                             {car.id === 3 && (
-                              <div className="flex justify-center pt-1">
+                              <div className="flex justify-center pt-2">
                                 <span className="text-sm text-muted-foreground italic">
                                   Chauffeur disponible en option
                                 </span>
