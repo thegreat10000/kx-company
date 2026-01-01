@@ -108,7 +108,7 @@ export async function registerRoutes(
         pricingInfo: JSON.stringify({
           type: "chauffeur",
           basePrice: "900€",
-          note: "Chauffeur inclus uniquement",
+          note: "Chauffeur disponible en option",
           extra: "Pack cortège, mairie et plus disponibles. Contactez-nous pour plus d'informations."
         })
       },
