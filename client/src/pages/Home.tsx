@@ -46,7 +46,7 @@ export default function Home() {
                 className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-center font-serif tracking-tight"
                 style={{
                   fontFamily: "'Playfair Display', serif",
-                  fontWeight: 400,
+                  fontWeight: 500,
                 }}
               >
                 Bienvenue chez KX, votre agence de Location et de Detailing <br className="hidden sm:block" />
