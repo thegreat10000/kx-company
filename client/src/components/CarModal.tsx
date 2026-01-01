@@ -135,8 +135,8 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                               </div>
                             ))}
                             {pricing.extra && (
-                              <div className="flex items-center justify-center py-2 mt-2 bg-primary/5 rounded-md border border-primary/10">
-                                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                              <div className="flex items-center justify-between py-1 border-b border-border/30 last:border-0">
+                                <span className="text-sm font-medium text-foreground" colSpan={2}>
                                   {pricing.extra}
                                 </span>
                               </div>
