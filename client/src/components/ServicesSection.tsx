@@ -1,22 +1,18 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Cloud } from "lucide-react";
 import { useLocation } from "wouter";
-import rentalImg from "@assets/generated_images/luxury_car_rental_showroom_display..png";
-import chauffeurImg from "@assets/generated_images/professional_chauffeur_opening_car_door..png";
-import detailingImg from "@assets/generated_images/luxury_car_detailing_process..png";
-
 const services = [
   {
     title: "Locations de véhicules",
-    image: rentalImg,
+    image: "/images/service_location.jpg",
   },
   {
     title: "Prestations avec chauffeur",
-    image: chauffeurImg,
+    image: "/images/service_chauffeur.jpg",
   },
   {
     title: "Detailing & Nettoyage",
-    image: detailingImg,
+    image: "/images/service_detailing.jpg",
   },
 ];
 

@@ -2,15 +2,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
-import rentalImg from "@assets/generated_images/luxury_car_rental_showroom_display..png";
-import chauffeurImg from "@assets/generated_images/professional_chauffeur_opening_car_door..png";
-import detailingImg from "@assets/generated_images/luxury_car_detailing_process..png";
-
 const services = [
   {
     title: "Locations de véhicules",
     description: "KX Company vous propose une large gamme de véhicules de prestige pour tous vos besoins. Que ce soit pour un week-end, un événement spécial ou un besoin professionnel, nous avons le véhicule qu'il vous faut.",
-    image: rentalImg,
+    image: "/images/service_location.jpg",
     features: [
       "Flotte de véhicules récents (Mercedes AMG, Peugeot 208 GT)",
       "Entretien rigoureux et propreté exemplaire",
@@ -21,7 +17,7 @@ const services = [
   {
     title: "Prestations avec chauffeur",
     description: "Profitez d'un service de transport haut de gamme avec nos chauffeurs professionnels. Pour vos mariages, transferts aéroport ou événements d'entreprise, voyagez en toute sérénité et élégance.",
-    image: chauffeurImg,
+    image: "/images/service_chauffeur.jpg",
     features: [
       "Chauffeurs professionnels et discrets",
       "Ponctualité garantie",
@@ -32,7 +28,7 @@ const services = [
   {
     title: "Detailing & Nettoyage",
     description: "Redonnez à votre véhicule son aspect d'origine grâce à notre service de Detailing. Nous intervenons sur place, à votre domicile ou sur votre lieu de travail pour un nettoyage complet et minutieux.",
-    image: detailingImg,
+    image: "/images/service_detailing.jpg",
     features: [
       "Nettoyage intérieur et extérieur approfondi",
       "Utilisation de produits haut de gamme",
