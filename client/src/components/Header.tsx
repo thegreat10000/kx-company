@@ -45,7 +45,7 @@ export function Header() {
           }
         >
           <SiInstagram className="mr-3 h-6 w-6" />
-          Instagram: 2KX.LOCATION
+          Instagram: KX.COMPANY
         </Button>
       </div>
       <div className="text-center text-muted-foreground">
@@ -206,7 +206,7 @@ export function Header() {
                     }}
                   >
                     <SiInstagram className="mr-2 h-5 w-5" />
-                    Instagram: 2KX.LOCATION
+                    Instagram: KX.COMPANY
                   </Button>
                   <p className="text-center text-sm text-muted-foreground pt-4">
                     © KX Company. Tous droits réservés.

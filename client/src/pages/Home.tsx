@@ -123,7 +123,7 @@ export default function Home() {
                           }
                         >
                           <SiInstagram className="mr-3 h-6 w-6" />
-                          Instagram: kx.location
+                          Instagram: KX.COMPANY
                         </Button>
                       </div>
                     </div>
