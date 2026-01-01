@@ -131,7 +131,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                                     <span className="font-bold text-primary text-lg">{p.price}</span>
                                     {p.note && <span className="text-xs text-muted-foreground">({p.note})</span>}
                                   </div>
-                                  {p.note?.toLowerCase().includes("vendredi") && (
+                                  {p.note?.toLowerCase().includes("dimanche") && (
                                     <span className="text-[10px] text-primary font-bold">
                                       Chauffeur disponible en option
                                     </span>
