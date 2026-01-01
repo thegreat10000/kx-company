@@ -109,8 +109,9 @@ export async function registerRoutes(
           type: "standard",
           prices: [
             { duration: "24h", price: "450€", note: "en semaine" },
-            { duration: "24h", price: "900€", note: "Vendredi à Dimanche" }
-          ]
+            { duration: "48h", price: "900€", note: "Vendredi à Dimanche" }
+          ],
+          extra: "Chauffeur disponible en option"
         })
       },
       {
