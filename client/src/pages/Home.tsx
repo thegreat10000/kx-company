@@ -29,6 +29,8 @@ export default function Home() {
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
 
+      
+
       {/* Hero Section */}
       <section className="relative pt-12 pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
         {/* Background decorative elements */}
