@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Cloud } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 const services = [
   {
@@ -48,31 +48,6 @@ export function ServicesSection() {
                 onClick={handleClick}
                 className="group relative cursor-pointer bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-100 min-h-[450px] flex flex-col"
               >
-                {/* Effet de fumée au survol - Sombre et dense */}
-                <div className="absolute inset-0 pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                  {[...Array(10)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ scale: 0, x: 0, y: 0, opacity: 0 }}
-                      animate={{ 
-                        scale: [1, 3, 5],
-                        x: [0, (i % 2 === 0 ? 40 : -40) * (i + 1)],
-                        y: [0, -40 * (i + 1)],
-                        opacity: [0, 0.7, 0]
-                      }}
-                      transition={{ 
-                        duration: 3,
-                        repeat: Infinity,
-                        delay: i * 0.1,
-                        ease: "easeOut"
-                      }}
-                      className="absolute bottom-6 left-1/2 -translate-x-1/2"
-                    >
-                      <Cloud className="w-16 h-16 text-slate-500 fill-slate-500 blur-xl" />
-                    </motion.div>
-                  ))}
-                </div>
-
                 <div className="aspect-[16/10] overflow-hidden">
                   <img
                     src={service.image}
