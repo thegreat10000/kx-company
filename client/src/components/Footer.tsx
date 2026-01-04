@@ -1,6 +1,6 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
+import { SiWhatsapp, SiSnapchat, SiTiktok, SiInstagram } from "react-icons/si";
 import logoPng from "@assets/image_1767024778246.png";
 
 export function Footer() {
@@ -45,6 +45,15 @@ export function Footer() {
                 }
               >
                 <SiSnapchat className="h-5 w-5" />
+              </Button>
+              <Button
+                size="icon"
+                className="rounded-full bg-black hover:bg-zinc-800 text-white shadow-lg shadow-black/20 border-none"
+                onClick={() =>
+                  window.open("https://www.tiktok.com/@kx.company", "_blank")
+                }
+              >
+                <SiTiktok className="h-5 w-5" />
               </Button>
               <Button
                 size="icon"

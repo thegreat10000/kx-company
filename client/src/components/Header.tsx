@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { SiWhatsapp, SiSnapchat, SiInstagram } from "react-icons/si";
+import { SiWhatsapp, SiSnapchat, SiTiktok, SiInstagram } from "react-icons/si";
 
 import logoPng from "@assets/logo_kx.png";
 
@@ -35,6 +35,15 @@ export function Header() {
         >
           <SiSnapchat className="mr-3 h-6 w-6" />
           Snapchat: KX.COMPANY
+        </Button>
+        <Button
+          className="w-full h-14 text-lg font-semibold bg-black hover:bg-zinc-800 text-white shadow-lg shadow-black/20 border-none"
+          onClick={() =>
+            window.open("https://www.tiktok.com/@kx.company", "_blank")
+          }
+        >
+          <SiTiktok className="mr-3 h-6 w-6" />
+          TikTok: @kx.company
         </Button>
         <Button
           className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
