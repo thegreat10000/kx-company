@@ -48,7 +48,7 @@ export function Footer() {
               </Button>
               <Button
                 size="icon"
-                className="rounded-full bg-black hover:bg-zinc-800 text-white shadow-lg shadow-black/20 border-none"
+                className="rounded-full bg-black hover:bg-zinc-800 text-white shadow-lg shadow-black/20 border border-white/30"
                 onClick={() =>
                   window.open("https://www.tiktok.com/@kx.company", "_blank")
                 }

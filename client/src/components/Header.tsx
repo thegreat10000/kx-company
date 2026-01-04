@@ -37,7 +37,7 @@ export function Header() {
           Snapchat: KX.COMPANY
         </Button>
         <Button
-          className="w-full h-14 text-lg font-semibold bg-black hover:bg-zinc-800 text-white shadow-lg shadow-black/20 border-none"
+          className="w-full h-14 text-lg font-semibold bg-black hover:bg-zinc-800 text-white shadow-lg shadow-black/20 border border-white/30"
           onClick={() =>
             window.open("https://www.tiktok.com/@kx.company", "_blank")
           }
