@@ -33,7 +33,7 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="light" storageKey="kx-location-theme" attribute="class">
+      <ThemeProvider defaultTheme="dark" forcedTheme="dark" storageKey="kx-location-theme" attribute="class">
         <TooltipProvider>
           <Toaster />
           <ScrollToTop />
