@@ -32,7 +32,7 @@ export function Footer() {
                 size="icon"
                 className="rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
                 onClick={() =>
-                  window.open("https://instagram.com/kx.location", "_blank")
+                  window.open("https://www.instagram.com/kx.company?igsh=MnprbGV1czFhZDYy", "_blank")
                 }
               >
                 <SiInstagram className="h-5 w-5" />
