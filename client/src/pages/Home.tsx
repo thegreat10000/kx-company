@@ -136,8 +136,8 @@ export default function Home() {
             <div className="flex-1 relative w-full max-w-[600px] lg:max-w-none">
               <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 ease-out border border-white/50 bg-white">
                 <img
-                  src="/images/hero_home_paris.jpg"
-                  alt="Mercedes AMG Paris"
+                  src="/images/hero_home_strasbourg.jpg"
+                  alt="Mercedes AMG Strasbourg"
                   className="w-full h-full object-cover"
                 />
               </div>
