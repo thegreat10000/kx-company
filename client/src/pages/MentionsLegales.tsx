@@ -37,7 +37,7 @@ export default function MentionsLegales() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">Hébergement</h2>
             <div className="bg-muted p-6 rounded-lg space-y-2">
-              <p><strong>Hébergeur :</strong> À compléter</p>
+              <p><strong>Hébergeur :</strong> Replit.com </p>
             </div>
           </section>
 
