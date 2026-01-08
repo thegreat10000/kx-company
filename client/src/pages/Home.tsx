@@ -29,11 +29,7 @@ export default function Home() {
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
 
-      
-
-      {/* Hero Section */}
       <section className="relative pt-12 pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
-        {/* Background decorative elements */}
         <div className="absolute top-0 right-0 -z-10 w-2/3 h-full bg-gradient-to-l from-primary/5 to-transparent rounded-l-full blur-3xl" />
         <div className="absolute bottom-0 left-0 -z-10 w-1/3 h-1/2 bg-gradient-to-t from-primary/5 to-transparent rounded-tr-full blur-3xl" />
 
@@ -142,7 +138,6 @@ export default function Home() {
                 />
               </div>
 
-              {/* Floating badges */}
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce [animation-duration:3s]">
                 <div className="bg-green-100 p-2 rounded-full text-green-600">
                   <ShieldCheck className="h-6 w-6" />
@@ -161,7 +156,6 @@ export default function Home() {
 
       <ServicesSection />
 
-      {/* Benefits Section */}
       <section className="py-16 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -202,15 +196,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Catalogue Grid */}
       <section className="py-20 bg-muted/30" id="catalogue">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Découvrez tout nos véhicules
+              Découvrez tous nos véhicules
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Réservez dès à présent facilement & rapidement.
+              Réservez dès à présent facilement et rapidement.
             </p>
           </div>
 

@@ -7,7 +7,6 @@ export interface IStorage {
   deleteAllCars(): Promise<void>;
 }
 
-// Données des véhicules en mémoire (sera remplacé par les vraies données)
 const carsData: Car[] = [];
 
 export class MemoryStorage implements IStorage {

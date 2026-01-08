@@ -9,9 +9,9 @@ import Home from "@/pages/Home";
 import Catalogue from "@/pages/Catalogue";
 import Services from "@/pages/Services";
 import Informations from "@/pages/Informations";
+import MentionsLegales from "@/pages/MentionsLegales";
 import NotFound from "@/pages/not-found";
 
-// Create a wrapper for simple scroll-to-top behavior
 function ScrollToTop() {
   if (typeof window !== "undefined") {
     window.scrollTo(0, 0);
@@ -26,6 +26,7 @@ function Router() {
       <Route path="/catalogue" component={Catalogue} />
       <Route path="/services" component={Services} />
       <Route path="/informations" component={Informations} />
+      <Route path="/mentions-legales" component={MentionsLegales} />
       <Route component={NotFound} />
     </Switch>
   );

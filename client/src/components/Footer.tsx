@@ -1,6 +1,7 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiWhatsapp, SiSnapchat, SiTiktok, SiInstagram } from "react-icons/si";
+import { Link } from "wouter";
 import logoPng from "@assets/image_1767024778246.png";
 
 export function Footer() {
@@ -72,6 +73,11 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} KX Company. Tous droits réservés.
           </p>
+          <Link href="/mentions-legales">
+            <a className="text-primary hover:underline mt-2 inline-block">
+              Mentions Légales
+            </a>
+          </Link>
         </div>
       </div>
     </footer>

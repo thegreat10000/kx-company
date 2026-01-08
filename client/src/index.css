@@ -71,12 +71,28 @@
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
-  
+
   .glass-card {
     @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
   }
-  
+
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom);
   }
+}
+
+/* Force full opacity for dropdown menus and popovers */
+[role="dialog"],
+[data-radix-popper-content-wrapper] {
+  background: hsl(var(--background)) !important;
+}
+
+.rdp {
+  background-color: hsl(var(--background)) !important;
+}
+
+[role="listbox"],
+[data-radix-select-content] {
+  background-color: hsl(var(--background)) !important;
+  opacity: 1 !important;
 }

@@ -2,6 +2,7 @@ import type { Express } from "express";
 import type { Server } from "http";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
+import nodemailer from "nodemailer";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -20,15 +21,145 @@ export async function registerRoutes(
     res.json(car);
   });
 
-  // Route to delete all cars (for admin reset)
-  app.delete("/api/cars", async (req, res) => {
+  app.delete("/api/cars", async (_req, res) => {
     await storage.deleteAllCars();
     res.json({ message: "All cars deleted" });
   });
 
-  // Seed data function
+  app.post("/api/bookings", async (req, res) => {
+    try {
+      const {
+        firstName,
+        lastName,
+        email,
+        phone,
+        hasLicense3Years,
+        depositMethod,
+        selectedCar,
+        dateRange,
+      } = req.body;
+
+      const car = await storage.getCar(Number(selectedCar));
+      if (!car) {
+        return res.status(404).json({ message: "Véhicule non trouvé" });
+      }
+
+      const dateFrom = dateRange.from ? new Date(dateRange.from).toLocaleDateString('fr-FR') : 'Non spécifiée';
+      const dateTo = dateRange.to ? new Date(dateRange.to).toLocaleDateString('fr-FR') : 'Même jour';
+
+      const depositMethodMap: Record<string, string> = {
+        "carte-bancaire": "Carte bancaire",
+        "espece": "Espèce",
+        "empreinte-bancaire": "Empreinte bancaire",
+        "virement": "Virement",
+        "vehicule-equivalent": "Véhicule équivalent",
+      };
+
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST || "smtp.ethereal.email",
+        port: Number(process.env.SMTP_PORT) || 587,
+        secure: false,
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
+        },
+      });
+      const mailOptions = {
+        from: `"KX Location" <${process.env.SMTP_USER || 'noreply@kx-location.com'}>`,
+        to: process.env.BOOKING_EMAIL || "contact@kx-location.com",
+        subject: `Nouvelle réservation: ${car.model}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4;">
+            <div style="background-color: #DB3B91; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0;">
+              <h1 style="margin: 0;">🚗 Nouvelle Demande de Réservation</h1>
+            </div>
+            <div style="background-color: white; padding: 30px; border-radius: 0 0 8px 8px;">
+              <h2 style="color: #DB3B91; border-bottom: 2px solid #DB3B91; padding-bottom: 10px;">Informations Client</h2>
+              <table style="width: 100%; margin-bottom: 20px;">
+                <tr>
+                  <td style="padding: 8px; font-weight: bold;">Nom complet:</td>
+                  <td style="padding: 8px;">${firstName} ${lastName}</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 8px; font-weight: bold;">Email:</td>
+                  <td style="padding: 8px;"><a href="mailto:${email}">${email}</a></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; font-weight: bold;">Téléphone:</td>
+                  <td style="padding: 8px;"><a href="tel:${phone}">${phone}</a></td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 8px; font-weight: bold;">Permis +3 ans:</td>
+                  <td style="padding: 8px;">${hasLicense3Years === 'oui' ? '✅ Oui' : '❌ Non'}</td>
+                </tr>
+              </table>
+
+              <h2 style="color: #DB3B91; border-bottom: 2px solid #DB3B91; padding-bottom: 10px;">Détails de la Réservation</h2>
+              <table style="width: 100%; margin-bottom: 20px;">
+                <tr>
+                  <td style="padding: 8px; font-weight: bold;">Véhicule:</td>
+                  <td style="padding: 8px;"><strong style="color: #DB3B91;">${car.model}</strong></td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 8px; font-weight: bold;">Prix:</td>
+                  <td style="padding: 8px;">${car.pricePerDay}€/jour</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; font-weight: bold;">Date de début:</td>
+                  <td style="padding: 8px;">${dateFrom}</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 8px; font-weight: bold;">Date de fin:</td>
+                  <td style="padding: 8px;">${dateTo}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px; font-weight: bold;">Mode de caution:</td>
+                  <td style="padding: 8px;">${depositMethodMap[depositMethod] || depositMethod}</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 8px; font-weight: bold;">Montant caution:</td>
+                  <td style="padding: 8px;">${car.caution?.toLocaleString()}€</td>
+                </tr>
+              </table>
+
+              <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-top: 20px;">
+                <p style="margin: 0; color: #856404;">
+                  <strong>Action requise:</strong> Contactez le client dans les plus brefs délais pour confirmer la réservation.
+                </p>
+              </div>
+
+              <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+                <p style="color: #666; font-size: 12px; margin: 0;">
+                  Email généré automatiquement par KX Location - ${new Date().toLocaleString('fr-FR')}
+                </p>
+              </div>
+            </div>
+          </div>
+        `,
+      };
+
+      const info = await transporter.sendMail(mailOptions);
+
+      console.log("Email de réservation envoyé:", info.messageId);
+
+      if (process.env.NODE_ENV === "development" && !process.env.SMTP_HOST) {
+        console.log("Preview URL:", nodemailer.getTestMessageUrl(info));
+      }
+
+      res.json({
+        message: "Réservation envoyée avec succès",
+        messageId: info.messageId,
+      });
+    } catch (error) {
+      console.error("Erreur lors de l'envoi de l'email:", error);
+      res.status(500).json({
+        message: "Erreur lors de l'envoi de la réservation",
+        error: error instanceof Error ? error.message : "Unknown error",
+      });
+    }
+  });
+
   async function seedDatabase() {
-    // Delete existing cars to force refresh seed data
     await storage.deleteAllCars();
     
     const seedCars = [
@@ -36,7 +167,16 @@ export async function registerRoutes(
         model: "Mercedes A35 AMG",
         pricePerDay: 200,
         imageUrl: "/images/a35_amg_new.jpg",
-        galleryUrls: ["/images/a35_amg_new.jpg"],
+        galleryUrls: [
+          "/images/a35_amg_new.jpg",
+          "/images/a35_amg_new1.JPG",
+          "/images/a35_amg_new2.JPG",
+          "/images/a35_amg_new3.JPG",
+          "/images/a35_amg_new4.JPG",
+          "/images/a35_amg_new5.JPG",
+          "/images/a35_amg_new6.JPG",
+          "/images/a35_amg_new7.JPG"
+        ],
         power: "306 ch",
         motorisation: "Essence",
         transmission: "Automatique",
@@ -59,7 +199,16 @@ export async function registerRoutes(
         model: "Mercedes C43 AMG",
         pricePerDay: 250,
         imageUrl: "/images/c43_amg_new.jpg",
-        galleryUrls: ["/images/c43_amg_new.jpg"],
+        galleryUrls: [
+          "/images/c43_amg_new.jpg",
+          "/images/c43_amg_new1.JPG",
+          "/images/c43_amg_new2.JPG",
+          "/images/c43_amg_new3.JPG",
+          "/images/c43_amg_new4.JPG",
+          "/images/c43_amg_new5.JPG",
+          "/images/c43_amg_new6.JPG",
+          "/images/c43_amg_new7.JPG"
+        ],
         power: "390 ch",
         motorisation: "Essence",
         transmission: "Automatique",
@@ -81,14 +230,15 @@ export async function registerRoutes(
       {
         model: "Mercedes Classe S Maybach",
         pricePerDay: 450,
-        imageUrl: "/images/s_devant_1767034994217.jpg",
+        imageUrl: "/images/S_maybach_new.JPG",
         galleryUrls: [
-          "/images/s_devant_1767034994217.jpg",
-          "/images/s2_1767034999895.jpg",
-          "/images/s3_1767035002650.jpg",
-          "/images/s4_1767035004807.jpg",
-          "/images/s_arriere_1767035011532.jpg",
-          "/images/cdda4d84-6306-43da-a681-fd4f8e1b5fb5_1767035032788.jpg"
+          "/images/S_maybach_new.JPG",
+          "/images/S_maybach_new1.JPG",
+          "/images/S_maybach_new3.JPG",
+          "/images/S_maybach_new4.JPG",
+          "/images/S_maybach_new5.JPG",
+          "/images/S_maybach_new6.JPG",
+          "/images/S_maybach_new7.JPG"
         ],
         power: "258 ch",
         motorisation: "Diesel",
@@ -119,7 +269,16 @@ export async function registerRoutes(
         model: "Peugeot 208 GT",
         pricePerDay: 80,
         imageUrl: "/images/208_gt_new.jpg",
-        galleryUrls: ["/images/208_gt_new.jpg"],
+        galleryUrls: [
+          "/images/208_gt_new.jpg",
+          "/images/208_gt_new1.jpg",
+          "/images/208_gt_new2.JPG",
+          "/images/208_gt_new3.jpg",
+          "/images/208_gt_new5.jpg",
+          "/images/208_gt_new6.jpg",
+          "/images/208_gt_new7.jpg",
+          "/images/208_gt_new8.jpg"
+        ],
         power: "110 ch",
         motorisation: "Hybride",
         transmission: "Automatique",
@@ -147,7 +306,6 @@ export async function registerRoutes(
     console.log("Database seeded with cars");
   }
 
-  // Seed initial cars data
   seedDatabase();
 
   return httpServer;
