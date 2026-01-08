@@ -21,11 +21,13 @@ export function Header() {
     <div className="space-y-6 py-4">
       <div className="flex flex-col gap-4">
         <Button
-          className="w-full h-14 text-lg font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
-          onClick={() => window.open("https://wa.me/33677727957", "_blank")}
+          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
+          onClick={() =>
+            window.open("https://www.instagram.com/kx.company?igsh=MnprbGV1czFhZDYy", "_blank")
+          }
         >
-          <SiWhatsapp className="mr-3 h-6 w-6" />
-          WhatsApp: 06 77 72 79 57
+          <SiInstagram className="mr-3 h-6 w-6" />
+          Instagram: KX.COMPANY
         </Button>
         <Button
           className="w-full h-14 text-lg font-semibold bg-[#FFFC00] hover:bg-[#EBE800] text-black shadow-lg shadow-[#FFFC00]/20 border-none"
@@ -46,13 +48,11 @@ export function Header() {
           TikTok: @kx.company
         </Button>
         <Button
-          className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white shadow-lg shadow-pink-500/20 border-none"
-          onClick={() =>
-            window.open("https://www.instagram.com/kx.company?igsh=MnprbGV1czFhZDYy", "_blank")
-          }
+          className="w-full h-14 text-lg font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg shadow-[#25D366]/20"
+          onClick={() => window.open("https://wa.me/33677727957", "_blank")}
         >
-          <SiInstagram className="mr-3 h-6 w-6" />
-          Instagram: KX.COMPANY
+          <SiWhatsapp className="mr-3 h-6 w-6" />
+          WhatsApp: 06 77 72 79 57
         </Button>
       </div>
       <div className="text-center text-muted-foreground">
@@ -157,14 +157,17 @@ export function Header() {
                 <div className="border-t pt-6 space-y-4">
                   <p className="text-lg font-medium">Contactez nous : </p>
                   <Button
-                    className="w-full h-12 font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white"
+                    className="w-full h-12 font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white border-none"
                     onClick={() => {
                       setIsOpen(false);
-                      window.open("https://wa.me/33677727957", "_blank");
+                      window.open(
+                        "https://www.instagram.com/kx.company?igsh=MnprbGV1czFhZDYy",
+                        "_blank",
+                      );
                     }}
                   >
-                    <SiWhatsapp className="mr-2 h-5 w-5" />
-                    WhatsApp: 06 77 72 79 57
+                    <SiInstagram className="mr-2 h-5 w-5" />
+                    Instagram: KX.COMPANY
                   </Button>
                   <Button
                     className="w-full h-12 font-semibold bg-[#FFFC00] hover:bg-[#EBE800] text-black border-none"
@@ -180,17 +183,27 @@ export function Header() {
                     Snapchat: KX.COMPANY
                   </Button>
                   <Button
-                    className="w-full h-12 font-semibold bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] hover:opacity-90 text-white border-none"
+                    className="w-full h-12 font-semibold bg-black hover:bg-zinc-800 text-white border border-white/30"
                     onClick={() => {
                       setIsOpen(false);
                       window.open(
-                        "https://instagram.com/kx.location",
+                        "https://www.tiktok.com/@kx.company",
                         "_blank",
                       );
                     }}
                   >
-                    <SiInstagram className="mr-2 h-5 w-5" />
-                    Instagram: KX.COMPANY
+                    <SiTiktok className="mr-2 h-5 w-5" />
+                    TikTok: @kx.company
+                  </Button>
+                  <Button
+                    className="w-full h-12 font-semibold bg-[#25D366] hover:bg-[#128C7E] text-white"
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.open("https://wa.me/33677727957", "_blank");
+                    }}
+                  >
+                    <SiWhatsapp className="mr-2 h-5 w-5" />
+                    WhatsApp: 06 77 72 79 57
                   </Button>
                   <p className="text-center text-sm text-muted-foreground pt-4">
                     © KX Company. Tous droits réservés.
