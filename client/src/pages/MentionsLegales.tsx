@@ -27,7 +27,7 @@ export default function MentionsLegales() {
             <h2 className="text-2xl font-semibold mb-4">Éditeur du site</h2>
             <div className="bg-muted p-6 rounded-lg space-y-2">
               <p><strong>Raison sociale :</strong> KX Location</p>
-              <p><strong>Forme juridique :</strong> Auto-entrepreneur</p>
+              <p><strong>Forme juridique :</strong> SASU</p>
               <p><strong>Adresse :</strong> Strasbourg, France</p>
               <p><strong>Email :</strong> kx.company77694@gmail.com</p>
               <p><strong>Téléphone :</strong> +33 6 77 72 79 57</p>
