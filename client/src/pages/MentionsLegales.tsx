@@ -89,9 +89,7 @@ export default function MentionsLegales() {
           </section>
 
           <div className="pt-8 border-t">
-            <p className="text-sm text-muted-foreground text-center">
-              Dernière mise à jour : À compléter
-            </p>
+            <p className="text-sm text-muted-foreground text-center">Dernière mise à jour : 09/01/2026</p>
           </div>
         </div>
       </div>
