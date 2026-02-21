@@ -196,8 +196,8 @@ export async function registerRoutes(
         })
       },
       {
-        model: "Volkswagen Golf 8R",
-        pricePerDay: 200,
+        model: "Golf 8R ⚫️🔵",
+        pricePerDay: 250,
         imageUrl: "/images/golf8r_new1.jpeg",
         galleryUrls: [
           "/images/golf8r_new1.jpeg",
@@ -224,10 +224,10 @@ export async function registerRoutes(
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
-            { duration: "24h", price: "200€", note: "en semaine" },
-            { duration: "48h", price: "650€", note: "Vendredi à Dimanche" },
-            { duration: "72h", price: "800€", note: "Vendredi à Lundi" },
-            { duration: "7 jours", price: "1200€", note: "Semaine entière" }
+            { duration: "24h", price: "250€", note: "en semaine" },
+            { duration: "48h", price: "700€", note: "Vendredi à Dimanche" },
+            { duration: "72h", price: "850€", note: "Vendredi à Lundi" },
+            { duration: "7 jours", price: "1 500€", note: "Semaine entière" }
           ]
         })
       },
