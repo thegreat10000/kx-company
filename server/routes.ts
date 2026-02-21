@@ -220,7 +220,7 @@ export async function registerRoutes(
         category: "Compacte Sportive",
         caution: 5000,
         conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
-        displayOrder: 2,
+        displayOrder: 4,
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
@@ -252,7 +252,7 @@ export async function registerRoutes(
         category: "Berline Sportive",
         caution: 5000,
         conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
-        displayOrder: 3,
+        displayOrder: 2,
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
@@ -290,7 +290,7 @@ export async function registerRoutes(
           "Prestation avec ou sans chauffeur sur devis",
           "Caution requise uniquement pour les prestations sans chauffeur"
         ],
-        displayOrder: 4,
+        displayOrder: 3,
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [

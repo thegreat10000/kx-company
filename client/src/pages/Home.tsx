@@ -207,9 +207,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {isLoading ? (
-              [1, 2, 3, 4].map((i) => (
+              [1, 2, 3, 4, 5].map((i) => (
                 <div
                   key={i}
                   className="h-[340px] bg-muted animate-pulse rounded-2xl"
@@ -230,7 +230,7 @@ export default function Home() {
             ) : (
               [...cars]
                 .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0))
-                .slice(0, 4)
+                .slice(0, 5)
                 .map((car) => (
                   <CarCard
                     key={car.id}
