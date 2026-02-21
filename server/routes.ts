@@ -196,6 +196,42 @@ export async function registerRoutes(
         })
       },
       {
+        model: "Volkswagen Golf 8R",
+        pricePerDay: 200,
+        imageUrl: "/images/golf8r_new1.jpeg",
+        galleryUrls: [
+          "/images/golf8r_new1.jpeg",
+          "/images/golf8r_new2.jpeg",
+          "/images/golf8r_new3.jpeg",
+          "/images/golf8r_new4.jpeg",
+          "/images/golf8r_new5.jpeg",
+          "/images/golf8r_new6.jpeg",
+          "/images/golf8r_new7.jpeg",
+          "/images/golf8r_new8.jpeg",
+          "/images/golf8r_new9.jpeg",
+          "/images/golf8r_new10.jpeg",
+          "/images/golf8r_new11.jpeg",
+          "/images/golf8r_new12.jpeg"
+        ],
+        power: "320 ch",
+        motorisation: "Essence",
+        transmission: "Automatique",
+        options: ["Apple CarPlay", "Ambiance LED", "Digital Cockpit Pro", "Toit Ouvrant"],
+        category: "Compacte Sportive",
+        caution: 5000,
+        conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
+        displayOrder: 2,
+        pricingInfo: JSON.stringify({
+          type: "standard",
+          prices: [
+            { duration: "24h", price: "200€", note: "en semaine" },
+            { duration: "48h", price: "650€", note: "Vendredi à Dimanche" },
+            { duration: "72h", price: "800€", note: "Vendredi à Lundi" },
+            { duration: "7 jours", price: "1200€", note: "Semaine entière" }
+          ]
+        })
+      },
+      {
         model: "Mercedes C43 AMG",
         pricePerDay: 250,
         imageUrl: "/images/c43_amg_new.jpg",
@@ -216,7 +252,7 @@ export async function registerRoutes(
         category: "Berline Sportive",
         caution: 5000,
         conditions: ["Âge minimum 21 ans", "Pièce d'identité", "Permis de conduire > 3 ans", "Justificatif de domicile (- 3 mois)"],
-        displayOrder: 2,
+        displayOrder: 3,
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
@@ -254,7 +290,7 @@ export async function registerRoutes(
           "Prestation avec ou sans chauffeur sur devis",
           "Caution requise uniquement pour les prestations sans chauffeur"
         ],
-        displayOrder: 3,
+        displayOrder: 4,
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
@@ -286,7 +322,7 @@ export async function registerRoutes(
         category: "Compacte Citadine",
         caution: 2000,
         conditions: ["Âge minimum 20 ans", "Pièce d'identité", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)"],
-        displayOrder: 4,
+        displayOrder: 5,
         pricingInfo: JSON.stringify({
           type: "standard",
           prices: [
