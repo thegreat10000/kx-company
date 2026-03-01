@@ -196,7 +196,7 @@ export async function registerRoutes(
         })
       },
       {
-        model: "Golf 8R ⚫️🔵",
+        model: "Volkswagen Golf 8R ⚫️🔵",
         pricePerDay: 250,
         imageUrl: "/images/golf8r_new1.jpeg",
         galleryUrls: [
