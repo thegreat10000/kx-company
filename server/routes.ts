@@ -266,15 +266,18 @@ export async function registerRoutes(
       {
         model: "Mercedes Classe S Maybach",
         pricePerDay: 450,
-        imageUrl: "/images/S_maybach_new.JPG",
+        imageUrl: "/images/maybach_new1.jpeg",
         galleryUrls: [
-          "/images/S_maybach_new.JPG",
-          "/images/S_maybach_new1.JPG",
-          "/images/S_maybach_new3.JPG",
-          "/images/S_maybach_new4.JPG",
-          "/images/S_maybach_new5.JPG",
-          "/images/S_maybach_new6.JPG",
-          "/images/S_maybach_new7.JPG"
+          "/images/maybach_new1.jpeg",
+          "/images/maybach_new2.jpeg",
+          "/images/maybach_new3.jpeg",
+          "/images/maybach_new4.jpeg",
+          "/images/maybach_new5.jpeg",
+          "/images/maybach_new6.jpeg",
+          "/images/maybach_new7.jpeg",
+          "/images/maybach_new8.jpeg",
+          "/images/maybach_new9.jpeg",
+          "/images/maybach_new10.jpeg"
         ],
         power: "258 ch",
         motorisation: "Diesel",
