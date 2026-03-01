@@ -133,7 +133,7 @@ export default function Catalogue() {
                                     src={imageUrl}
                                     alt={`${selectedCar.model} - Image ${index + 1}`}
                                     className="object-cover w-full h-full"
-                                    style={selectedCar.model === "Renault Clio V Alpine" && index < 3 ? { objectPosition: index === 1 ? "center 75%" : "center 75%", transform: index === 1 ? "scale(0.85)" : undefined } : undefined}
+                                    style={selectedCar.model === "Renault Clio V Alpine" && index < 3 ? { objectPosition: "center 75%" } : undefined}
                                   />
                                 </div>
                               </CarouselItem>
