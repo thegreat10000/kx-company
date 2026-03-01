@@ -69,7 +69,7 @@ export default function Catalogue() {
                   src={imageUrl} 
                   alt={car.model}
                   className="object-cover w-full h-full"
-                  style={car.model === "Renault Clio V Alpine" ? { objectPosition: "center 65%" } : undefined}
+                  style={car.model === "Renault Clio V Alpine" ? { objectPosition: "center 75%" } : undefined}
                 />
               </div>
               <CardHeader className="p-4">
@@ -133,7 +133,7 @@ export default function Catalogue() {
                                     src={imageUrl}
                                     alt={`${selectedCar.model} - Image ${index + 1}`}
                                     className="object-cover w-full h-full"
-                                    style={selectedCar.model === "Renault Clio V Alpine" && index < 3 ? { objectPosition: "center 65%" } : undefined}
+                                    style={selectedCar.model === "Renault Clio V Alpine" && index < 3 ? { objectPosition: "center 75%" } : undefined}
                                   />
                                 </div>
                               </CarouselItem>
