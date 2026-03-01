@@ -33,6 +33,7 @@ export function CarCard({ car, onClick }: CarCardProps) {
           src={imageUrl} 
           alt={car.model}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          style={car.model === "Renault Clio V Alpine" ? { objectPosition: "center 35%" } : undefined}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>

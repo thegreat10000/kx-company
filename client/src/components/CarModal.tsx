@@ -74,6 +74,7 @@ export function CarModal({ car, isOpen, onClose }: CarModalProps) {
                           src={src} 
                           alt={`${car.model} - Photo ${index + 1}`} 
                           className="object-cover w-full h-full"
+                          style={car.model === "Renault Clio V Alpine" && index < 3 ? { objectPosition: "center 35%" } : undefined}
                         />
                       </div>
                     </CarouselItem>
