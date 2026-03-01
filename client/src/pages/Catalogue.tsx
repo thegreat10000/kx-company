@@ -133,7 +133,7 @@ export default function Catalogue() {
                                     src={imageUrl}
                                     alt={`${selectedCar.model} - Image ${index + 1}`}
                                     className="object-cover w-full h-full"
-                                    style={(selectedCar.model === "Renault Clio V Alpine" && index < 3) || (selectedCar.model === "Peugeot 208 GT" && index < 6) ? { objectPosition: selectedCar.model === "Renault Clio V Alpine" ? "center 75%" : "center 65%" } : undefined}
+                                    style={(selectedCar.model === "Renault Clio V Alpine" && index < 3) ? { objectPosition: "center 75%" } : (selectedCar.model === "Peugeot 208 GT" && index < 6) ? { objectPosition: (index >= 1 && index <= 3) ? "center 75%" : "center 65%" } : undefined}
                                   />
                                 </div>
                               </CarouselItem>
