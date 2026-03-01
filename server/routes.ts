@@ -349,7 +349,6 @@ export async function registerRoutes(
           "/images/clio_alpine5.jpeg",
           "/images/clio_alpine6.jpeg",
           "/images/clio_alpine7.jpeg",
-          "/images/clio_alpine8.jpeg",
           "/images/clio_alpine9.jpeg"
         ],
         power: "140 ch",
