@@ -336,6 +336,40 @@ export async function registerRoutes(
             { duration: "30 jours", price: "1300€", note: "Mois complet" }
           ]
         })
+      },
+      {
+        model: "Renault Clio V Alpine",
+        pricePerDay: 80,
+        imageUrl: "/images/clio_alpine1.jpeg",
+        galleryUrls: [
+          "/images/clio_alpine1.jpeg",
+          "/images/clio_alpine2.jpeg",
+          "/images/clio_alpine3.jpeg",
+          "/images/clio_alpine4.jpeg",
+          "/images/clio_alpine5.jpeg",
+          "/images/clio_alpine6.jpeg",
+          "/images/clio_alpine7.jpeg",
+          "/images/clio_alpine8.jpeg",
+          "/images/clio_alpine9.jpeg"
+        ],
+        power: "140 ch",
+        motorisation: "Hybride",
+        transmission: "Automatique",
+        options: ["Apple CarPlay", "Ambiance LED", "Cockpit", "Frein régénératif"],
+        category: "Compacte Citadine",
+        caution: 2000,
+        conditions: ["Âge minimum 20 ans", "Pièce d'identité", "Permis de conduire > 1 an", "Justificatif de domicile (- 3 mois)"],
+        displayOrder: 6,
+        pricingInfo: JSON.stringify({
+          type: "standard",
+          prices: [
+            { duration: "24h", price: "80€", note: "en semaine" },
+            { duration: "48h", price: "220€", note: "Vendredi à Dimanche" },
+            { duration: "72h", price: "300€", note: "Vendredi à Lundi" },
+            { duration: "7 jours", price: "450€", note: "Semaine entière" },
+            { duration: "30 jours", price: "1300€", note: "Mois complet" }
+          ]
+        })
       }
     ];
 
