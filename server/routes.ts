@@ -3,6 +3,36 @@ import type { Server } from "http";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
 import nodemailer from "nodemailer";
+import { z } from "zod";
+
+const bookingBodySchema = z.object({
+  firstName: z.string().min(2).max(100),
+  lastName: z.string().min(2).max(100),
+  email: z.string().email().max(254),
+  phone: z.string().min(10).max(20),
+  hasLicense3Years: z.enum(["oui", "non"]),
+  depositMethod: z.enum([
+    "carte-bancaire",
+    "espece",
+    "empreinte-bancaire",
+    "virement",
+    "vehicule-equivalent",
+  ]),
+  selectedCar: z.coerce.number().int().positive(),
+  dateRange: z.object({
+    from: z.string().refine((s) => !isNaN(Date.parse(s)), { message: "Invalid date" }),
+    to: z.string().refine((s) => !isNaN(Date.parse(s)), { message: "Invalid date" }).optional(),
+  }),
+});
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
 export async function registerRoutes(
   httpServer: Server,
@@ -23,18 +53,28 @@ export async function registerRoutes(
 
   app.post("/api/bookings", async (req, res) => {
     try {
+      const parsed = bookingBodySchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Données de réservation invalides" });
+      }
+
       const {
-        firstName,
-        lastName,
-        email,
-        phone,
+        firstName: rawFirstName,
+        lastName: rawLastName,
+        email: rawEmail,
+        phone: rawPhone,
         hasLicense3Years,
         depositMethod,
         selectedCar,
         dateRange,
-      } = req.body;
+      } = parsed.data;
 
-      const car = await storage.getCar(Number(selectedCar));
+      const firstName = escapeHtml(rawFirstName);
+      const lastName = escapeHtml(rawLastName);
+      const email = escapeHtml(rawEmail);
+      const phone = escapeHtml(rawPhone);
+
+      const car = await storage.getCar(selectedCar);
       if (!car) {
         return res.status(404).json({ message: "Véhicule non trouvé" });
       }
@@ -149,7 +189,6 @@ export async function registerRoutes(
       console.error("Erreur lors de l'envoi de l'email:", error);
       res.status(500).json({
         message: "Erreur lors de l'envoi de la réservation",
-        error: error instanceof Error ? error.message : "Unknown error",
       });
     }
   });
