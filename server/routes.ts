@@ -21,11 +21,6 @@ export async function registerRoutes(
     res.json(car);
   });
 
-  app.delete("/api/cars", async (_req, res) => {
-    await storage.deleteAllCars();
-    res.json({ message: "All cars deleted" });
-  });
-
   app.post("/api/bookings", async (req, res) => {
     try {
       const {
