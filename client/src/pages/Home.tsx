@@ -135,7 +135,7 @@ export default function Home() {
                   src="/images/hero_home_strasbourg.jpg"
                   alt="Mercedes AMG Strasbourg"
                   className="w-full h-full object-cover"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   loading="eager"
                 />
               </div>
